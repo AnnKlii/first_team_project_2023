@@ -68,7 +68,7 @@ a {
 .top__right {
     position: relative;
     width: 100%;
-    margin-left: 12vw;
+    margin-left: 5vw;
     padding-top: 43px;
 }
 
@@ -95,7 +95,7 @@ a {
 .top__buttons {
     display: flex;
     padding-bottom: 90px;
-    justify-content: space-around;
+    gap: 23px;
 }
 
 .left_button, .right_button {
@@ -122,4 +122,45 @@ a {
     font-style: normal;
     font-weight: 300;
     line-height: 64px;
+}
+
+.top__numbers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.about {
+    margin-top: 120px;
+    background-color: #FBFBFB;
+}
+
+.about__right {
+    padding: 30px 70px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about__title {
+    color: #BDBDBD;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+}
+
+.about__text {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.about_button {
+    position: relative;
+    border-color: transparent;
+    align-self: flex-start;
 }
