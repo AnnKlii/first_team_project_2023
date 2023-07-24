@@ -84,7 +84,7 @@ a {
 
 .inside_image {
     position: absolute;
-    left: 41%;
+    left: 8.7vw;
     bottom: 0%;
     font-size: 12px;
     font-style: normal;
@@ -190,6 +190,7 @@ a {
     position: relative;
     border-color: transparent;
     align-self: flex-start;
+    left: 0;
 }
 
 .left_images {
