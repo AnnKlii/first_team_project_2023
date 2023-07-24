@@ -8,6 +8,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+}
+
 .container {
     padding-left: 135px;
     padding-right: 135px;
@@ -37,6 +43,12 @@ body {
     color: #333;
 }
 
+.nav_link {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 5px 15px;
+}
+
 .header__list {
     list-style-type: none;
     font-size: 12px;
@@ -46,4 +58,68 @@ body {
     letter-spacing: 2.4px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top__right {
+    position: relative;
+    width: 100%;
+    margin-left: 12vw;
+    padding-top: 43px;
+}
+
+.inside_image {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #333;
+    padding: 30px 49px 23px 20px;
+    background-color: white;
+}
+
+.top__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.top__buttons {
+    display: flex;
+    padding-bottom: 90px;
+    justify-content: space-around;
+}
+
+.left_button, .right_button {
+    width: 53px;
+    height: 53px;
+    border: 1px solid #F2F2F2;
+    background: #F9F9F9;
+    cursor: pointer;
+}
+
+.top__second-title {
+    padding-bottom: 90px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    color: #333;
+}
+
+.top__title {
+    padding-top: 365px;
+    color: #BDBDBD;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
 }
