@@ -20,9 +20,16 @@ body {
     justify-content: space-between;
 }
 
+.header__logo {
+    display: flex;
+    flex-direction: column;
+}
+
 .header__nav {
     display: flex;
     gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .header__link {
