@@ -72,12 +72,13 @@ a {
 .top {
     display: flex;
     justify-content: space-between;
+    gap: 122px;
 }
 
 .top__right {
     background-image: url(../assets/image/header.png);
     background-repeat: no-repeat;
-    background-position: right;
+    background-size: cover;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -95,7 +96,7 @@ a {
     color: #333;
     padding: 30px 49px 23px 20px;
     background-color: white;
-    margin-left: 8.5vw;
+    border-color: transparent;
 }
 
 .inside_image:hover {
