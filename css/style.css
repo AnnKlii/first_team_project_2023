@@ -314,8 +314,12 @@ a {
         padding-bottom: 30px;
     }
 
-    .top__buttons {
-        padding-bottom: 30px;
+    .top__buttons, .top__numbers {
+        display: none;
+    }
+
+    .top__right {
+        margin: 0;
     }
 
     .about {
