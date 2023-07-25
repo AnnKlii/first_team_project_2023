@@ -122,7 +122,8 @@ a {
     gap: 23px;
 }
 
-.left_button, .right_button {
+.left_button,
+.right_button {
     width: 53px;
     height: 53px;
     border: 1px solid #F2F2F2;
@@ -223,7 +224,9 @@ a {
     line-height: 64px;
 }
 
-.main__blocks, .main__left, .main__right {
+.main__blocks,
+.main__left,
+.main__right {
     display: flex;
 }
 
@@ -231,7 +234,8 @@ a {
     gap: 187px;
 }
 
-.main__left, .main__right {
+.main__left,
+.main__right {
     gap: 30px;
     align-items: center;
 }
@@ -246,6 +250,53 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 36px;
+}
+
+.main__certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 165px;
+}
+
+.main__certifications-second-title,
+.main__contacts-second-title {
+    color: var(--gray-1, #333);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.main__contacts {
+    background-image: url(../assets/image/map.png);
+    background-position: right;
+    background-color: lightgray 50%;
+    background-repeat: no-repeat;
+    width: 1319px;
+    height: 501px;
+    padding-right: 0;
+    padding-top: 105px;
+}
+
+.main__contacts-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main_contacts-tel {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main__contacts-button {
+    background-color: var(--gray-1, #333);
+    width: 222px;
+    height: 71px;
+    color: #FFF;
 }
 
 @media screen and (min-width:768px) and (max-width: 1024px) {
@@ -325,7 +376,8 @@ a {
         padding-bottom: 30px;
     }
 
-    .top__buttons, .top__numbers {
+    .top__buttons,
+    .top__numbers {
         display: none;
     }
 
