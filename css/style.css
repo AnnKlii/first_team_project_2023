@@ -83,6 +83,17 @@ a {
     align-items: flex-end;
 }
 
+.top__right-change {
+    background-image: url(../assets/image/header_change.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 43px;
+    align-items: flex-end;
+}
+
 .inside_image {
     font-size: 12px;
     font-style: normal;
