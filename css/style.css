@@ -137,7 +137,8 @@ a {
     cursor: pointer;
 }
 
-.left_button:hover, .right_button:hover {
+.left_button:hover,
+.right_button:hover {
     color: #F9F9F9;
     transform: scale(1.2);
 }
@@ -460,7 +461,6 @@ textarea {
 input {
     padding: 15px 0 15px 21px;
     margin-bottom: 10px;
-
 }
 
 textarea {
@@ -607,72 +607,72 @@ textarea {
     .main__blocks-text {
         font-size: 18px;
     }
-}
 
-@media screen and (max-width:767px) {
-    .container {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
 
-    .header {
-        gap: 10px;
-    }
+    @media screen and (max-width:767px) {
+        .container {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
 
-    .header__nav {
-        gap: 20px;
-    }
+        .header {
+            gap: 10px;
+        }
 
-    .header__list {
-        font-size: 10px;
-        font-weight: 300;
-    }
+        .header__nav {
+            gap: 20px;
+        }
 
-    .top {
-        gap: 5px;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
+        .header__list {
+            font-size: 10px;
+            font-weight: 300;
+        }
 
-    .top__title {
-        padding-top: 30px;
-        font-size: 30px;
-    }
+        .top {
+            gap: 5px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .top__second-title {
-        font-size: 30px;
-        padding-bottom: 30px;
-    }
+        .top__title {
+            padding-top: 30px;
+            font-size: 30px;
+        }
 
-    .top__buttons,
-    .top__numbers {
-        display: none;
-    }
+        .top__second-title {
+            font-size: 30px;
+            padding-bottom: 30px;
+        }
 
-    .top__right {
-        margin: 0;
-    }
+        .top__buttons,
+        .top__numbers {
+            display: none;
+        }
 
-    .about {
-        margin-top: 30px;
-        flex-direction: column;
-    }
+        .top__right {
+            margin: 0;
+        }
 
-    .about__left {
-        flex-direction: column;
-    }
+        .about {
+            margin-top: 30px;
+            flex-direction: column;
+        }
 
-    .main {
-        padding-top: 30px;
-    }
+        .about__left {
+            flex-direction: column;
+        }
 
-    .main__title {
-        word-break: break-word;
-        font-size: 54px;
-    }
+        .main {
+            padding-top: 30px;
+        }
 
-    .main__blocks {
-        flex-direction: column;
+        .main__title {
+            word-break: break-word;
+            font-size: 54px;
+        }
+
+        .main__blocks {
+            flex-direction: column;
+        }
     }
-}
