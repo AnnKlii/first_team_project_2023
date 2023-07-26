@@ -136,47 +136,52 @@
                     placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.</p>
             </div>
         </div>
-        <section class="project container">
-            <h2 class="project__title">Our Projects</h2>
-            <div class="project__gallery">
-                <div class="project__image project__cover"><a class="button project__button" href="#">View More </a>
-                </div>
-                <img class="project__image" src="./assets/image/image15.png" alt="project">
-                <img class="project__image" src="./assets/image/image16.png" alt="project">
-                <img class="project__image" src="./assets/image/image17.png" alt="project">
-                <img class="project__image" src="./assets/image/image18.png" alt="project">
-            </div>
-            <a class="button project__button" href="#">All Projects</a>
-        </section>
-        <section class="contacts">
-            <form class="contacts__form" action="" method="post">
-                <p><label for="contacts-name"></label>
-                    <input type="text" name="contacts-name" id="contacts-name" placeholder="Name">
-                </p>
-                <p><label for="contacts-phone"></label>
-                    <input type="text" name="contacts-phone" id="contacts-phone" placeholder="Phone Number*" required>
-                </p>
-                <p><label for="contacts-mail"></label>
-                    <input type="text" name="contacts-mail" id="contacts-mail" placeholder="E-mail*" required>
-                </p>
-                <p><label for="contacts-inteserted"></label>
-                    <input type="text" name="contacts-inteserted" id="contacts-inteserted" placeholder="Interested In">
-                </p>
-                <p><label for="contacts-message"></label>
-                    <textarea name="contacts-message" id="contacts-message" cols="20" rows="10" placeholder="Message*"
-                        required></textarea>
-                </p>
-                <button class="button project__button" type="submit">Send Email</button>
-            </form>
-
-            <div><img class="contacts__image" src="./assets/image/image12.png" alt="image"></div>
-
-        </section>
     </main>
-    <footer class="footer">
+    <section class="project container">
+        <h2 class="project__title">Our Projects</h2>
+        <div class="project__gallery">
+            <div class="project__cover">
+                <h3 class="project__cover-title">
+                    <p>Sample</p>
+                    <p>Project</p>
+                </h3>
+                <a class="project__cover-button" href="#">View More </a>
+            </div>
+            <div><img class="project__image" src="./assets/image/image15.png" alt="project"></div>
+            <div><img class="project__image" src="./assets/image/image16.png" alt="project"></div>
+            <div><img class="project__image" src="./assets/image/image17.png" alt="project"></div>
+            <div><img class="project__image" src="./assets/image/image18.png" alt="project"></div>
+        </div>
+        <a class="button project__button" href="#">All Projects</a>
+    </section>
+    <section class="contacts container">
+        <h2 class="contacts__title">Contact Us</h2>
+        <form class="contacts__form" action="" method="post">
+            <p><label for="contacts-name"></label>
+                <input type="text" name="contacts-name" id="contacts-name" placeholder="Name">
+            </p>
+            <p><label for="contacts-phone"></label>
+                <input type="text" name="contacts-phone" id="contacts-phone" placeholder="Phone Number*" required>
+            </p>
+            <p><label for="contacts-mail"></label>
+                <input type="email" name="contacts-mail" id="contacts-mail" placeholder="E-mail*" required>
+            </p>
+            <p><label for="contacts-inteserted"></label>
+                <input type="text" name="contacts-inteserted" id="contacts-inteserted" placeholder="Interested In">
+            </p>
+            <p><label for="contacts-message"></label>
+                <textarea name="contacts-message" id="contacts-message" rows="8" placeholder="Message*"
+                    required></textarea>
+            </p>
+        </form>
+
+        <div><img class="contacts__image" src="./assets/image/image12.png" alt="image"></div>
+        <button class="button contacts__button" type="submit">Send Email</button>
+    </section>
+    <footer class="footer container">
         <img class="footer__logo" src="./assets/image/logo-footer.png" alt="logo">
         <section class="footer-nav">
-            <h3 class="footer__title">Information</h3>
+            <h4 class="footer__title">Information</h4>
             <ul class="footer-nav__list">
                 <li class="footer-nav__item">
                     <a class="footer-nav__link" href="index.html">Main</a>
@@ -188,24 +193,26 @@
                     <a class="footer-nav__link" href="#">Projects</a>
                 </li>
                 <li class="footer-nav__item">
-                    <a class="footer-nav__link" href="#">Certifications</a>
+                    <a class="footer-nav__link" href="certifications.html">Certifications</a>
                 </li>
                 <li class="footer-nav__item">
-                    <a class="footer-nav__link" href="#">Contacts</a>
+                    <a class="footer-nav__link" href="contacts.html">Contacts</a>
                 </li>
             </ul>
         </section>
         <section class="footer-contacts">
-            <h3 class="footer__title">Contacts</h3>
+            <h4 class="footer__title">Contacts</h4>
             <address class="footer-contacts__address">
-                <p>1234 Sample Street
-                    Austin Texas 78704</p>
+                <div>
+                    1234 Sample Street
+                    <p>Austin Texas 78704</p>
+                </div>
                 <a href="tel: 512.333.2222">512.333.2222</a>
             </address>
-            <a href="mailto:sampleemail@gmail.com">sampleemail@gmail.com</a>
+            <a class="footer-contacts__mail" href="mailto:sampleemail@gmail.com">sampleemail@gmail.com</a>
         </section>
         <section class="footer-social">
-            <h3 class="footer__title">Social Media</h3>
+            <h4 class="footer__title">Social Media</h4>
             <ul class="footer-social__list">
                 <li class="footer-social__item">
                     <a class="footer-social__button" href="#">
@@ -229,7 +236,9 @@
                 </li>
             </ul>
         </section>
-        <div>© 2021 All Rights Reserved</div>
+        <div class="footer__copy">
+            <p>© 2021 All Rights Reserved</p>
+        </div>
     </footer>
     <script src="/js/script.js"></script>
 </body>
