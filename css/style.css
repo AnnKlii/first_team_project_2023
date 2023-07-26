@@ -330,7 +330,7 @@ h2 {
 }
 
 .project__cover {
-    background-image: url(../assets/image/Rectangle12.png);
+    background-image: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);
     background-size: contain;
     background-repeat: no-repeat;
     grid-column: 1/span 6;
