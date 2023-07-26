@@ -608,6 +608,25 @@ textarea {
         font-size: 18px;
     }
 
+    .project__cover-title {
+        font-size: 48px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-social {
+        padding-left: 30px;
+    }
+
+    .footer-social__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
 
     @media screen and (max-width:767px) {
         .container {
