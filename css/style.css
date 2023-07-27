@@ -356,7 +356,7 @@ h2 {
     padding-left: 135px;
     width: 1440px;
     height: 1143px;
-    ;
+
 }
 
 .main-certifications__title {
@@ -365,12 +365,12 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 64px;
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 63px;
 }
 
 .main-certifications__second-title {
-    color: var(--gray-1, #333);
+    color: #333;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -381,7 +381,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     padding-left: 135px;
-    padding-right: 0px;
+    padding-right: 0;
     width: 1440px;
     height: 100%;
 }
@@ -400,12 +400,12 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 64px;
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 63px;
 }
 
 .main-contacts__second-title {
-    color: var(--gray-1, #333);
+    color: #333;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -429,7 +429,7 @@ h2 {
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
-    line-height: 140.8%;
+    line-height: 141%;
 }
 
 .main-contacts__tel {
@@ -452,7 +452,7 @@ h2 {
 }
 
 .main-contacts__button {
-    background-color: var(--gray-1, #333);
+    background-color: #333;
     color: #FFF;
     font-size: 12px;
     font-style: normal;
@@ -469,6 +469,7 @@ h2 {
 }
 
 .image_right {
+    border-right: 1px solid black;
     background-image: url(../assets/image/map.png);
     background-color: lightgray 50%;
     background-repeat: no-repeat;
