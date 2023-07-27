@@ -349,6 +349,64 @@ h2 {
 
 /* ----- END page Our Projects------------------------------------------------------------------------------------------------------------------------ */
 
+/* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
+.topp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 63px;
+    padding-bottom: 60px;
+    gap: 30px;
+}
+
+.topp__title_1 {
+    width: 387px;
+    color: #BDBDBD;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    padding-top: 63px;
+    margin-right: 918px;
+}
+
+.topp__second-title_1 {
+    color: #333;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.topp__top_1 {
+    padding-top: 60px;
+}
+
+.topp__center_1 {
+    display: flex;
+    gap: 30px;
+}
+
+.main_text_1 {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+    white-space: pre-wrap;
+}
+
+.topp__end_1 {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    width: 1170px;
+    height: 435px;
+    flex-shrink: 0;
+}
+
+/* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
+
 /* ------ START page CERTIFICATIONS and CONTACTS--- */
 .main-certifications__container {
     display: flex;
