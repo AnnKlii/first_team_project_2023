@@ -290,6 +290,7 @@ h2 {
     flex-direction: column;
     gap: 30px;
 }
+
 .sectionblock {
     display: flex;
     background-color: #FBFBFB;
@@ -484,31 +485,21 @@ h2 {
     font-weight: 300;
     line-height: normal;
     padding-top: 53px;
-    padding-bottom: 33px;
+    margin-bottom: 33px;
 }
 
-.main-contacts__button {
-    background-color: #333;
-    color: #FFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    padding-top: 30px;
-    padding-left: 71px;
-    border: none;
-    width: 222px;
-    height: 71px;
+.contact-us {
     margin-bottom: 112px;
+    text-align: center;
+    width: 222px;
+
 }
 
 .main-contacts__right {
-    border-right: 1px solid black;
-    background-image: url(../assets/image/map.png);
+    background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    width: 100%;
+    border-right: 1px solid black;
+    width: 50vw;
     display: flex;
 }
 
@@ -839,6 +830,7 @@ textarea {
     .footer__copy {
         margin: 0 -30px;
     }
+
 }
 
 @media screen and (max-width:767px) {
