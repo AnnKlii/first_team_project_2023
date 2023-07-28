@@ -169,11 +169,11 @@ a {
 }
 
 .about {
-    margin-top: 120px;
+    margin: 120px 135px;
     background-color: #FBFBFB;
     display: flex;
     gap: 30px;
-    padding-top: 30px;
+    padding: 0;
 }
 
 .about__left {
@@ -219,7 +219,7 @@ h2 {
 .left_images {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
 }
 
 .main {
