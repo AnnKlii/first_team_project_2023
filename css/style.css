@@ -614,7 +614,8 @@ h2 {
     background-color: #1a1717;
 }
 
-.button::after {
+.project__button::after,
+.contacts__button::after {
     content: url(../assets/image/ico-shape.svg);
     padding-left: 10px;
 }
@@ -828,6 +829,10 @@ textarea {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .footer__logo {
+        padding-right: 50px;
+    }
+
     .footer-social {
         padding-left: 30px;
     }
@@ -837,6 +842,10 @@ textarea {
         flex-direction: column;
         gap: 15px;
         align-items: flex-start;
+    }
+
+    .footer__copy {
+        margin: 0 -30px;
     }
 }
 
@@ -905,5 +914,44 @@ textarea {
 
     .main__blocks {
         flex-direction: column;
+    }
+
+    .contacts,
+    .project__gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project__cover-title {
+        font-size: 36px;
+        padding-top: 20px;
+    }
+
+    .contacts__image {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 30px;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer-social {
+        padding-top: 60px;
+    }
+
+    .footer-social__list {
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer__title {
+        text-align: center;
     }
 }
