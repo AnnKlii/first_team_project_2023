@@ -796,52 +796,54 @@ textarea {
     }
 
     .about {
-        margin-top: 40px;
+        margin: 0;
+        padding-top: 30px;
     }
+}
 
-    .about__left {
-        flex-wrap: wrap;
-    }
+.about__left {
+    flex-wrap: wrap;
+}
 
-    .about__right {
-        justify-content: center;
-    }
+.about__right {
+    justify-content: center;
+}
 
-    .main__blocks {
-        gap: 30px;
-    }
+.main__blocks {
+    gap: 30px;
+}
 
-    .main__blocks-text {
-        font-size: 18px;
-    }
+.main__blocks-text {
+    font-size: 18px;
+}
 
-    .project__cover-title {
-        font-size: 48px;
-    }
+.project__cover-title {
+    font-size: 48px;
+}
 
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
 
-    .footer__logo {
-        padding-right: 50px;
-    }
+.footer__logo {
+    padding-right: 50px;
+}
 
-    .footer-social {
-        padding-left: 30px;
-    }
+.footer-social {
+    padding-left: 30px;
+}
 
-    .footer-social__list {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
+.footer-social__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
 
-    .footer__copy {
-        margin: 0 -30px;
-    }
+.footer__copy {
+    margin: 0 -30px;
+}
 }
 
 @media screen and (max-width:767px) {
