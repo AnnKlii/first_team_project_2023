@@ -524,7 +524,7 @@ h2 {
 
 .project__cover {
     background-image: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     grid-column: 1/span 6;
     display: flex;
@@ -673,6 +673,7 @@ textarea {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.42px;
+    overflow: hidden;
 }
 
 .footer a {
@@ -683,8 +684,8 @@ textarea {
     text-decoration: underline;
 }
 
-.footer__logo {
-    padding-right: 100px;
+.footer-nav {
+    padding-left: 70px;
 }
 
 .footer__title {
@@ -715,6 +716,12 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+}
+
+.footer-social__item:hover,
+.footer__logo:hover {
+    padding: 5px;
+    border: 2px solid white;
 }
 
 .footer-contacts__address {
@@ -786,49 +793,49 @@ textarea {
         padding-top: 30px;
     }
 
-.about__left {
-    flex-wrap: wrap;
-}
+    .about__left {
+        flex-wrap: wrap;
+    }
 
-.about__right {
-    justify-content: center;
-}
+    .about__right {
+        justify-content: center;
+    }
 
-.main__blocks {
-    gap: 30px;
-}
+    .main__blocks {
+        gap: 30px;
+    }
 
-.main__blocks-text {
-    font-size: 18px;
-}
+    .main__blocks-text {
+        font-size: 18px;
+    }
 
-.project__cover-title {
-    font-size: 48px;
-}
+    .project__cover-title {
+        font-size: 48px;
+    }
 
-.footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-.footer__logo {
-    padding-right: 50px;
-}
+    .footer__logo {
+        padding-right: 50px;
+    }
 
-.footer-social {
-    padding-left: 30px;
-}
+    .footer-social {
+        padding-left: 30px;
+    }
 
-.footer-social__list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-}
+    .footer-social__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
 
-.footer__copy {
-    margin: 0 -30px;
-}
+    .footer__copy {
+        margin: 0 -30px;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -926,16 +933,23 @@ textarea {
         display: none;
     }
 
+    .footer-nav {
+        padding: 0;
+    }
+
+    .footer-nav,
+    .footer-contacts,
+    .footer-social {
+        text-align: center;
+    }
+
     .footer-social {
         padding-top: 60px;
     }
 
     .footer-social__list {
-        padding-left: 30px;
         padding-bottom: 30px;
     }
 
-    .footer__title {
-        text-align: center;
-    }
+    .footer__copy {}
 }
