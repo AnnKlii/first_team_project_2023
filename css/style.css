@@ -344,6 +344,7 @@ h2 {
 
 .project__cover-button {
     color: #FFF;
+    background-color: transparent;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -444,6 +445,7 @@ h2 {
 .contacts__button {
     width: 222px;
     height: 71px;
+    cursor: pointer;
 }
 
 input,
@@ -491,6 +493,10 @@ textarea {
     text-decoration: underline;
 }
 
+.footer__logo {
+    padding-right: 100px;
+}
+
 .footer__title {
     font-size: 16px;
     font-style: normal;
@@ -511,11 +517,7 @@ textarea {
     list-style-type: none;
 }
 
-.footer-social {
-    justify-self: start;
-}
-
-.footer-social__item img {
+.footer-social__item {
     margin-right: 40px;
 }
 
@@ -523,7 +525,6 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    align-items: center;
 }
 
 .footer-contacts__address {
