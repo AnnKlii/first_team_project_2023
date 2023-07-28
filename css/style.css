@@ -430,25 +430,11 @@ h2 {
     display: flex;
     flex-direction: column;
     padding-right: 177px;
-    align-items: stretch;
 }
 
-.main-contacts__title {
-    color: #BDBDBD;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 64px;
+.main-contacts {
     padding-left: 0;
     padding-top: 63px;
-}
-
-.main-contacts__second-title {
-    color: #333;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 64px;
 }
 
 .main-contacts__block-name {
