@@ -303,7 +303,7 @@ h2 {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    padding-left: 30px;
 }
 
 .sectionblock__title,
