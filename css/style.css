@@ -267,15 +267,15 @@ h2 {
 }
 
 /* ----- START page Our Projects --------------------------------------------------------------------------------------------------------------------- */
+
 .main__ourprojects {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 63px;
-    padding-bottom: 60px;
 }
 
-.main__ourprojects-second-title {
+.main__second-title {
     padding-bottom: 30px;
     color: #333;
     font-size: 64px;
@@ -284,12 +284,19 @@ h2 {
     line-height: 64px;
 }
 
-.section .block {
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #F2F2F2;
+    margin-bottom: 29px;
+}
+.section.block {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
 }
+
 .sectionblock {
     display: flex;
     background-color: #FBFBFB;
@@ -309,14 +316,14 @@ h2 {
 .sectionblock__title,
 h2 {
     color: #BDBDBD;
-    font-size: 64px;
+    font-family: Roboto;
+    font-size: 40px;
     font-style: normal;
     font-weight: 300;
-    line-height: 64px;
-    padding-left: 0;
+    line-height: normal;
     padding-top: 30px;
-    padding-right: 30px;
 }
+
 
 .sectionblock__text {
     color: #000;
@@ -326,12 +333,10 @@ h2 {
     line-height: 25px;
     padding-top: 73px;
     padding-right: 70px;
+    padding-bottom: 0px;
 }
 
-.sectionblock_button {
-    position: relative;
-    border-color: transparent;
-    align-self: flex-start;
+.inside_img {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -341,26 +346,50 @@ h2 {
     color: #333;
     padding: 30px 49px 23px 20px;
     background-color: white;
+    border-color: transparent;
+}
+
+.sectionblock_button {
+    position: relative;
+    border-color: transparent;
+    align-self: flex-start;
     margin: 64px 248px 30px 0;
 }
 
-
-.numbers {
+.sectionblock__numbers {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 26px;
     background-color: transparent;
-    /* Убираем фон у блока */
 }
 
-.buttons {
+.sectionblock__buttons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 23px;
     background-color: transparent;
-    /* Убираем фон у блока */
 }
 
+.sectionblock_bottom {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+    .section.block {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sectionblock {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* ----- END page Our Projects------------------------------------------------------------------------------------------------------------------------ */
 
