@@ -224,6 +224,10 @@ h2 {
     gap: 30px;
 }
 
+.about_bottom {
+    margin-bottom: -20px;
+}
+
 .main {
     padding-top: 120px;
     display: flex;
