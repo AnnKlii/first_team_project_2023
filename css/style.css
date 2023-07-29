@@ -221,6 +221,11 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
+}
+
+.about_bottom {
+    margin-bottom: -20px;
 }
 
 .main {
@@ -302,6 +307,7 @@ h2 {
     display: flex;
     background-color: #FBFBFB;
 }
+
 .section.block img {
     width: auto;
 }
@@ -395,12 +401,13 @@ h2 {
     .content {
         padding-left: 40px;
     }
+
     .section.block {
         margin: 0;
         align-items: center;
         gap: 30px;
     }
-    
+
     .sectionblock__images img {
         width: 100%;
     }
@@ -430,7 +437,7 @@ h2 {
     .sectionblock__title {
         font-size: 30px;
     }
-    
+
     .sectionblock__text {
         padding: 30px 70px 0 0;
     }
@@ -480,6 +487,7 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
+    max-height: 38vh;
 }
 
 .main_text_1 {
@@ -488,6 +496,7 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 25px;
+    overflow: auto;
 }
 
 .topp__end_1 {
@@ -501,21 +510,20 @@ h2 {
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
 
 /* ------ START page CERTIFICATIONS and CONTACTS--- */
-.main-certifications__container {
+.main-certifications__block {
     display: flex;
     flex-direction: column;
-    padding-left: 135px;
-    height: 1424px;
+    padding-left: 0;
+    height: 100vh;
 }
 
 .main-certifications {
-    padding-left: 0;
     padding-top: 63px;
 }
 
 .main-contacts__contacts-block {
     display: flex;
-    padding-left: 135px;
+    padding-left: 0;
     padding-right: 0;
 
 }
@@ -579,8 +587,12 @@ h2 {
 .main-contacts__right {
     background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    width: 50vw;
+    background-size: cover;
+    margin-top: 3px;
+    margin-bottom: 120px;
     display: flex;
+    min-width: 50vw;
+    min-height: 30vh;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
@@ -912,7 +924,7 @@ textarea {
     }
 
     .main-contacts__contacts-block {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 
@@ -1025,7 +1037,7 @@ textarea {
     }
 
     .main-contacts__contacts-block {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
 }
