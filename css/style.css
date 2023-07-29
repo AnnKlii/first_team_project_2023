@@ -505,7 +505,7 @@ h2 {
 .main-certifications__block {
     display: flex;
     flex-direction: column;
-    padding-left: 135px;
+    padding-left: 0;
     height: 100vh;
 }
 
@@ -515,7 +515,7 @@ h2 {
 
 .main-contacts__contacts-block {
     display: flex;
-    padding-left: 135px;
+    padding-left: 0;
     padding-right: 0;
 
 }
@@ -915,13 +915,8 @@ textarea {
         margin: 0 -30px;
     }
 
-    .main-certifications__block {
-        padding-left: 0;
-    }
-
     .main-contacts__contacts-block {
         flex-direction: column;
-        padding-left: 0;
     }
 }
 
@@ -1033,13 +1028,8 @@ textarea {
         text-align: center;
     }
 
-    .main-certifications__block {
-        padding-left: 0;
-    }
-
     .main-contacts__contacts-block {
         flex-direction: column;
-        padding-left: 0;
     }
 
 }
