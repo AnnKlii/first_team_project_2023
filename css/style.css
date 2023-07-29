@@ -75,7 +75,6 @@ a {
 .top {
     display: flex;
     justify-content: space-between;
-    gap: 122px;
 }
 
 .top__right {
@@ -126,7 +125,6 @@ a {
 .top__buttons {
     display: flex;
     padding-bottom: 90px;
-    gap: 23px;
 }
 
 .left_button,
@@ -138,10 +136,20 @@ a {
     cursor: pointer;
 }
 
+.left_button {
+    margin-right: 23px;
+}
+
 .left_button:hover,
 .right_button:hover {
     color: #F9F9F9;
     transform: scale(1.2);
+}
+
+.button_line {
+    max-width: 271px;
+    height: 1px;
+    align-self: center;
 }
 
 .top__second-title {
