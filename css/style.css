@@ -290,6 +290,7 @@ h2 {
     background-color: #F2F2F2;
     margin-bottom: 29px;
 }
+
 .section.block {
     padding: 0;
     display: flex;
@@ -449,15 +450,14 @@ h2 {
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
 
 /* ------ START page CERTIFICATIONS and CONTACTS--- */
-.main-certifications__container {
+.main-certifications__block {
     display: flex;
     flex-direction: column;
     padding-left: 135px;
-    height: 1424px;
+    height: 100vh;
 }
 
 .main-certifications {
-    padding-left: 0;
     padding-top: 63px;
 }
 
@@ -527,8 +527,12 @@ h2 {
 .main-contacts__right {
     background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    width: 50vw;
+    background-size: cover;
+    margin-top: 3px;
+    margin-bottom: 120px;
     display: flex;
+    min-width: 50vw;
+    min-height: 30vh;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
@@ -859,8 +863,13 @@ textarea {
         margin: 0 -30px;
     }
 
+    .main-certifications__block {
+        padding-left: 0;
+    }
+
     .main-contacts__contacts-block {
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding-left: 0;
     }
 }
 
@@ -972,8 +981,13 @@ textarea {
         text-align: center;
     }
 
+    .main-certifications__block {
+        padding-left: 0;
+    }
+
     .main-contacts__contacts-block {
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding-left: 0;
     }
 
 }
