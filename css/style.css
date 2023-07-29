@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    min-width: 320px;
 }
 
 a {
@@ -169,11 +170,11 @@ a {
 }
 
 .about {
-    margin-top: 120px;
+    margin: 120px 135px;
     background-color: #FBFBFB;
     display: flex;
     gap: 30px;
-    padding-top: 30px;
+    padding: 0;
 }
 
 .about__left {
@@ -219,7 +220,7 @@ h2 {
 .left_images {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
 }
 
 .main {
@@ -266,54 +267,68 @@ h2 {
 }
 
 /* ----- START page Our Projects --------------------------------------------------------------------------------------------------------------------- */
+
 .main__ourprojects {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 63px;
-    padding-bottom: 60px;
 }
 
-.main__ourprojects-second-title {
-    color: var(--gray-1, #333);
+.main__second-title {
+    padding-bottom: 30px;
+    color: #333;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
     line-height: 64px;
 }
 
-.our-projects {
-    margin-top: 0px;
-    background-color: #FBFBFB;
-    display: flex;
-    gap: 30px;
-    margin: 0px 135px 0px 135px;
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #F2F2F2;
+    margin-bottom: 29px;
 }
 
-.our-projects__left {
-    display: flex;
-    gap: 30px;
-}
-
-.our-projects__right {
+.section.block {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 60px;
 }
 
-.our-projects__title,
-h2 {
+.sectionblock {
+    display: flex;
+    background-color: #FBFBFB;
+}
+
+.section.block img {
+    width: auto;
+}
+
+.sectionblock__images {
+    display: flex;
+    gap: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.sectionblock__title {
     color: #BDBDBD;
-    font-size: 64px;
+    font-family: Roboto;
+    font-size: 40px;
     font-style: normal;
     font-weight: 300;
-    line-height: 64px;
-    padding-left: 0px;
+    line-height: normal;
     padding-top: 30px;
-    padding-right: 30px;
 }
 
-.our-projects__text {
+.sectionblock__text {
     color: #000;
     font-size: 16px;
     font-style: normal;
@@ -321,12 +336,10 @@ h2 {
     line-height: 25px;
     padding-top: 73px;
     padding-right: 70px;
+    padding-bottom: 0px;
 }
 
-.our-projects_button {
-    position: relative;
-    border-color: transparent;
-    align-self: flex-start;
+.inside_img {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -337,14 +350,96 @@ h2 {
     padding: 30px 49px 23px 20px;
     background-color: white;
     border-color: transparent;
-    margin: 64px 248px 30px 0px;
 }
 
+.sectionblock_button {
+    position: relative;
+    border-color: transparent;
+    align-self: flex-start;
+    margin: 64px 248px 30px 0;
+}
 
-.left_images {
+.sectionblock__numbers {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 26px;
+    background-color: transparent;
+}
+
+.sectionblock__buttons {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    background-color: transparent;
+}
+
+.sectionblock_bottom {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding-bottom: 120px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .main__ourprojects {
+        padding: 0 5px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        margin: 0;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+
+    .section.block {
+        margin: 0;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sectionblock__images img {
+        width: 100%;
+    }
+
+    .sectionblock {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__first-title {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .main__second-title {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    .sectionblock_bottom {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .sectionblock__title {
+        font-size: 30px;
+    }
+
+    .sectionblock__text {
+        padding: 30px 70px 0 0;
+    }
+
+    .inside_img {
+        margin: 35px 0 30px 0;
+    }
 }
 
 /* ----- END page Our Projects------------------------------------------------------------------------------------------------------------------------ */
@@ -384,6 +479,7 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
+    max-height: 38vh;
 }
 
 .main_text_1 {
@@ -392,6 +488,7 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 25px;
+    overflow: auto;
 }
 
 .topp__end_1 {
@@ -405,51 +502,32 @@ h2 {
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
 
 /* ------ START page CERTIFICATIONS and CONTACTS--- */
-.main-certifications__container {
+.main-certifications__block {
     display: flex;
     flex-direction: column;
-    padding-left: 135px;
-    width: 1440px;
-    height: 1143px;
+    padding-left: 0;
+    height: 100vh;
 }
 
 .main-certifications {
-    padding-left: 0;
     padding-top: 63px;
 }
 
 .main-contacts__contacts-block {
     display: flex;
-    justify-content: space-between;
-    padding-left: 135px;
+    padding-left: 0;
     padding-right: 0;
-    width: 1440px;
-    height: 100%;
+
 }
 
 .main-contacts__left {
     display: flex;
     flex-direction: column;
     padding-right: 177px;
-    align-items: stretch;
 }
 
-.main-contacts__title {
-    color: #BDBDBD;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 64px;
-    padding-left: 0;
+.main-contacts {
     padding-top: 63px;
-}
-
-.main-contacts__second-title {
-    color: #333;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 64px;
 }
 
 .main-contacts__block-name {
@@ -488,33 +566,25 @@ h2 {
     font-weight: 300;
     line-height: normal;
     padding-top: 53px;
-    padding-bottom: 33px;
+    margin-bottom: 33px;
 }
 
-.main-contacts__button {
-    background-color: #333;
-    color: #FFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    padding-top: 30px;
-    padding-left: 71px;
-    border: none;
-    width: 222px;
-    height: 71px;
+.contact-us {
     margin-bottom: 112px;
+    text-align: center;
+    width: 222px;
+
 }
 
-.image_right {
-    border-right: 1px solid black;
-    background-image: url(../assets/image/map.png);
-    background-color: lightgray 50%;
+.main-contacts__right {
+    background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    width: 1319px;
-    height: 501px;
+    background-size: cover;
+    margin-top: 3px;
+    margin-bottom: 120px;
+    display: flex;
+    min-width: 50vw;
+    min-height: 30vh;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
@@ -522,6 +592,7 @@ h2 {
 .project {
     display: grid;
     grid-row: 1fr 4fr 1fr;
+    /*что это? */
 }
 
 .project__title {
@@ -594,9 +665,8 @@ h2 {
 }
 
 .button {
-    background-color: var(--gray-1, #333);
+    background-color: #333;
     color: #FFF;
-    font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -658,7 +728,6 @@ input,
 textarea {
     background-color: #F3F3F3;
     color: #8D8D8D;
-    font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -798,7 +867,8 @@ textarea {
     }
 
     .about {
-        margin-top: 40px;
+        margin: 0;
+        padding-top: 30px;
     }
 
     .about__left {
@@ -843,6 +913,10 @@ textarea {
 
     .footer__copy {
         margin: 0 -30px;
+    }
+
+    .main-contacts__contacts-block {
+        flex-direction: column;
     }
 }
 
@@ -892,8 +966,10 @@ textarea {
     }
 
     .about {
+        margin: 0;
         margin-top: 30px;
         flex-direction: column;
+        align-items: center;
     }
 
     .about__left {
@@ -951,4 +1027,9 @@ textarea {
     .footer__title {
         text-align: center;
     }
+
+    .main-contacts__contacts-block {
+        flex-direction: column;
+    }
+
 }
