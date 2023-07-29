@@ -437,6 +437,7 @@ h2 {
     display: flex;
     padding-left: 135px;
     padding-right: 0;
+
 }
 
 .main-contacts__left {
@@ -498,7 +499,6 @@ h2 {
 .main-contacts__right {
     background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    border-right: 1px solid black;
     width: 50vw;
     display: flex;
 }
@@ -831,6 +831,9 @@ textarea {
         margin: 0 -30px;
     }
 
+    .main-contacts__contacts-block {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -939,6 +942,10 @@ textarea {
 
     .footer__title {
         text-align: center;
+    }
+
+    .main-contacts__contacts-block {
+        flex-wrap: wrap;
     }
 
 }
