@@ -446,6 +446,7 @@ h2 {
         margin: 35px 0 30px 0;
     }
 }
+
 /* media
 @media screen and (min-width:768px) and (max-width: 1024px) {
 }
@@ -811,9 +812,16 @@ textarea {
     grid-template-rows: 1fr;
 }
 
-.footer-social__item:hover,
+.footer-social__image {
+    fill: #F2F2F2
+}
+
+.footer-social__image:hover {
+    fill: #8D8D8D;
+}
+
 .footer__logo:hover {
-    padding: 5px;
+    padding: 10px;
     border: 2px solid white;
 }
 
@@ -912,7 +920,7 @@ textarea {
     }
 
     .footer__logo {
-        padding-right: 50px;
+        padding-right: 30px;
     }
 
     .footer-social {
