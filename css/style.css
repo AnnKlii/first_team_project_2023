@@ -302,6 +302,7 @@ h2 {
     display: flex;
     background-color: #FBFBFB;
 }
+
 .section.block img {
     width: auto;
 }
@@ -395,12 +396,13 @@ h2 {
     .content {
         padding-left: 40px;
     }
+
     .section.block {
         margin: 0;
         align-items: center;
         gap: 30px;
     }
-    
+
     .sectionblock__images img {
         width: 100%;
     }
@@ -430,7 +432,7 @@ h2 {
     .sectionblock__title {
         font-size: 30px;
     }
-    
+
     .sectionblock__text {
         padding: 30px 70px 0 0;
     }
@@ -477,6 +479,7 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
+    max-height: 38vh;
 }
 
 .main_text_1 {
@@ -485,6 +488,7 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 25px;
+    overflow: auto;
 }
 
 .topp__end_1 {
