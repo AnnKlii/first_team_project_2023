@@ -221,6 +221,11 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
+}
+
+.about_bottom {
+    margin-bottom: -20px;
 }
 
 .main {
@@ -267,15 +272,15 @@ h2 {
 }
 
 /* ----- START page Our Projects --------------------------------------------------------------------------------------------------------------------- */
+
 .main__ourprojects {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 63px;
-    padding-bottom: 60px;
 }
 
-.main__ourprojects-second-title {
+.main__second-title {
     padding-bottom: 30px;
     color: #333;
     font-size: 64px;
@@ -284,16 +289,27 @@ h2 {
     line-height: 64px;
 }
 
-.section .block {
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #F2F2F2;
+    margin-bottom: 29px;
+}
+
+.section.block {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
 }
 
 .sectionblock {
     display: flex;
     background-color: #FBFBFB;
+}
+
+.section.block img {
+    width: auto;
 }
 
 .sectionblock__images {
@@ -307,16 +323,14 @@ h2 {
     padding-left: 30px;
 }
 
-.sectionblock__title,
-h2 {
+.sectionblock__title {
     color: #BDBDBD;
-    font-size: 64px;
+    font-family: Roboto;
+    font-size: 40px;
     font-style: normal;
     font-weight: 300;
-    line-height: 64px;
-    padding-left: 0;
+    line-height: normal;
     padding-top: 30px;
-    padding-right: 30px;
 }
 
 .sectionblock__text {
@@ -327,12 +341,10 @@ h2 {
     line-height: 25px;
     padding-top: 73px;
     padding-right: 70px;
+    padding-bottom: 0px;
 }
 
-.sectionblock_button {
-    position: relative;
-    border-color: transparent;
-    align-self: flex-start;
+.inside_img {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -342,26 +354,101 @@ h2 {
     color: #333;
     padding: 30px 49px 23px 20px;
     background-color: white;
+    border-color: transparent;
+}
+
+.sectionblock_button {
+    position: relative;
+    border-color: transparent;
+    align-self: flex-start;
     margin: 64px 248px 30px 0;
 }
 
-
-.numbers {
+.sectionblock__numbers {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 26px;
     background-color: transparent;
-    /* Убираем фон у блока */
 }
 
-.buttons {
+.sectionblock__buttons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 23px;
     background-color: transparent;
-    /* Убираем фон у блока */
 }
 
+.sectionblock_bottom {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding-bottom: 120px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .main__ourprojects {
+        padding: 0 5px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        margin: 0;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+
+    .section.block {
+        margin: 0;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sectionblock__images img {
+        width: 100%;
+    }
+
+    .sectionblock {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__first-title {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .main__second-title {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    .sectionblock_bottom {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .sectionblock__title {
+        font-size: 30px;
+    }
+
+    .sectionblock__text {
+        padding: 30px 70px 0 0;
+    }
+
+    .inside_img {
+        margin: 35px 0 30px 0;
+    }
+}
+/* media
+@media screen and (min-width:768px) and (max-width: 1024px) {
+}
 
 /* ----- END page Our Projects------------------------------------------------------------------------------------------------------------------------ */
 
@@ -400,6 +487,7 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
+    max-height: 38vh;
 }
 
 .main_text_1 {
@@ -408,6 +496,7 @@ h2 {
     font-style: normal;
     font-weight: 300;
     line-height: 25px;
+    overflow: auto;
 }
 
 .topp__end_1 {
@@ -421,22 +510,22 @@ h2 {
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
 
 /* ------ START page CERTIFICATIONS and CONTACTS--- */
-.main-certifications__container {
+.main-certifications__block {
     display: flex;
     flex-direction: column;
-    padding-left: 135px;
-    height: 1424px;
+    padding-left: 0;
+    height: 100vh;
 }
 
 .main-certifications {
-    padding-left: 0;
     padding-top: 63px;
 }
 
 .main-contacts__contacts-block {
     display: flex;
-    padding-left: 135px;
+    padding-left: 0;
     padding-right: 0;
+
 }
 
 .main-contacts__left {
@@ -485,32 +574,25 @@ h2 {
     font-weight: 300;
     line-height: normal;
     padding-top: 53px;
-    padding-bottom: 33px;
+    margin-bottom: 33px;
 }
 
-.main-contacts__button {
-    background-color: #333;
-    color: #FFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    padding-top: 30px;
-    padding-left: 71px;
-    border: none;
-    width: 222px;
-    height: 71px;
+.contact-us {
     margin-bottom: 112px;
+    text-align: center;
+    width: 222px;
+
 }
 
 .main-contacts__right {
-    border-right: 1px solid black;
-    background-image: url(../assets/image/map.png);
+    background-image: url(/assets/image/map.png);
     background-repeat: no-repeat;
-    width: 100%;
+    background-size: cover;
+    margin-top: 3px;
+    margin-bottom: 120px;
     display: flex;
+    min-width: 50vw;
+    min-height: 30vh;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
@@ -847,6 +929,10 @@ textarea {
     .footer__copy {
         margin: 0 -30px;
     }
+
+    .main-contacts__contacts-block {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -964,6 +1050,10 @@ textarea {
 
     .footer__title {
         text-align: center;
+    }
+
+    .main-contacts__contacts-block {
+        flex-direction: column;
     }
 
 }
