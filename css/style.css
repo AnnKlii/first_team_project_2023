@@ -290,6 +290,7 @@ h2 {
     background-color: #F2F2F2;
     margin-bottom: 29px;
 }
+
 .section.block {
     padding: 0;
     display: flex;
@@ -300,6 +301,9 @@ h2 {
 .sectionblock {
     display: flex;
     background-color: #FBFBFB;
+}
+.section.block img {
+    width: auto;
 }
 
 .sectionblock__images {
@@ -313,8 +317,7 @@ h2 {
     padding-left: 30px;
 }
 
-.sectionblock__title,
-h2 {
+.sectionblock__title {
     color: #BDBDBD;
     font-family: Roboto;
     font-size: 40px;
@@ -323,7 +326,6 @@ h2 {
     line-height: normal;
     padding-top: 30px;
 }
-
 
 .sectionblock__text {
     color: #000;
@@ -377,17 +379,64 @@ h2 {
     padding-bottom: 120px;
 }
 
-@media (max-width: 768px) {
-    .section.block {
-        padding: 0;
-        display: flex;
+@media screen and (max-width: 767px) {
+
+    .main__ourprojects {
+        padding: 0 5px;
+        flex-wrap: wrap;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        margin: 0;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+    .section.block {
+        margin: 0;
+        align-items: center;
         gap: 30px;
+    }
+    
+    .sectionblock__images img {
+        width: 100%;
     }
 
     .sectionblock {
         display: flex;
+        margin-top: 30px;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .main__first-title {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .main__second-title {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    .sectionblock_bottom {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .sectionblock__title {
+        font-size: 30px;
+    }
+    
+    .sectionblock__text {
+        padding: 30px 70px 0 0;
+    }
+
+    .inside_img {
+        margin: 35px 0 30px 0;
     }
 }
 
