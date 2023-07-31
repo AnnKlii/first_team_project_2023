@@ -1177,8 +1177,6 @@ textarea {
         margin: 35px 0 30px 0;
     }
 }
-    <<<<<<< HEAD
-}
 
 /* ------ START page Gallery--- */
 .main_container {
@@ -1228,10 +1226,6 @@ textarea {
     padding-left: 100px;
 }
 
-=======.main-contacts__contacts-block {
+.main-contacts__contacts-block {
     flex-direction: column;
 }
-
-}
-
->>>>>>> a102228c528484b572e684d114aa6f7b5bb17d9b
