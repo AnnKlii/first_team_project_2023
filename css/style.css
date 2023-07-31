@@ -955,3 +955,49 @@ textarea {
         text-align: center;
     }
 }
+/* ------ START page Gallery--- */
+.main_container{
+    display: grid;
+    width: 1170px;
+    padding: 100px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 60px;
+    grid-row-gap: 1em;
+    padding-top: 1%;
+}
+
+.top__title1 {
+    width: 387px;
+    color: #BDBDBD;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+    padding-top: 63px;
+    padding-left: 100px;
+}
+
+.top__second-title1 {
+    color: black;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    padding-left: 100px;
+}
+.top__buttons1{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 80px;
+    gap: 23px;
+    
+}
+.top__numbers1 {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 30px;
+    padding-left: 100px;
+}
+
