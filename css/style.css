@@ -522,7 +522,6 @@ h2 {
 .main-certifications__block {
     display: flex;
     flex-direction: column;
-    padding-left: 0;
     height: 100vh;
 }
 
@@ -534,17 +533,22 @@ h2 {
     display: flex;
     padding-left: 0;
     padding-right: 0;
+    gap: 177px;
 
 }
 
 .main-contacts__left {
     display: flex;
     flex-direction: column;
-    padding-right: 177px;
+    align-self: center;
 }
 
 .main-contacts {
     padding-top: 63px;
+}
+
+.title-second {
+    padding-bottom: 34px;
 }
 
 .main-contacts__block-name {
@@ -590,19 +594,14 @@ h2 {
     margin-bottom: 112px;
     text-align: center;
     width: 222px;
-
 }
 
 .main-contacts__right {
-    margin-top: 3px;
+    padding-top: 50px;
     margin-bottom: 120px;
     display: flex;
     min-width: 50vw;
     min-height: 30vh;
-}
-
-.main-contacts__map {
-    border-right: 1px solid black;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
