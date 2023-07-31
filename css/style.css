@@ -594,9 +594,6 @@ h2 {
 }
 
 .main-contacts__right {
-    background-image: url(/assets/image/map.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-top: 3px;
     margin-bottom: 120px;
     display: flex;
