@@ -1131,6 +1131,10 @@ textarea {
         max-width: 100%;
     }
 
+    .main-contacts__contacts-block {
+        flex-direction: column;
+    }
+
     <<<<<<< HEAD
 }
 
