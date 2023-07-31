@@ -534,7 +534,8 @@ h2 {
     padding-top: 50px;
     margin-bottom: 120px;
     display: flex;
-    min-width: 50vw;
+    overflow: hidden;
+    min-width: 30vw;
     min-height: 30vh;
 }
 
@@ -888,6 +889,7 @@ textarea {
         padding-left: 30px;
         padding-right: 30px;
     }
+
     .content {
         padding-left: 40px;
     }
@@ -905,7 +907,7 @@ textarea {
     .line {
         margin: 0;
     }
-    
+
     .sectionblock {
         display: flex;
         margin-top: 30px;
@@ -926,9 +928,11 @@ textarea {
         font-size: 40px;
         padding-bottom: 30px;
     }
+
     .sectionblock_bottom {
         padding-top: 30px;
-}
+    }
+
     .topp {
         padding-left: 30px;
         padding-right: 30px;
@@ -1225,6 +1229,6 @@ textarea {
     padding-left: 100px;
 }
 
-.main-contacts__contacts-block {
+/* .main-contacts__contacts-block {
     flex-direction: column;
-}
+} */
