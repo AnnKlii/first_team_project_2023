@@ -601,6 +601,10 @@ h2 {
     min-height: 30vh;
 }
 
+.main-contacts__map {
+    border-right: 1px solid black;
+}
+
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
 
 .project {
