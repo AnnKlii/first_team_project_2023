@@ -949,6 +949,36 @@ textarea {
     .main-contacts__contacts-block {
         flex-direction: column;
     }
+
+    .topp {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .topp__title_1 {
+        padding-top: 80px;
+        font-size: 40px;
+    }
+
+    .topp__second-title_1 {
+        font-size: 40px;
+    }
+
+    .topp__top_1 {
+        flex-wrap: wrap;
+    }
+
+    .topp__center_1 {
+        justify-content: center;
+    }
+
+    .main_text_1 {
+        font-size: 18px;
+    }
+
+    .topp__end_1 {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -1067,10 +1097,48 @@ textarea {
     .footer__title {
         text-align: center;
     }
-<<<<<<< HEAD
+
+    .topp {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .topp__title_1 {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .topp__second-title_1 {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    .topp__top_1 {
+        max-width: 100%;
+    }
+
+    .topp__center_1 {
+        justify-content: center;
+        margin: 0;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_text_1 {
+        justify-content: center;
+
+    }
+
+    .topp__end_1 {
+        max-width: 100%;
+    }
+
+    <<<<<<< HEAD
 }
+
 /* ------ START page Gallery--- */
-.main_container{
+.main_container {
     display: grid;
     width: 1170px;
     padding: 100px;
@@ -1100,13 +1168,15 @@ textarea {
     line-height: 64px;
     padding-left: 100px;
 }
-.top__buttons1{
+
+.top__buttons1 {
     display: flex;
     flex-direction: row;
     padding-bottom: 80px;
     gap: 23px;
-    
+
 }
+
 .top__numbers1 {
     display: flex;
     justify-content: row;
@@ -1115,11 +1185,10 @@ textarea {
     padding-left: 100px;
 }
 
-=======
-
-    .main-contacts__contacts-block {
-        flex-direction: column;
-    }
+=======.main-contacts__contacts-block {
+    flex-direction: column;
+}
 
 }
->>>>>>> 8fe0ae8d14de3d2c3c9a7b933f75735b75e60b9a
+
+>>>>>>>8fe0ae8d14de3d2c3c9a7b933f75735b75e60b9a
