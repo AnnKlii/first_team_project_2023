@@ -430,8 +430,6 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
-    max-height: 38vh;
-}
 
 .main_text_1 {
     color: #000;
@@ -440,6 +438,7 @@ h2 {
     font-weight: 300;
     line-height: 25px;
     overflow: auto;
+    max-height: 428px;
 }
 
 .topp__end_1 {
