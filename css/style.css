@@ -407,24 +407,6 @@ h2 {
     gap: 30px;
 }
 
-.topp__title_1 {
-    color: #BDBDBD;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 64px;
-    padding-top: 63px;
-}
-
-.topp__second-title_1 {
-    padding: 0;
-    color: #333;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 64px;
-}
-
 .topp_line {
     width: 100%;
     height: 1px;
