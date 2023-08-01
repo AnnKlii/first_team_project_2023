@@ -433,6 +433,7 @@ h2 {
 .topp__center_1 {
     display: flex;
     gap: 30px;
+    overflow: hidden;
 }
 
 .main_text_1 {
