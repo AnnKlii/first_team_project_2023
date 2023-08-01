@@ -407,6 +407,10 @@ h2 {
     gap: 30px;
 }
 
+.sample-title {
+    padding-bottom: 0;
+}
+
 .topp_line {
     width: 100%;
     height: 1px;
