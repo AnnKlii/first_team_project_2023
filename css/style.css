@@ -1090,14 +1090,9 @@ textarea {
         padding-right: 5px;
     }
 
-    .topp__title_1 {
-        padding-top: 30px;
-        font-size: 30px;
-    }
-
-    .topp__second-title_1 {
-        font-size: 30px;
-        padding-bottom: 30px;
+    .topp_line {
+        margin: 0;
+        margin-bottom: 0; 
     }
 
     .topp__top_1 {
