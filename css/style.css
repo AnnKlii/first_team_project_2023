@@ -404,11 +404,11 @@ h2 {
     flex-direction: column;
     padding-top: 63px;
     padding-bottom: 60px;
-    gap: 30px;
+    
 }
 
 .sample-title {
-    padding-bottom: 0;
+    padding-bottom: 30px;
 }
 
 .topp_line {
@@ -427,6 +427,8 @@ h2 {
     display: flex;
     gap: 30px;
     overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .main_text_1 {
@@ -445,6 +447,7 @@ h2 {
     padding-top: 30px;
     width: 1170px;
     height: 435px;
+    
 }
 
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
