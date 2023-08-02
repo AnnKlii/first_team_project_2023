@@ -1209,13 +1209,19 @@ textarea {
 /* ------ START page Gallery--- */
 .main_container {
     display: grid;
-    width: 1170px;
-    padding: 100px;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 50% 50%;
-    grid-column-gap: 60px;
-    grid-row-gap: 1em;
-    padding-top: 1%;
+    padding: 130px;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    padding-top: 50px;
+}
+.container__item-item:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+.line {
+    
+    width: 1300px;
+    height: 1px;
+    padding-left: 130px;
+    
 }
 
 .top__title1 {
@@ -1225,8 +1231,8 @@ textarea {
     font-style: normal;
     font-weight: 300;
     line-height: 64px;
-    padding-top: 63px;
-    padding-left: 100px;
+    padding-top: 70px;
+    padding-left: 130px;
 }
 
 .top__second-title1 {
@@ -1235,14 +1241,14 @@ textarea {
     font-style: normal;
     font-weight: 700;
     line-height: 64px;
-    padding-left: 100px;
+    padding-left: 130px;
 }
 
 .top__buttons1 {
     display: flex;
     flex-direction: row;
-    padding-bottom: 80px;
-    gap: 23px;
+    padding-bottom: 20px;
+    
 
 }
 
@@ -1250,5 +1256,8 @@ textarea {
     display: flex;
     align-items: center;
     gap: 30px;
-    padding-left: 100px;
+    padding-left: 130px;
+    padding-bottom: 100px;
+    align-self: baseline;
+    padding-top: 21px;
 }
