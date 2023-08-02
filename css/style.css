@@ -403,7 +403,7 @@ h2 {
     flex-direction: column;
     padding-top: 63px;
     padding-bottom: 60px;
-    
+
 }
 
 .sample-title {
@@ -446,7 +446,7 @@ h2 {
     padding-top: 30px;
     width: 1170px;
     height: 435px;
-    
+
 }
 
 /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
@@ -1085,7 +1085,7 @@ textarea {
 
     .topp_line {
         margin: 0;
-        margin-bottom: 0; 
+        margin-bottom: 0;
     }
 
     .topp__top_1 {
@@ -1218,8 +1218,4 @@ textarea {
     align-items: center;
     gap: 30px;
     padding-left: 100px;
-}
-
-.main-contacts__contacts-block {
-    flex-direction: column;
 }
