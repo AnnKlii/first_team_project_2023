@@ -317,6 +317,10 @@ Our Projects Page Styles
     margin: 20px 0;
 }
 
+.line {
+    width: 100%;
+}
+
 /* Block Section */
 .section.block-section {
     padding: 0;
