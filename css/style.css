@@ -34,6 +34,7 @@ a {
 
 .header__logo:hover {
     transform: scale(1.2);
+    transition: transform .3s ease;
 }
 
 .header__nav {
@@ -115,6 +116,7 @@ a {
 
 .inside_image:hover {
     transform: scale(1.2);
+    transition: transform .3s ease;
 }
 
 .top__left {
@@ -144,6 +146,7 @@ a {
 .right_button:hover {
     color: #F9F9F9;
     transform: scale(1.2);
+    transition: transform .3s ease;
 }
 
 .button_line {
@@ -1124,82 +1127,83 @@ textarea {
         flex-direction: column;
     }
 
-/* Styles for the "Our Projects" page */
+    /* Styles for the "Our Projects" page */
 
-/* Main section styles */
-.main__ourprojects {
-    padding: 30px 5px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* Main section styles */
+    .main__ourprojects {
+        padding: 30px 5px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Content container styles */
+    .content {
+        padding-right: 30px;
+    }
+
+    /* Line separator styles */
+    .line {
+        margin: 0;
+    }
+
+    /* Block section styles */
+    .section.block-section {
+        align-items: center;
+        gap: 1px;
+    }
+
+    /* Images within section blocks */
+    .sectionblock__images img {
+        width: 100%;
+    }
+
+    /* Individual project block styles */
+    .sectionblock {
+        display: flex;
+        margin: 30px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Title and subtitle styles */
+    .main__titles,
+    .sectionblock_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 30px;
+    }
+
+    /* Font size for titles and subtitles */
+    .main__first-title,
+    .main__second-title,
+    .sectionblock__title {
+        font-size: 30px;
+    }
+
+    /* Line height for the first title */
+    .main__first-title {
+        line-height: 24px;
+    }
+
+    /* Spacing between bottom elements */
+    .sectionblock_bottom {
+        gap: 40px;
+    }
+
+    /* Text block styles */
+    .sectionblock__text {
+        padding: 30px 0;
+    }
+
+    /* Margin for images within blocks */
+    .inside_img {
+        margin: 30px 0;
+    }
 }
 
-/* Content container styles */
-.content {
-    padding-right: 30px;
-}
-
-/* Line separator styles */
-.line {
-    margin: 0;
-}
-
-/* Block section styles */
-.section.block-section {
-    align-items: center;
-    gap: 1px;
-}
-
-/* Images within section blocks */
-.sectionblock__images img {
-    width: 100%;
-}
-
-/* Individual project block styles */
-.sectionblock {
-    display: flex;
-    margin: 30px 0;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Title and subtitle styles */
-.main__titles,
-.sectionblock_bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-top: 30px;
-}
-
-/* Font size for titles and subtitles */
-.main__first-title,
-.main__second-title,
-.sectionblock__title {
-    font-size: 30px;
-}
-
-/* Line height for the first title */
-.main__first-title {
-    line-height: 24px;
-}
-
-/* Spacing between bottom elements */
-.sectionblock_bottom {
-    gap: 40px;
-}
-
-/* Text block styles */
-.sectionblock__text {
-    padding: 30px 0;
-}
-
-/* Margin for images within blocks */
-.inside_img {
-    margin: 30px 0;
-}
-}
 /* ------ START page Gallery--- */
 .main_container {
     display: grid;
