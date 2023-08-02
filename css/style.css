@@ -311,7 +311,7 @@ Our Projects Page Styles
 
 /* Section Divider */
 .grey-line {
-background-color: #F2F2F2;
+    background-color: #F2F2F2;
     height: 1px;
     border: none;
     margin: 20px 0;
@@ -885,6 +885,10 @@ textarea {
         padding-right: 30px;
     }
 
+    .footer-nav {
+        padding-left: 30px;
+    }
+
     .footer-social {
         padding-left: 30px;
     }
@@ -1143,11 +1147,11 @@ textarea {
         padding-right: 30px;
     }
 
-/* Line separator styles */
-.grey-line {
-    /* margin: 0; */
+    /* Line separator styles */
+    .grey-line {
+        /* margin: 0; */
         width: 100%;
-}
+    }
 
     /* Block section styles */
     .section.block-section {
