@@ -1214,8 +1214,9 @@ textarea {
 .main_container {
     display: grid;
     padding: 130px;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     padding-top: 50px;
+    gap: 30px;
 }
 .container__item-item:hover {
     transform: scale(1.2); /* Увеличиваем масштаб */
@@ -1229,7 +1230,6 @@ textarea {
 }
 
 .top__title1 {
-    width: 387px;
     color: #BDBDBD;
     font-size: 64px;
     font-style: normal;
