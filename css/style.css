@@ -1223,13 +1223,15 @@ textarea {
 }
 .container__item-item:hover {
     transform: scale(1.2); /* Увеличиваем масштаб */
-   }
+}
+.container__item-item{ 
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
 .line {
     
     width: 1300px;
     height: 1px;
-   
-    
 }
 
 .top__title1 {
