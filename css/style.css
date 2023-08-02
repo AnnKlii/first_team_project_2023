@@ -533,8 +533,8 @@ h2 {
     padding-top: 50px;
     margin-bottom: 120px;
     display: flex;
-    min-width: 50vw;
     min-height: 30vh;
+    overflow: hidden;
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
