@@ -1025,8 +1025,7 @@ textarea {
     }
 
     .about {
-        margin: 0;
-        margin-top: 30px;
+        margin: 30px 0 0;
         flex-direction: column;
         align-items: center;
     }
@@ -1103,7 +1102,6 @@ textarea {
 
     .topp_line {
         margin: 0;
-        margin-bottom: 0;
     }
 
     .topp__top_1 {
@@ -1112,8 +1110,7 @@ textarea {
 
     .topp__center_1 {
         justify-content: center;
-        margin: 0;
-        margin-top: 30px;
+        margin: 30px 0 0;
         flex-direction: column;
         align-items: center;
     }
