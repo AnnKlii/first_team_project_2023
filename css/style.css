@@ -282,8 +282,13 @@ h2 {
     line-height: 36px;
 }
 
-/* ----- START page Our Projects --------------------------------------------------------------------------------------------------------------------- */
+/* 
+==========================
+Our Projects Page Styles
+==========================
+*/
 
+/* Main Our Projects section */
 .main__ourprojects {
     display: flex;
     flex-direction: column;
@@ -291,22 +296,25 @@ h2 {
     padding-top: 63px;
 }
 
+/* Second-level Heading */
 .main__second-title {
-    padding-bottom: 30px;
+    padding-bottom: 0.45em;
     color: #333;
-    font-size: 64px;
+    font-size: 4em;
     font-style: normal;
     font-weight: 700;
-    line-height: 64px;
+    line-height: 1;
 }
 
+/* Section Divider */
 .line {
     width: 100%;
-    height: 1px;
+    height: 0.0625em;
     background-color: #F2F2F2;
-    margin-bottom: 29px;
+    margin-bottom: 1.8em;
 }
 
+/* Block Section */
 .section.block-section {
     padding: 0;
     display: flex;
@@ -314,22 +322,26 @@ h2 {
     gap: 60px;
 }
 
+/* Main Section Block */
 .sectionblock {
     display: flex;
     background-color: #FBFBFB;
 }
 
+/* Section Block Images */
 .sectionblock__images {
     display: flex;
     gap: 30px;
 }
 
+/* Content Section */
 .content {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
 }
 
+/* Section Block Title */
 .sectionblock__title {
     color: #BDBDBD;
     font-size: 40px;
@@ -339,17 +351,19 @@ h2 {
     padding-top: 30px;
 }
 
+/* Text Block */
 .sectionblock__text {
     color: #000;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 1.5625;
     padding-top: 73px;
     padding-right: 70px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
+/* Inside Image Button */
 .inside_img {
     font-size: 12px;
     font-style: normal;
@@ -361,41 +375,39 @@ h2 {
     padding: 30px 49px 23px 20px;
     background-color: white;
     border-color: transparent;
+    transition: transform 0.3s ease;
 }
 
+/* Inside Image Button Hover Effect */
 .inside_img:hover {
     transform: scale(1.2);
 }
 
+/* Section Block Button */
 .sectionblock_button {
     position: relative;
     border-color: transparent;
     align-self: flex-start;
     margin: 64px 248px 30px 0;
+    transition: transform 0.3s ease;
 }
 
-.sectionblock__numbers {
+/* Number and Button Blocks */
+.sectionblock__numbers,
+.sectionblock__buttons {
     display: flex;
     align-items: center;
     gap: 26px;
     background-color: transparent;
 }
 
-.sectionblock__buttons {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-    background-color: transparent;
-}
-
+/* Bottom Section Block */
 .sectionblock_bottom {
     display: flex;
     align-items: center;
     gap: 29px;
     padding-bottom: 120px;
 }
-
-/* ----- END page Our Projects------------------------------------------------------------------------------------------------------------------------ */
 
 /* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
 .topp {
@@ -1112,72 +1124,82 @@ textarea {
         flex-direction: column;
     }
 
-    .main__ourprojects {
-        padding: 0 5px;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Styles for the "Our Projects" page */
 
-    .line {
-        margin: 0;
-        margin-bottom: 0;
-    }
-
-    .section.block-section {
-        margin: 0;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .sectionblock__images img {
-        width: 100%;
-    }
-
-    .sectionblock {
-        display: flex;
-        margin-top: 30px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main__titles {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-    }
-
-    .main__first-title {
-        font-size: 30px;
-        line-height: 24px;
-    }
-
-    .main__second-title {
-        font-size: 30px;
-    }
-
-    .sectionblock_bottom {
-        padding-top: 30px;
-        padding-bottom: 60px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .sectionblock__title {
-        font-size: 30px;
-    }
-
-    .sectionblock__text {
-        padding: 30px 30px 0 0;
-    }
-
-    .inside_img {
-        margin: 35px 0 30px 0;
-    }
+/* Main section styles */
+.main__ourprojects {
+    padding: 30px 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Content container styles */
+.content {
+    padding-right: 30px;
+}
+
+/* Line separator styles */
+.line {
+    margin: 0;
+}
+
+/* Block section styles */
+.section.block-section {
+    align-items: center;
+    gap: 1px;
+}
+
+/* Images within section blocks */
+.sectionblock__images img {
+    width: 100%;
+}
+
+/* Individual project block styles */
+.sectionblock {
+    display: flex;
+    margin: 30px 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title and subtitle styles */
+.main__titles,
+.sectionblock_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+/* Font size for titles and subtitles */
+.main__first-title,
+.main__second-title,
+.sectionblock__title {
+    font-size: 30px;
+}
+
+/* Line height for the first title */
+.main__first-title {
+    line-height: 24px;
+}
+
+/* Spacing between bottom elements */
+.sectionblock_bottom {
+    gap: 40px;
+}
+
+/* Text block styles */
+.sectionblock__text {
+    padding: 30px 0;
+}
+
+/* Margin for images within blocks */
+.inside_img {
+    margin: 30px 0;
+}
+}
 /* ------ START page Gallery--- */
 .main_container {
     display: grid;
