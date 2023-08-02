@@ -1153,7 +1153,7 @@ textarea {
 
     /* Line separator styles */
     .grey-line {
-    /* margin: 0; */
+        /* margin: 0; */
         width: 100%;
     }
 
@@ -1221,15 +1221,19 @@ textarea {
     padding-top: 50px;
     gap: 30px;
 }
+
 .container__item-item:hover {
-    transform: scale(1.2); /* Увеличиваем масштаб */
+    transform: scale(1.2);
+    /* Увеличиваем масштаб */
 }
-.container__item-item{ 
+
+.container__item-item {
     cursor: -webkit-zoom-in;
-    cursor: zoom-in;пш
+    cursor: zoom-in;
 }
+
 .line {
-    
+
     width: 1300px;
     height: 1px;
 }
@@ -1241,7 +1245,7 @@ textarea {
     font-weight: 300;
     line-height: 64px;
     padding-top: 70px;
-    
+
 }
 
 .top__second-title1 {
@@ -1250,14 +1254,14 @@ textarea {
     font-style: normal;
     font-weight: 700;
     line-height: 64px;
-    
+
 }
 
 .top__buttons1 {
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
-    
+
 
 }
 
@@ -1269,6 +1273,7 @@ textarea {
     align-self: baseline;
     padding-top: 21px;
 }
-.full_container{
-    padding-left: 130px;   
+
+.full_container {
+    padding-left: 130px;
 }
