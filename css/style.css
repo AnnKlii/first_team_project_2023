@@ -1213,7 +1213,6 @@ textarea {
 /* ------ START page Gallery--- */
 .main_container {
     display: grid;
-    padding: 130px;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     padding-top: 50px;
     gap: 30px;
@@ -1225,7 +1224,7 @@ textarea {
     
     width: 1300px;
     height: 1px;
-    padding-left: 130px;
+   
     
 }
 
@@ -1236,7 +1235,7 @@ textarea {
     font-weight: 300;
     line-height: 64px;
     padding-top: 70px;
-    padding-left: 130px;
+    
 }
 
 .top__second-title1 {
@@ -1245,7 +1244,7 @@ textarea {
     font-style: normal;
     font-weight: 700;
     line-height: 64px;
-    padding-left: 130px;
+    
 }
 
 .top__buttons1 {
@@ -1260,8 +1259,10 @@ textarea {
     display: flex;
     align-items: center;
     gap: 30px;
-    padding-left: 130px;
     padding-bottom: 100px;
     align-self: baseline;
     padding-top: 21px;
+}
+.full_container{
+    padding-left: 130px;   
 }
