@@ -1144,11 +1144,11 @@ textarea {
         padding-right: 30px;
     }
 
-/* Line separator styles */
-.grey-line {
+    /* Line separator styles */
+    .grey-line {
     /* margin: 0; */
         width: 100%;
-}
+    }
 
     /* Block section styles */
     .section.block-section {
