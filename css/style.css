@@ -553,8 +553,6 @@ Our Projects Page Styles
 
 .project {
     display: grid;
-    /* grid-row: 1fr 4fr 1fr; */
-    /*что это? */
 }
 
 .project__title {
@@ -606,8 +604,6 @@ Our Projects Page Styles
 }
 
 .project__gallery img {
-    width: 100%;
-    /* не очень ясен смысл нижнего width */
     max-width: 100%;
 }
 
@@ -768,7 +764,6 @@ textarea {
 
 .footer-social__image {
     fill: #F2F2F2
-        /* здесь можно было это свойство прописать внутри самого svg */
 }
 
 .footer-social__image:hover {
