@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f04d388a-cb46-4d17-b40d-7bae6434726c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/certifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/certifications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/our_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/our_project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample_project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
-    </list>
+    <list default="true" id="f04d388a-cb46-4d17-b40d-7bae6434726c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +49,7 @@
       <workItem from="1690913875938" duration="269000" />
       <workItem from="1690978655483" duration="1143000" />
       <workItem from="1691077900210" duration="273000" />
+      <workItem from="1691102753138" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="add fix">
       <option name="closed" value="true" />
@@ -83,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691078047129</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add sass">
+      <option name="closed" value="true" />
+      <created>1691102844728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691102844728</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +92,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add fix" />
     <MESSAGE value="delete not nedded line" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete not nedded line" />
+    <MESSAGE value="add sass" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sass" />
   </component>
 </project>
