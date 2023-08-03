@@ -1212,7 +1212,6 @@ textarea {
 }
 
 .container__item-item {
-    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
