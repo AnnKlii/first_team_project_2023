@@ -269,7 +269,7 @@ a {
 
 .left_button:hover,
 .right_button:hover {
-    color: $littleWhite;
+    background-color: $littleWhite;
     transform: scale(1.2);
     transition: transform .3s ease;
 }
