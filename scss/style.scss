@@ -993,7 +993,7 @@ h2 {
 input,
 textarea {
     background-color: $middleWhite;
-    color: $lightGrey;
+    color: $darkGrey;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1003,12 +1003,22 @@ textarea {
     border: none;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: $lightGrey;
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
 input {
     padding: 15px 0 15px 21px;
     margin-bottom: 10px;
 }
 
 textarea {
+    font-family: 'Roboto', sans-serif;
     padding: 15px 0 0 21px;
 }
 
@@ -1152,7 +1162,7 @@ textarea {
     }
 
     & a:hover {
-        text-decoration: underline;
+        text-shadow: 0 0 10px $littleWhite;
     }
 
     & li {

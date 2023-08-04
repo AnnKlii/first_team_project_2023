@@ -982,7 +982,7 @@ h2 {
 input,
 textarea {
   background-color: #F2F2F2;
-  color: #BDBDBD;
+  color: #333;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -992,12 +992,30 @@ textarea {
   border: none;
 }
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #BDBDBD;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #BDBDBD;
+}
+
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
 input {
   padding: 15px 0 15px 21px;
   margin-bottom: 10px;
 }
 
 textarea {
+  font-family: "Roboto", sans-serif;
   padding: 15px 0 0 21px;
 }
 
@@ -1130,7 +1148,7 @@ textarea {
   color: #fff;
 }
 .footer a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 10px #FBFBFB;
 }
 .footer li {
   list-style-type: none;
