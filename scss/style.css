@@ -186,7 +186,6 @@ a {
   .top__title {
     line-height: 32px;
     font-size: 40px;
-    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -204,6 +203,11 @@ a {
 @media screen and (max-width: 767px) {
   .top__numbers {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .top {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 767px) {
