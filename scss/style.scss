@@ -644,7 +644,6 @@ h2 {
     }
 }
 
-/* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
 .topp {
     @include flexible();
     @include columnStyle();
@@ -741,10 +740,6 @@ h2 {
     }
 }
 
-/* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
-
-/* ------ START page CERTIFICATIONS and CONTACTS--- */
-
 .main-certifications {
     padding-top: 63px;
 
@@ -839,8 +834,6 @@ h2 {
     }
 }
 
-/* -----------END page CERTIFICATIONS and CONTACTS-- */
-
 .project {
     display: grid;
 
@@ -930,7 +923,6 @@ h2 {
         }
     }
 }
-
 .button {
     background-color: $darkGrey;
     color: $white;
@@ -1197,7 +1189,6 @@ textarea {
     }
 }
 
-/* ------ START page Gallery--- */
 .main_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -1248,5 +1239,4 @@ textarea {
 
 .full_container {
     padding-left: 130px;
-
 }
