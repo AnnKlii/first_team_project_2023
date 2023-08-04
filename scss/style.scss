@@ -129,7 +129,7 @@ a {
 .nav_link {
     border-top: 1px solid $darkGrey;
     border-bottom: 1px solid $darkGrey;
-    padding: 5px 11px;
+    padding: 5px 6px;
 }
 
 .after_hover:hover {
@@ -644,7 +644,6 @@ h2 {
     }
 }
 
-/* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
 .topp {
     @include flexible();
     @include columnStyle();
@@ -741,10 +740,6 @@ h2 {
     }
 }
 
-/* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
-
-/* ------ START page CERTIFICATIONS and CONTACTS--- */
-
 .main-certifications {
     padding-top: 63px;
 
@@ -838,8 +833,6 @@ h2 {
         margin-bottom: 0;
     }
 }
-
-/* -----------END page CERTIFICATIONS and CONTACTS-- */
 
 .project {
     display: grid;
@@ -1207,7 +1200,6 @@ textarea {
     }
 }
 
-/* ------ START page Gallery--- */
 .main_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -1258,5 +1250,5 @@ textarea {
 
 .full_container {
     padding-left: 130px;
-
+    margin-right: 130px;
 }
