@@ -249,6 +249,7 @@ a {
   background-color: #FBFBFB;
   transform: scale(1.2);
   transition: transform 0.3s ease;
+  border-color: #2C2C2C;
 }
 
 .button_line {
