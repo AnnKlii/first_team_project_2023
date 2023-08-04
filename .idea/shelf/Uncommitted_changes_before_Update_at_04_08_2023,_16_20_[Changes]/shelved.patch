@@ -1,0 +1,2451 @@
+Index: scss/style.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>$darkGrey: #333;\n$middleWhite: #F2F2F2;\n$littleWhite: #FBFBFB;\n$lightGrey: #BDBDBD;\n$black: #000;\n$white: #fff;\n$middleGrey: #2C2C2C;\n\n@mixin flexible {\n    display: flex;\n}\n\n@mixin backStyle {\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n@mixin twelveFont {\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n}\n\n@mixin bigFont {\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n}\n\n@mixin smallFont {\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n}\n\n@mixin columnStyle {\n    flex-direction: column;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nbody {\n    font-family: 'Roboto', sans-serif;\n    min-width: 320px;\n}\n\na {\n    text-decoration: none;\n    color: $darkGrey;\n    cursor: pointer;\n}\n\n.container {\n    padding-left: 135px;\n    padding-right: 135px;\n    margin: 0 auto;\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        padding-left: 30px;\n        padding-right: 30px;\n    }\n\n    @media screen and (max-width:767px) {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.header {\n    @include flexible();\n    margin-top: 29px;\n    justify-content: space-between;\n\n    &__logo {\n        @include flexible();\n        @include columnStyle();\n\n        &:hover {\n            transform: scale(1.2);\n            transition: transform .3s ease;\n        }\n    }\n\n    &__nav {\n        @include flexible();\n        gap: 60px;\n        flex-wrap: wrap;\n        align-items: center;\n\n        @media screen and (max-width:767px) {\n            gap: 20px;\n        }\n    }\n\n    &__link {\n        text-decoration: none;\n        color: $darkGrey;\n    }\n\n    &__list {\n        list-style-type: none;\n        @include twelveFont();\n        cursor: pointer;\n\n        @media screen and (max-width: 767px) {\n            font-size: 10px;\n            font-weight: 300;\n        }\n    }\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        @include columnStyle();\n        gap: 20px;\n    }\n\n    @media screen and (max-width:767px) {\n        gap: 10px;\n    }\n}\n\n.nav_link {\n    border-top: 1px solid $darkGrey;\n    border-bottom: 1px solid $darkGrey;\n    padding: 5px 15px;\n}\n\n.after_hover:hover {\n    border-top: 1px solid $darkGrey;\n    border-bottom: 1px solid $darkGrey;\n    padding: 5px 15px;\n}\n\n.top {\n    @include flexible();\n    justify-content: space-between;\n\n    &__right {\n        background-image: url(../assets/image/header.png);\n        @include backStyle();\n        @include flexible();\n        justify-content: flex-start;\n        width: 100%;\n        margin-top: 43px;\n        align-items: flex-end;\n\n        @media screen and (max-width:767px) {\n            margin: 0;\n        }\n    }\n\n    &__right-change {\n        background-image: url(../assets/image/header_change.jpg);\n        @include backStyle();\n        @include flexible();\n        justify-content: flex-start;\n        margin-top: 43px;\n        align-items: flex-end;\n    }\n\n    &__left {\n        @include flexible();\n        @include columnStyle();\n    }\n\n    &__buttons {\n        @include flexible();\n        padding-bottom: 90px;\n\n        @media screen and (max-width:767px) {\n            display: none;\n        }\n    }\n\n    &__titles {\n        padding-top: 365px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-top: 80px;\n        }\n\n        @media screen and (max-width:767px) {\n            padding-top: 30px;\n        }\n    }\n\n    &__second-title {\n        padding-bottom: 90px;\n        @include bigFont();\n        font-weight: 700;\n        color: $darkGrey;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            font-size: 40px;\n        }\n\n        @media screen and (max-width:767px) {\n            font-size: 30px;\n            padding-bottom: 30px;\n        }\n    }\n\n    &__title {\n        color: $lightGrey;\n        @include bigFont();\n        font-weight: 300;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            line-height: 32px;\n            font-size: 40px;\n        }\n\n        @media screen and (max-width:767px) {\n            font-size: 30px;\n            line-height: 24px;\n        }\n    }\n\n    &__numbers {\n        @include flexible();\n        justify-content: flex-start;\n        align-items: center;\n        gap: 30px;\n\n        @media screen and (max-width:767px) {\n            display: none;\n        }\n    }\n\n    @media screen and (max-width:767px) {\n        gap: 5px;\n        flex-wrap: wrap;\n        @include columnStyle();\n        align-items: center;\n    }\n}\n\n.inside_image {\n    @include twelveFont();\n    color: $darkGrey;\n    padding: 30px 49px 23px 20px;\n    background-color: $white;\n    border-color: transparent;\n\n    &:hover {\n        transform: scale(1.2);\n        transition: transform .3s ease;\n    }\n}\n\n.left_button,\n.right_button {\n    width: 53px;\n    height: 53px;\n    border: 1px solid $middleWhite;\n    background: $middleWhite;\n    cursor: pointer;\n}\n\n.left_button {\n    margin-right: 23px;\n}\n\n.left_button:hover,\n.right_button:hover {\n    color: $littleWhite;\n    transform: scale(1.2);\n    transition: transform .3s ease;\n}\n\n.button_line {\n    max-width: 271px;\n    height: 1px;\n    align-self: center;\n}\n\n.about {\n    margin: 120px 135px;\n    background-color: $littleWhite;\n    @include flexible();\n    gap: 30px;\n    padding: 0;\n\n    &__left {\n        @include flexible();\n        gap: 30px;\n        padding-top: 30px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            flex-wrap: wrap;\n        }\n\n        @media screen and (max-width:767px) {\n            @include columnStyle();\n        }\n    }\n\n    &__right {\n        padding: 30px 70px 30px 30px;\n        @include flexible();\n        @include columnStyle();\n        gap: 20px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            justify-content: center;\n        }\n    }\n\n    &__title {\n        color: $lightGrey;\n        @include bigFont();\n        font-weight: 300;\n    }\n\n    &__text {\n        color: $black;\n        @include smallFont();\n        line-height: 25px;\n    }\n\n    &_button {\n        position: relative;\n        border-color: transparent;\n        align-self: flex-start;\n    }\n\n    &_bottom {\n        margin-bottom: -20px;\n    }\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        margin: 0;\n        padding-top: 30px;\n    }\n\n    @media screen and (max-width:767px) {\n        margin: 30px 0 0;\n        @include columnStyle();\n        align-items: center;\n    }\n}\n\nh2 {\n    color: $lightGrey;\n    @include bigFont();\n    font-weight: 300;\n}\n\n.right_image {\n    align-self: center;\n}\n\n.left_images {\n    @include flexible();\n    @include columnStyle();\n    justify-content: center;\n    gap: 30px;\n}\n\n.main {\n    padding-top: 120px;\n    @include flexible();\n    @include columnStyle();\n    gap: 60px;\n\n    &__title {\n        color: $lightGrey;\n        @include bigFont();\n        font-weight: 300;\n\n        @media screen and (max-width:767px) {\n            word-break: break-word;\n            font-size: 54px;\n        }\n    }\n\n    &__first-title {\n        @media screen and (max-width:767px) {\n            line-height: 24px;\n            font-size: 30px;\n        }\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            font-size: 54px;\n        }\n    }\n\n    &__second-title {\n        @media screen and (max-width:767px) {\n            font-size: 30px;\n        }\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            font-size: 54px;\n        }\n    }\n\n    &__titles {\n        @media screen and (max-width:767px) {\n            @include flexible();\n            @include columnStyle();\n            align-items: center;\n            gap: 10px;\n            padding-top: 30px;\n        }\n    }\n\n    &__blocks,\n    &__left,\n    &__right {\n        @include flexible();\n    }\n\n    &__blocks {\n        gap: 187px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            gap: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            @include columnStyle();\n        }\n    }\n\n    &__left,\n    &__right {\n        gap: 30px;\n        align-items: center;\n    }\n\n    &__blocks {\n        padding-bottom: 120px;\n\n        &-text {\n            color: $darkGrey;\n            font-size: 22px;\n            font-style: normal;\n            font-weight: 400;\n            line-height: 36px;\n\n            @media screen and (min-width:768px) and (max-width: 1024px) {\n                font-size: 18px;\n            }\n        }\n    }\n\n    &__ourprojects {\n        @include flexible();\n        @include columnStyle();\n        align-items: flex-start;\n        padding-top: 63px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-left: 30px;\n            padding-right: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            padding: 30px 5px 0;\n            @include flexible();\n            @include columnStyle();\n            align-items: center;\n        }\n    }\n\n    &__second-title {\n        padding-bottom: 0.45em;\n        color: $darkGrey;\n        font-size: 4em;\n        font-style: normal;\n        font-weight: 700;\n        line-height: 1;\n    }\n\n    @media screen and (max-width:767px) {\n        padding-top: 30px;\n    }\n}\n\n.grey-line {\n    width: 100%;\n    height: 1px;\n    background: $middleWhite;\n    margin-bottom: 29px;\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        width: 100%;\n        margin: 0;\n    }\n\n    @media screen and (max-width:767px) {\n        margin: 0;\n        width: 100%;\n    }\n}\n\n.section.block-section {\n    padding: 0;\n    @include flexible();\n    @include columnStyle();\n    gap: 60px;\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        margin: 0;\n        align-items: center;\n        gap: 30px;\n    }\n\n    @media screen and (max-width:767px) {\n        align-items: center;\n        gap: 1px;\n    }\n}\n\n.sectionblock {\n    @include flexible();\n    background-color: $littleWhite;\n\n    &__images {\n        @include flexible();\n        gap: 30px;\n\n        & img {\n            @media screen and (min-width:768px) and (max-width: 1024px) {\n                width: 100%;\n            }\n\n            @media screen and (max-width:767px) {\n                width: 100%;\n            }\n        }\n    }\n\n    &__title {\n        color: $lightGrey;\n        font-size: 40px;\n        font-style: normal;\n        font-weight: 300;\n        line-height: normal;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            font-size: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            font-size: 30px;\n        }\n    }\n\n    &__text {\n        color: $black;\n        @include smallFont();\n        line-height: 1.5625;\n        padding-bottom: 0;\n    }\n\n    &__numbers,\n    &__buttons {\n        @include flexible();\n        align-items: center;\n        gap: 26px;\n        background-color: transparent;\n    }\n\n    &_button {\n        position: relative;\n        border-color: transparent;\n        align-self: flex-start;\n        transition: transform 0.3s ease;\n    }\n\n    &_bottom {\n        @include flexible();\n        align-items: center;\n        gap: 29px;\n        padding-bottom: 120px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-top: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            gap: 40px;\n            @include flexible();\n            @include columnStyle();\n            align-items: center;\n            gap: 10px;\n            padding-top: 30px;\n        }\n    }\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        @include flexible();\n        margin-top: 30px;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    @media screen and (max-width:767px) {\n        @include flexible();\n        margin: 30px 0;\n        @include columnStyle();\n        align-items: center;\n    }\n}\n\n.content {\n    @include flexible();\n    @include columnStyle();\n    gap: 70px;\n    padding: 30px 70px 30px 30px;\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        gap: 20px;\n        padding: 30px 70px 20px 30px;\n    }\n\n    @media screen and (max-width:767px) {\n        padding-right: 30px;\n        gap: 40px;\n    }\n}\n\n.inside_img {\n    @include twelveFont();\n    color: $darkGrey;\n    padding: 30px 49px 23px 20px;\n    background-color: $white;\n    border-color: transparent;\n    transition: transform 0.3s ease;\n\n    &:hover {\n        transform: scale(1.2);\n    }\n}\n\n/* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */\n.topp {\n    @include flexible();\n    @include columnStyle();\n    padding-top: 63px;\n    padding-bottom: 60px;\n\n    &_line {\n        width: 100%;\n        height: 1px;\n        background: $middleWhite;\n        margin-bottom: 29px;\n\n        @media screen and (max-width:767px) {\n            width: 100%;\n        }\n    }\n\n    &__top_1 {\n        display: contents;\n        padding-top: 60px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            flex-wrap: wrap;\n        }\n\n        @media screen and (max-width:767px) {\n            max-width: 100%;\n        }\n    }\n\n    &__center_1 {\n        @include flexible();\n        gap: 30px;\n        overflow: hidden;\n        padding-top: 30px;\n        padding-bottom: 30px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            justify-content: center;\n        }\n\n        @media screen and (max-width:767px) {\n            justify-content: center;\n            margin: 30px 0 0;\n            @include columnStyle();\n            align-items: center;\n        }\n    }\n\n    &__end_1 {\n        display: contents;\n        gap: 30px;\n        padding-top: 30px;\n        max-width: 1170px;\n        height: 435px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            flex-wrap: wrap;\n        }\n\n        @media screen and (max-width:767px) {\n            max-width: 100%;\n        }\n    }\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        padding-left: 30px;\n        padding-right: 30px;\n    }\n\n    @media screen and (max-width:767px) {\n        padding-left: 5px;\n        padding-right: 5px;\n    }\n}\n\n.sample-title {\n    padding-bottom: 30px;\n}\n\n.main_text_1 {\n    color: $black;\n    @include smallFont();\n    line-height: 25px;\n    overflow: auto;\n    max-height: 428px;\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        font-size: 18px;\n    }\n\n    @media screen and (max-width:767px) {\n        justify-content: center;\n    }\n}\n\n/* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */\n\n/* ------ START page CERTIFICATIONS and CONTACTS--- */\n\n.main-certifications {\n    padding-top: 63px;\n\n    &__block {\n        @include flexible();\n        @include columnStyle();\n        height: 100vh;\n    }\n}\n\n.main-contacts {\n    padding-top: 63px;\n\n    &__contacts-block {\n        @include flexible();\n        padding-left: 0;\n        padding-right: 0;\n        gap: 177px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            @include columnStyle();\n        }\n\n        @media screen and (max-width:767px) {\n            @include columnStyle();\n        }\n    }\n\n    &__left {\n        @include flexible();\n        @include columnStyle();\n        align-self: center;\n    }\n\n    &__block-name {\n        padding-top: 34px;\n    }\n\n    &__name {\n        color: $darkGrey;\n        font-size: 18px;\n        font-style: normal;\n        font-weight: 700;\n        line-height: normal;\n    }\n\n    &__address {\n        color: $darkGrey;\n        @include smallFont();\n        line-height: 141%;\n    }\n\n    &__tel {\n        color: $darkGrey;\n        font-size: 18px;\n        font-style: normal;\n        font-weight: 700;\n        line-height: normal;\n        padding-top: 44px;\n    }\n\n    &__mail {\n        color: $darkGrey;\n        @include smallFont();\n        line-height: normal;\n        padding-top: 53px;\n        margin-bottom: 33px;\n    }\n\n    &__right {\n        padding-top: 50px;\n        margin-bottom: 120px;\n        @include flexible();\n        min-height: 30vh;\n        overflow: hidden;\n    }\n}\n\n.title-second {\n    padding-bottom: 34px;\n}\n\n.contact-us {\n    margin-bottom: 112px;\n    text-align: center;\n    width: 222px;\n}\n\n/* -----------END page CERTIFICATIONS and CONTACTS-- */\n\n.project {\n    display: grid;\n\n    &__title {\n        padding-bottom: 60px;\n    }\n\n    &__cover-title {\n        color: $white;\n        font-size: 64px;\n        font-style: normal;\n        font-weight: 700;\n        line-height: 64px;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            font-size: 48px;\n        }\n\n        @media screen and (max-width:767px) {\n            font-size: 36px;\n            padding-top: 20px;\n        }\n    }\n\n    &__cover {\n        background-image: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);\n        background-size: cover;\n        background-repeat: no-repeat;\n        grid-column: 1/span 6;\n        @include flexible();\n        @include columnStyle();\n        justify-content: center;\n        padding-left: 79px;\n    }\n\n    &__cover-button {\n        color: $white;\n        background-color: transparent;\n        @include twelveFont();\n        padding-top: 14px;\n    }\n\n    &__cover-button::after {\n        content: url(../assets/image/ico-shape.svg);\n        padding-right: 20px;\n    }\n\n    &__gallery {\n        display: grid;\n        gap: 30px;\n        grid-template-columns: repeat(12, 1fr);\n        grid-template-rows: 1fr 1fr;\n        margin-bottom: 30px;\n\n        @media screen and (max-width: 767px) {\n            @include flexible();\n            @include columnStyle();\n        }\n    }\n\n    &__gallery img {\n        width: 100%;\n    }\n\n    &__gallery div:nth-child(2) {\n        grid-column: 7/13;\n    }\n\n    &__gallery div:nth-child(3) {\n        grid-column: 1/span 3;\n    }\n\n    &__gallery div:nth-child(4) {\n        grid-column: 4/span 5;\n    }\n\n    &__gallery div:last-child {\n        grid-column: 9/ 13;\n    }\n\n    &__button {\n        justify-self: end;\n\n        &::after {\n            content: url(../assets/image/ico-shape.svg);\n            padding-left: 10px;\n        }\n    }\n}\n\n.button {\n    background-color: $darkGrey;\n    color: $white;\n    @include twelveFont();\n    padding: 30px 39px;\n    border: none;\n\n    &:hover {\n        background-color: $lightGrey;\n    }\n}\n\n.contacts {\n    display: grid;\n    grid-template-columns: 1fr 2fr;\n    grid-template-rows: 1fr;\n    gap: 30px;\n    padding-top: 120px;\n    padding-bottom: 120px;\n\n    &__title {\n        grid-column: 1/3;\n        grid-row: 1/2;\n        padding-bottom: 22px;\n    }\n\n    &__form {\n        grid-column: 1/2;\n        grid-row: 2/3;\n    }\n\n    &__image {\n        grid-column: 2/3;\n        grid-row: 2/3;\n        width: 100%;\n        max-width: 100%;\n\n        @media screen and (max-width: 767px) {\n            display: none;\n        }\n    }\n\n    &__button {\n        width: 222px;\n        height: 71px;\n        cursor: pointer;\n\n        &::after {\n            content: url(../assets/image/ico-shape.svg);\n            padding-left: 10px;\n        }\n    }\n\n    @media screen and (max-width: 767px) {\n        @include flexible();\n        @include columnStyle();\n    }\n}\n\ninput,\ntextarea {\n    background-color: $middleWhite;\n    color: $lightGrey;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    letter-spacing: 0.56px;\n    width: 100%;\n    border: none;\n}\n\ninput {\n    padding: 15px 0 15px 21px;\n    margin-bottom: 10px;\n}\n\ntextarea {\n    padding: 15px 0 0 21px;\n}\n\n.contacts__button {\n    margin-top: 30px;\n}\n\n.footer {\n    background-color: $middleGrey;\n    color: $white;\n    display: grid;\n    grid-template-columns: 2fr 3fr 4fr 3fr;\n    grid-template-rows: 3fr 1fr;\n    padding-top: 58px;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 500;\n    line-height: 24px;\n    letter-spacing: 0.42px;\n    overflow: hidden;\n\n    &__title {\n        font-size: 16px;\n        font-style: normal;\n        font-weight: 700;\n        line-height: normal;\n        padding-bottom: 25px;\n\n        @media screen and (max-width:767px) {\n            text-align: center;\n        }\n    }\n\n    &__logo {\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-right: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            display: none;\n        }\n\n        &:hover {\n            padding: 10px;\n            border: 2px solid $white;\n        }\n    }\n\n    &-nav {\n        padding-left: 70px;\n\n        &__item {\n            padding-bottom: 16px;\n\n            &:last-child {\n                padding-bottom: 60px;\n            }\n        }\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-left: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            padding: 0;\n            text-align: center;\n        }\n    }\n\n    &-social {\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            padding-left: 30px;\n        }\n\n        @media screen and (max-width:767px) {\n            padding-top: 60px;\n            text-align: center;\n        }\n\n        &__item {\n            margin-right: 40px;\n        }\n\n        &__list {\n            display: grid;\n            grid-template-columns: repeat(4, 1fr);\n            grid-template-rows: 1fr;\n\n            @media screen and (min-width:768px) and (max-width: 1024px) {\n                @include flexible();\n                @include columnStyle();\n                gap: 15px;\n                align-items: flex-start;\n            }\n\n            @media screen and (max-width:767px) {\n                padding-bottom: 30px;\n            }\n        }\n\n        &__image {\n            fill: $middleWhite;\n\n            &:hover {\n                fill: $lightGrey;\n            }\n        }\n    }\n\n    &-contacts {\n        @media screen and (max-width:767px) {\n            text-align: center;\n        }\n    }\n\n    &-contacts__address {\n        font-style: normal;\n    }\n\n    &-contacts__address div::before {\n        content: url(../assets/image/point.svg);\n        padding-right: 19px;\n    }\n\n    &-contacts__address p {\n        padding-left: 33px;\n    }\n\n    &-contacts__phone::before {\n        content: url(../assets/image/phone.svg);\n        padding-right: 14px;\n    }\n\n    &-contacts__mail::before {\n        content: url(../assets/image/mail.svg);\n        padding-right: 14px;\n    }\n\n    & a {\n        color: $white;\n    }\n\n    & a:hover {\n        text-decoration: underline;\n    }\n\n    & li {\n        list-style-type: none;\n    }\n\n    &__copy {\n        color: rgba(200, 200, 200, 0.50);\n        font-family: Open Sans;\n        font-size: 12px;\n        font-style: normal;\n        font-weight: 400;\n        line-height: 22px;\n        grid-column: span 4;\n        @include flexible();\n        justify-content: center;\n        align-items: center;\n        padding: 24px 0;\n        border-top: 1px solid rgba(255, 255, 255, 0.1);\n        margin: 0 -8.4rem;\n\n        @media screen and (min-width:768px) and (max-width: 1024px) {\n            margin: 0 -30px;\n        }\n    }\n\n    &-contacts__address div,\n    &-contacts__address {\n        padding-bottom: 32px;\n    }\n\n    @media screen and (min-width:768px) and (max-width: 1024px) {\n        display: grid;\n        grid-template-columns: repeat(4, 1fr);\n    }\n\n    @media screen and (max-width:767px) {\n        @include flexible();\n        @include columnStyle();\n        align-items: stretch;\n        padding-left: 30px;\n    }\n}\n\n/* ------ START page Gallery--- */\n.main_container {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));\n    padding-top: 50px;\n    gap: 30px;\n}\n\n\n\n.container__item-item {\n    cursor: zoom-in;\n\n    &:hover {\n        transform: scale(1.2);\n    }\n}\n\n.line {\n    max-width: 1300px;\n    height: 1px;\n}\n\n.top__title1 {\n    color: $lightGrey;\n    font-size: 64px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 64px;\n    padding-top: 70px;\n\n}\n\n.top__second-title1 {\n    color: $black;\n    font-size: 64px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 64px;\n}\n\n.top__buttons1 {\n    @include flexible();\n    flex-direction: row;\n    padding-bottom: 20px;\n}\n\n.top__numbers1 {\n    @include flexible();\n    align-items: center;\n    gap: 30px;\n    padding-bottom: 100px;\n    align-self: baseline;\n    padding-top: 21px;\n}\n\n.full_container {\n    padding-left: 130px;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scss/style.scss b/scss/style.scss
+--- a/scss/style.scss	(revision 4ab30219f6bb8ee70b8fd1ea8c8c0b2daed803f7)
++++ b/scss/style.scss	(date 1691150622047)
+@@ -1197,8 +1197,6 @@
+     gap: 30px;
+ }
+ 
+-
+-
+ .container__item-item {
+     cursor: zoom-in;
+ 
+@@ -1214,20 +1212,15 @@
+ 
+ .top__title1 {
+     color: $lightGrey;
+-    font-size: 64px;
+-    font-style: normal;
++    @include bigFont();
+     font-weight: 300;
+-    line-height: 64px;
+     padding-top: 70px;
+-
+ }
+ 
+ .top__second-title1 {
+     color: $black;
+-    font-size: 64px;
+-    font-style: normal;
++    @include bigFont();
+     font-weight: 700;
+-    line-height: 64px;
+ }
+ 
+ .top__buttons1 {
+Index: scss/style.css.map
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\"version\":3,\"sources\":[\"style.scss\",\"style.css\"],\"names\":[],\"mappings\":\"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\",\"file\":\"style.css\"}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scss/style.css.map b/scss/style.css.map
+--- a/scss/style.css.map	(revision 4ab30219f6bb8ee70b8fd1ea8c8c0b2daed803f7)
++++ b/scss/style.css.map	(date 1691150622225)
+@@ -1,1 +1,1 @@
+-{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"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","file":"style.css"}
+\ No newline at end of file
++{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"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","file":"style.css"}
+\ No newline at end of file
+Index: scss/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  \n  body {\n    font-family: \"Roboto\", sans-serif;\n    min-width: 320px;\n  }\n  \n  a {\n    text-decoration: none;\n    color: #333;\n    cursor: pointer;\n  }\n  \n  .container {\n    padding-left: 135px;\n    padding-right: 135px;\n    margin: 0 auto;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .container {\n      padding-left: 30px;\n      padding-right: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .container {\n      padding-left: 5px;\n      padding-right: 5px;\n    }\n  }\n  \n  .header {\n    display: flex;\n    margin-top: 29px;\n    justify-content: space-between;\n  }\n  .header__logo {\n    display: flex;\n    flex-direction: column;\n  }\n  .header__logo:hover {\n    transform: scale(1.2);\n    transition: transform 0.3s ease;\n  }\n  .header__nav {\n    display: flex;\n    gap: 60px;\n    flex-wrap: wrap;\n    align-items: center;\n  }\n  @media screen and (max-width: 767px) {\n    .header__nav {\n      gap: 20px;\n    }\n  }\n  .header__link {\n    text-decoration: none;\n    color: #333;\n  }\n  .header__list {\n    list-style-type: none;\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n    cursor: pointer;\n  }\n  @media screen and (max-width: 767px) {\n    .header__list {\n      font-size: 10px;\n      font-weight: 300;\n    }\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .header {\n      flex-direction: column;\n      gap: 20px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .header {\n      gap: 10px;\n    }\n  }\n  \n  .nav_link {\n    border-top: 1px solid #333;\n    border-bottom: 1px solid #333;\n    padding: 5px 15px;\n  }\n  \n  .after_hover:hover {\n    border-top: 1px solid #333;\n    border-bottom: 1px solid #333;\n    padding: 5px 15px;\n  }\n  \n  .top {\n    display: flex;\n    justify-content: space-between;\n  }\n  .top__right {\n    background-image: url(../assets/image/header.png);\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    display: flex;\n    justify-content: flex-start;\n    width: 100%;\n    margin-top: 43px;\n    align-items: flex-end;\n  }\n  @media screen and (max-width: 767px) {\n    .top__right {\n      margin: 0;\n    }\n  }\n  .top__right-change {\n    background-image: url(../assets/image/header_change.jpg);\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    display: flex;\n    justify-content: flex-start;\n    margin-top: 43px;\n    align-items: flex-end;\n  }\n  .top__left {\n    display: flex;\n    flex-direction: column;\n  }\n  .top__buttons {\n    display: flex;\n    padding-bottom: 90px;\n  }\n  @media screen and (max-width: 767px) {\n    .top__buttons {\n      display: none;\n    }\n  }\n  .top__titles {\n    padding-top: 365px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .top__titles {\n      padding-top: 80px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .top__titles {\n      padding-top: 30px;\n    }\n  }\n  .top__second-title {\n    padding-bottom: 90px;\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n    font-weight: 700;\n    color: #333;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .top__second-title {\n      font-size: 40px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .top__second-title {\n      font-size: 30px;\n      padding-bottom: 30px;\n    }\n  }\n  .top__title {\n    color: #BDBDBD;\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n    font-weight: 300;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .top__title {\n      line-height: 32px;\n      font-size: 40px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .top__title {\n      font-size: 30px;\n      line-height: 24px;\n    }\n  }\n  .top__numbers {\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    gap: 30px;\n  }\n  @media screen and (max-width: 767px) {\n    .top__numbers {\n      display: none;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .top {\n      gap: 5px;\n      flex-wrap: wrap;\n      flex-direction: column;\n      align-items: center;\n    }\n  }\n  \n  .inside_image {\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n    color: #333;\n    padding: 30px 49px 23px 20px;\n    background-color: #fff;\n    border-color: transparent;\n  }\n  .inside_image:hover {\n    transform: scale(1.2);\n    transition: transform 0.3s ease;\n  }\n  \n  .left_button,\n  .right_button {\n    width: 53px;\n    height: 53px;\n    border: 1px solid #F2F2F2;\n    background: #F2F2F2;\n    cursor: pointer;\n  }\n  \n  .left_button {\n    margin-right: 23px;\n  }\n  \n  .left_button:hover,\n  .right_button:hover {\n    color: #FBFBFB;\n    transform: scale(1.2);\n    transition: transform 0.3s ease;\n  }\n  \n  .button_line {\n    max-width: 271px;\n    height: 1px;\n    align-self: center;\n  }\n  \n  .about {\n    margin: 120px 135px;\n    background-color: #FBFBFB;\n    display: flex;\n    gap: 30px;\n    padding: 0;\n  }\n  .about__left {\n    display: flex;\n    gap: 30px;\n    padding-top: 30px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .about__left {\n    flex-wrap: wrap;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .about__left {\n      flex-direction: column;\n    }\n}\n.about__right {\n    padding: 30px 70px 30px 30px;\n    display: flex;\n    flex-direction: column;\n    gap: 20px;\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .about__right {\n    justify-content: center;\n    }\n}\n.about__title {\n    color: #BDBDBD;\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n    font-weight: 300;\n}\n.about__text {\n    color: #000;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 25px;\n}\n.about_button {\n    position: relative;\n    border-color: transparent;\n    align-self: flex-start;\n}\n.about_bottom {\n    margin-bottom: -20px;\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .about {\n    margin: 0;\n    padding-top: 30px;\n    }\n}\n@media screen and (max-width: 767px) {\n    .about {\n    margin: 30px 0 0;\n    flex-direction: column;\n    align-items: center;\n    }\n}\n\nh2 {\n    color: #BDBDBD;\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n    font-weight: 300;\n  }\n  \n  .right_image {\n    align-self: center;\n}\n\n.left_images {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    gap: 30px;\n}\n\n.main {\n    padding-top: 120px;\n    display: flex;\n    flex-direction: column;\n    gap: 60px;\n}\n.main__title {\n    color: #BDBDBD;\n    font-size: 64px;\n    font-style: normal;\n    line-height: 64px;\n    font-weight: 300;\n}\n@media screen and (max-width: 767px) {\n    .main__title {\n    word-break: break-word;\n    font-size: 54px;\n    }\n}\n@media screen and (max-width: 767px) {\n    .main__first-title {\n    line-height: 24px;\n    font-size: 30px;\n    }\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main__first-title {\n    font-size: 54px;\n    }\n}\n\n@media screen and (max-width: 767px) {  \n    .main__second-title {\n      font-size: 30px;   /* Не работает, но свойтсва верные */\n    }\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main__second-title {\n      font-size: 54px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .main__titles {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 10px;\n      padding-top: 30px;\n    }\n  }\n  .main__blocks, .main__left, .main__right {\n    display: flex;\n  }\n  .main__blocks {\n    gap: 187px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main__blocks {\n      gap: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .main__blocks {\n      flex-direction: column;\n    }\n  }\n  .main__left, .main__right {\n    gap: 30px;\n    align-items: center;\n  }\n  .main__blocks {\n    padding-bottom: 120px;\n  }\n  .main__blocks-text {\n    color: #333;\n    font-size: 22px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 36px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main__blocks-text {\n      font-size: 18px;\n    }\n  }\n  .main__ourprojects {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    padding-top: 63px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main__ourprojects {\n      padding-left: 30px;\n      padding-right: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .main__ourprojects {\n      padding: 30px 5px 0;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n    }\n  }\n  .main__second-title {\n    padding-bottom: 0.45em;\n    color: #333;\n    font-size: 4em;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 1;\n  }\n  @media screen and (max-width: 767px) {\n    .main {\n      padding-top: 30px;\n    }\n  }\n  \n  .grey-line {\n    width: 100%;\n    height: 1px;\n    background: #F2F2F2;\n    margin-bottom: 29px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .grey-line {\n      width: 100%;\n      margin: 0;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .grey-line {\n      margin: 0;\n      width: 100%;\n    }\n    .sectionblock {\n      width: 100%;\n      grid-template-columns: 1fr;\n    }\n  }\n  \n  .section.block-section {\n    padding: 0;\n    display: flex;\n    flex-direction: column;\n    gap: 60px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .section.block-section {\n      margin: 0;\n      align-items: center;\n      gap: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .section.block-section {\n      align-items: center;\n      gap: 1px;\n    }\n  }\n  \n  .sectionblock {\n    display: grid;\n    background-color: #FBFBFB;\n    grid-template-columns: repeat(2, 1fr);\n  }\n  .sectionblock__images img {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n  }\n  .sectionblock__images {\n    display: flex;\n    gap: 30px;\n    overflow: hidden;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .sectionblock__images img {\n      width: 100%;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .sectionblock__images img {\n      width: 100%;\n    }\n  }\n  .sectionblock__title {\n    color: #BDBDBD;\n    font-size: 40px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .sectionblock__title {\n      font-size: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .sectionblock__title {\n      font-size: 30px;\n    }\n}\n.sectionblock__text {\n    color: #000;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 1.5625;\n    padding-bottom: 0;\n}\n.sectionblock__numbers, .sectionblock__buttons {\n    display: flex;\n    align-items: center;\n    gap: 26px;\n    background-color: transparent;\n}\n.sectionblock_button {\n    position: relative;\n    border-color: transparent;\n    align-self: flex-start;\n    transition: transform 0.3s ease;\n}\n.sectionblock_bottom {\n    display: flex;\n    align-items: center;\n    gap: 29px;\n    padding-bottom: 120px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .sectionblock_bottom {\n      padding-top: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .sectionblock_bottom {\n      gap: 40px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 10px;\n    padding-top: 30px;\n    }\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .sectionblock {\n    display: flex;\n    margin-top: 30px;\n    flex-direction: row;\n    align-items: center;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .sectionblock {\n      display: flex;\n      margin: 30px 0;\n      flex-direction: column;\n      align-items: center;\n    }\n  }\n  \n  .content {\n    display: flex;\n    flex-direction: column;\n    gap: 70px;\n    padding: 30px 70px 30px 30px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .content {\n      gap: 20px;\n      padding: 30px 70px 20px 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .content {\n      padding-right: 30px;\n      gap: 40px;\n    }\n  }\n  \n  .inside_img {\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n    color: #333;\n    padding: 30px 49px 23px 20px;\n    background-color: #fff;\n    border-color: transparent;\n    transition: transform 0.3s ease;\n  }\n  .inside_img:hover {\n    transform: scale(1.2);\n  }\n  \n  /* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */\n  .topp {\n    display: flex;\n    flex-direction: column;\n    padding-top: 63px;\n    padding-bottom: 60px;\n  }\n  .topp_line {\n    width: 100%;\n    height: 1px;\n    background: #F2F2F2;\n    margin-bottom: 29px;\n  }\n  @media screen and (max-width: 767px) {\n    .topp_line {\n      width: 100%;\n    }\n  }\n  .topp__top_1 {\n    display: contents;\n    padding-top: 60px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .topp__top_1 {\n      flex-wrap: wrap;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .topp__top_1 {\n      max-width: 100%;\n    }\n  }\n  .topp__center_1 {\n    display: flex;\n    gap: 30px;\n    overflow: hidden;\n    padding-top: 30px;\n    padding-bottom: 30px;\n}\n@media screen and (min-width: 768px) and (max-width: 1024px) {\n    .topp__center_1 {\n    justify-content: center;\n    }\n}\n@media screen and (max-width: 767px) {\n    .topp__center_1 {\n    justify-content: center;\n      margin: 30px 0 0;\n      flex-direction: column;\n      align-items: center;\n    }\n  }\n  .topp__end_1 {\n    display: contents;\n    gap: 30px;\n    padding-top: 30px;\n    max-width: 1170px;\n    height: 435px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .topp__end_1 {\n    flex-wrap: wrap;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .topp__end_1 {\n      max-width: 100%;\n    }\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .topp {\n      padding-left: 30px;\n      padding-right: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .topp {\n      padding-left: 5px;\n      padding-right: 5px;\n    }\n  }\n  \n  .sample-title {\n    padding-bottom: 30px;\n  }\n  \n  .main_text_1 {\n    color: #000;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 25px;\n    overflow: auto;\n    max-height: 428px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main_text_1 {\n      font-size: 18px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .main_text_1 {\n      justify-content: center;\n    }\n  }\n  \n  /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */\n  /* ------ START page CERTIFICATIONS and CONTACTS--- */\n  .main-certifications {\n    padding-top: 63px;\n  }\n  .main-certifications__block {\n    display: flex;\n    flex-direction: column;\n    height: 100vh;\n  }\n  \n  .main-contacts {\n    padding-top: 63px;\n  }\n  .main-contacts__contacts-block {\n    display: flex;\n    padding-left: 0;\n    padding-right: 0;\n    gap: 177px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .main-contacts__contacts-block {\n      flex-direction: column;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .main-contacts__contacts-block {\n      flex-direction: column;\n    }\n  }\n  .main-contacts__left {\n    display: flex;\n    flex-direction: column;\n    align-self: center;\n  }\n  .main-contacts__block-name {\n    padding-top: 34px;\n  }\n  .main-contacts__name {\n    color: #333;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: normal;\n  }\n  .main-contacts__address {\n    color: #333;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 141%;\n  }\n  .main-contacts__tel {\n    color: #333;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: normal;\n    padding-top: 44px;\n  }\n  .main-contacts__mail {\n    color: #333;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n    padding-top: 53px;\n    margin-bottom: 33px;\n  }\n  .main-contacts__right {\n    padding-top: 50px;\n    margin-bottom: 120px;\n    display: flex;\n    min-height: 30vh;\n    overflow: hidden;\n  }\n  \n  .title-second {\n    padding-bottom: 34px;\n  }\n  \n  .contact-us {\n    margin-bottom: 112px;\n    text-align: center;\n    width: 222px;\n  }\n  \n  /* -----------END page CERTIFICATIONS and CONTACTS-- */\n  .project {\n    display: grid;\n  }\n  .project__title {\n    padding-bottom: 60px;\n  }\n  .project__cover-title {\n    color: #fff;\n    font-size: 64px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 64px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .project__cover-title {\n      font-size: 48px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .project__cover-title {\n      font-size: 36px;\n      padding-top: 20px;\n    }\n  }\n  .project__cover {\n    background-image: linear-gradient(to right, rgb(76, 76, 76) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);\n    background-size: cover;\n    background-repeat: no-repeat;\n    grid-column: 1/span 6;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    padding-left: 79px;\n  }\n  .project__cover-button {\n    color: #fff;\n    background-color: transparent;\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n    padding-top: 14px;\n  }\n  .project__cover-button::after {\n    content: url(../assets/image/ico-shape.svg);\n    padding-right: 20px;\n  }\n  .project__gallery {\n    display: grid;\n    gap: 30px;\n    grid-template-columns: repeat(12, 1fr);\n    grid-template-rows: 1fr 1fr;\n    margin-bottom: 30px;\n  }\n  @media screen and (max-width: 767px) {\n    .project__gallery {\n      display: flex;\n      flex-direction: column;\n    }\n  }\n  .project__gallery img {\n    width: 100%;\n  }\n  .project__gallery div:nth-child(2) {\n    grid-column: 7/13;\n  }\n  .project__gallery div:nth-child(3) {\n    grid-column: 1/span 3;\n  }\n  .project__gallery div:nth-child(4) {\n    grid-column: 4/span 5;\n  }\n  .project__gallery div:last-child {\n    grid-column: 9/13;\n  }\n  .project__button {\n    justify-self: end;\n  }\n  .project__button::after {\n    content: url(../assets/image/ico-shape.svg);\n    padding-left: 10px;\n  }\n  \n  .button {\n    background-color: #333;\n    color: #fff;\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 12px;\n    letter-spacing: 2.4px;\n    text-transform: uppercase;\n    padding: 30px 39px;\n    border: none;\n  }\n  .button:hover {\n    background-color: #BDBDBD;\n  }\n  \n  .contacts {\n    display: grid;\n    grid-template-columns: 1fr 2fr;\n    grid-template-rows: 1fr;\n    gap: 30px;\n    padding-top: 120px;\n    padding-bottom: 120px;\n  }\n  .contacts__title {\n    grid-column: 1/3;\n    grid-row: 1/2;\n    padding-bottom: 22px;\n  }\n  .contacts__form {\n    grid-column: 1/2;\n    grid-row: 2/3;\n  }\n  .contacts__image {\n    grid-column: 2/3;\n    grid-row: 2/3;\n    width: 100%;\n    max-width: 100%;\n  }\n  @media screen and (max-width: 767px) {\n    .contacts__image {\n      display: none;\n    }\n  }\n  .contacts__button {\n    width: 222px;\n    height: 71px;\n    cursor: pointer;\n  }\n  .contacts__button::after {\n    content: url(../assets/image/ico-shape.svg);\n    padding-left: 10px;\n  }\n  @media screen and (max-width: 767px) {\n    .contacts {\n      display: flex;\n      flex-direction: column;\n    }\n  }\n  \n  input,\n  textarea {\n    background-color: #F2F2F2;\n    color: #BDBDBD;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    letter-spacing: 0.56px;\n    width: 100%;\n    border: none;\n  }\n  \n  input {\n    padding: 15px 0 15px 21px;\n    margin-bottom: 10px;\n  }\n  \n  textarea {\n    padding: 15px 0 0 21px;\n  }\n  \n  .footer {\n    background-color: #2C2C2C;\n    color: #fff;\n    display: grid;\n    grid-template-columns: 2fr 3fr 4fr 3fr;\n    grid-template-rows: 3fr 1fr;\n    padding-top: 58px;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 500;\n    line-height: 24px;\n    letter-spacing: 0.42px;\n    overflow: hidden;\n  }\n  .footer__title {\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: normal;\n    padding-bottom: 25px;\n  }\n  @media screen and (max-width: 767px) {\n    .footer__title {\n      text-align: center;\n    }\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer__logo {\n      padding-right: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .footer__logo {\n      display: none;\n    }\n  }\n  .footer__logo:hover {\n    padding: 10px;\n    border: 2px solid #fff;\n  }\n  .footer-nav {\n    padding-left: 70px;\n  }\n  .footer-nav__item {\n    padding-bottom: 16px;\n  }\n  .footer-nav__item:last-child {\n    padding-bottom: 60px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer-nav {\n      padding-left: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .footer-nav {\n      padding: 0;\n      text-align: center;\n    }\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer-social {\n      padding-left: 30px;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .footer-social {\n      padding-top: 60px;\n      text-align: center;\n    }\n  }\n  .footer-social__item {\n    margin-right: 40px;\n  }\n  .footer-social__list {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: 1fr;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer-social__list {\n      display: flex;\n      flex-direction: column;\n      gap: 15px;\n      align-items: flex-start;\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .footer-social__list {\n      padding-bottom: 30px;\n    }\n  }\n  .footer-social__image {\n    fill: #F2F2F2;\n  }\n  .footer-social__image:hover {\n    fill: #BDBDBD;\n  }\n  @media screen and (max-width: 767px) {\n    .footer-contacts {\n      text-align: center;\n    }\n  }\n  .footer-contacts__address {\n    font-style: normal;\n  }\n  .footer-contacts__address div::before {\n    content: url(../assets/image/point.svg);\n    padding-right: 19px;\n  }\n  .footer-contacts__address p {\n    padding-left: 33px;\n  }\n  .footer-contacts__address a::before {\n    content: url(../assets/image/phone.svg);\n    padding-right: 14px;\n  }\n  .footer-contacts__mail::before {\n    content: url(../assets/image/mail.svg);\n    padding-right: 14px;\n  }\n  .footer a {\n    color: #fff;\n  }\n  .footer a:hover {\n    text-decoration: underline;\n  }\n  .footer li {\n    list-style-type: none;\n  }\n  .footer__copy {\n    color: rgba(200, 200, 200, 0.5);\n    font-family: Open Sans;\n    font-size: 12px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: 22px;\n    grid-column: span 4;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 24px 0;\n    border-top: 1px solid rgba(255, 255, 255, 0.1);\n    margin: 0 -8.4rem;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer__copy {\n      margin: 0 -30px;\n    }\n  }\n  .footer-contacts__address div, .footer-contacts__address {\n    padding-bottom: 32px;\n  }\n  @media screen and (min-width: 768px) and (max-width: 1024px) {\n    .footer {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n    }\n  }\n  @media screen and (max-width: 767px) {\n    .footer {\n      display: flex;\n      flex-direction: column;\n      align-items: stretch;\n      padding-left: 30px;\n    }\n  }\n  \n  /* ------ START page Gallery--- */\n  .main_container {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));\n    padding-top: 50px;\n    gap: 30px;\n  }\n  \n  .container__item-item {\n    cursor: zoom-in;\n  }\n  .container__item-item:hover {\n    transform: scale(1.2);\n  }\n  \n  .line {\n    max-width: 1300px;\n    height: 1px;\n  }\n  \n  .top__title1 {\n    color: #BDBDBD;\n    font-size: 64px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: 64px;\n    padding-top: 70px;\n  }\n  \n  .top__second-title1 {\n    color: #000;\n    font-size: 64px;\n    font-style: normal;\n    font-weight: 700;\n    line-height: 64px;\n  }\n  \n  .top__buttons1 {\n    display: flex;\n    flex-direction: row;\n    padding-bottom: 20px;\n  }\n  \n  .top__numbers1 {\n    display: flex;\n    align-items: center;\n    gap: 30px;\n    padding-bottom: 100px;\n    align-self: baseline;\n    padding-top: 21px;\n  }\n  \n  .full_container {\n    padding-left: 130px;\n  }/*# sourceMappingURL=style.css.map */
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scss/style.css b/scss/style.css
+--- a/scss/style.css	(revision 4ab30219f6bb8ee70b8fd1ea8c8c0b2daed803f7)
++++ b/scss/style.css	(date 1691150622225)
+@@ -1,1230 +1,1222 @@
+ * {
+-    margin: 0;
+-    padding: 0;
+-    box-sizing: border-box;
+-  }
+-  
+-  body {
+-    font-family: "Roboto", sans-serif;
+-    min-width: 320px;
+-  }
+-  
+-  a {
+-    text-decoration: none;
+-    color: #333;
+-    cursor: pointer;
+-  }
+-  
+-  .container {
+-    padding-left: 135px;
+-    padding-right: 135px;
+-    margin: 0 auto;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .container {
+-      padding-left: 30px;
+-      padding-right: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .container {
+-      padding-left: 5px;
+-      padding-right: 5px;
+-    }
+-  }
+-  
+-  .header {
+-    display: flex;
+-    margin-top: 29px;
+-    justify-content: space-between;
+-  }
+-  .header__logo {
+-    display: flex;
+-    flex-direction: column;
+-  }
+-  .header__logo:hover {
+-    transform: scale(1.2);
+-    transition: transform 0.3s ease;
+-  }
+-  .header__nav {
+-    display: flex;
+-    gap: 60px;
+-    flex-wrap: wrap;
+-    align-items: center;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .header__nav {
+-      gap: 20px;
+-    }
+-  }
+-  .header__link {
+-    text-decoration: none;
+-    color: #333;
+-  }
+-  .header__list {
+-    list-style-type: none;
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 12px;
+-    letter-spacing: 2.4px;
+-    text-transform: uppercase;
+-    cursor: pointer;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .header__list {
+-      font-size: 10px;
+-      font-weight: 300;
+-    }
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .header {
+-      flex-direction: column;
+-      gap: 20px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .header {
+-      gap: 10px;
+-    }
+-  }
+-  
+-  .nav_link {
+-    border-top: 1px solid #333;
+-    border-bottom: 1px solid #333;
+-    padding: 5px 15px;
+-  }
+-  
+-  .after_hover:hover {
+-    border-top: 1px solid #333;
+-    border-bottom: 1px solid #333;
+-    padding: 5px 15px;
+-  }
+-  
+-  .top {
+-    display: flex;
+-    justify-content: space-between;
+-  }
+-  .top__right {
+-    background-image: url(../assets/image/header.png);
+-    background-position: center;
+-    background-repeat: no-repeat;
+-    background-size: cover;
+-    display: flex;
+-    justify-content: flex-start;
+-    width: 100%;
+-    margin-top: 43px;
+-    align-items: flex-end;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__right {
+-      margin: 0;
+-    }
+-  }
+-  .top__right-change {
+-    background-image: url(../assets/image/header_change.jpg);
+-    background-position: center;
+-    background-repeat: no-repeat;
+-    background-size: cover;
+-    display: flex;
+-    justify-content: flex-start;
+-    margin-top: 43px;
+-    align-items: flex-end;
+-  }
+-  .top__left {
+-    display: flex;
+-    flex-direction: column;
+-  }
+-  .top__buttons {
+-    display: flex;
+-    padding-bottom: 90px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__buttons {
+-      display: none;
+-    }
+-  }
+-  .top__titles {
+-    padding-top: 365px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .top__titles {
+-      padding-top: 80px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__titles {
+-      padding-top: 30px;
+-    }
+-  }
+-  .top__second-title {
+-    padding-bottom: 90px;
+-    font-size: 64px;
+-    font-style: normal;
+-    line-height: 64px;
+-    font-weight: 700;
+-    color: #333;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .top__second-title {
+-      font-size: 40px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__second-title {
+-      font-size: 30px;
+-      padding-bottom: 30px;
+-    }
+-  }
+-  .top__title {
+-    color: #BDBDBD;
+-    font-size: 64px;
+-    font-style: normal;
+-    line-height: 64px;
+-    font-weight: 300;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .top__title {
+-      line-height: 32px;
+-      font-size: 40px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__title {
+-      font-size: 30px;
+-      line-height: 24px;
+-    }
+-  }
+-  .top__numbers {
+-    display: flex;
+-    justify-content: flex-start;
+-    align-items: center;
+-    gap: 30px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top__numbers {
+-      display: none;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .top {
+-      gap: 5px;
+-      flex-wrap: wrap;
+-      flex-direction: column;
+-      align-items: center;
+-    }
+-  }
+-  
+-  .inside_image {
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 12px;
+-    letter-spacing: 2.4px;
+-    text-transform: uppercase;
+-    color: #333;
+-    padding: 30px 49px 23px 20px;
+-    background-color: #fff;
+-    border-color: transparent;
+-  }
+-  .inside_image:hover {
+-    transform: scale(1.2);
+-    transition: transform 0.3s ease;
+-  }
+-  
+-  .left_button,
+-  .right_button {
+-    width: 53px;
+-    height: 53px;
+-    border: 1px solid #F2F2F2;
+-    background: #F2F2F2;
+-    cursor: pointer;
+-  }
+-  
+-  .left_button {
+-    margin-right: 23px;
+-  }
+-  
+-  .left_button:hover,
+-  .right_button:hover {
+-    color: #FBFBFB;
+-    transform: scale(1.2);
+-    transition: transform 0.3s ease;
+-  }
+-  
+-  .button_line {
+-    max-width: 271px;
+-    height: 1px;
+-    align-self: center;
+-  }
+-  
+-  .about {
+-    margin: 120px 135px;
+-    background-color: #FBFBFB;
+-    display: flex;
+-    gap: 30px;
+-    padding: 0;
+-  }
+-  .about__left {
+-    display: flex;
+-    gap: 30px;
+-    padding-top: 30px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .about__left {
++  margin: 0;
++  padding: 0;
++  box-sizing: border-box;
++}
++
++body {
++  font-family: "Roboto", sans-serif;
++  min-width: 320px;
++}
++
++a {
++  text-decoration: none;
++  color: #333;
++  cursor: pointer;
++}
++
++.container {
++  padding-left: 135px;
++  padding-right: 135px;
++  margin: 0 auto;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .container {
++    padding-left: 30px;
++    padding-right: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .container {
++    padding-left: 5px;
++    padding-right: 5px;
++  }
++}
++
++.header {
++  display: flex;
++  margin-top: 29px;
++  justify-content: space-between;
++}
++.header__logo {
++  display: flex;
++  flex-direction: column;
++}
++.header__logo:hover {
++  transform: scale(1.2);
++  transition: transform 0.3s ease;
++}
++.header__nav {
++  display: flex;
++  gap: 60px;
++  flex-wrap: wrap;
++  align-items: center;
++}
++@media screen and (max-width: 767px) {
++  .header__nav {
++    gap: 20px;
++  }
++}
++.header__link {
++  text-decoration: none;
++  color: #333;
++}
++.header__list {
++  list-style-type: none;
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 12px;
++  letter-spacing: 2.4px;
++  text-transform: uppercase;
++  cursor: pointer;
++}
++@media screen and (max-width: 767px) {
++  .header__list {
++    font-size: 10px;
++    font-weight: 300;
++  }
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .header {
++    flex-direction: column;
++    gap: 20px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .header {
++    gap: 10px;
++  }
++}
++
++.nav_link {
++  border-top: 1px solid #333;
++  border-bottom: 1px solid #333;
++  padding: 5px 15px;
++}
++
++.after_hover:hover {
++  border-top: 1px solid #333;
++  border-bottom: 1px solid #333;
++  padding: 5px 15px;
++}
++
++.top {
++  display: flex;
++  justify-content: space-between;
++}
++.top__right {
++  background-image: url(../assets/image/header.png);
++  background-position: center;
++  background-repeat: no-repeat;
++  background-size: cover;
++  display: flex;
++  justify-content: flex-start;
++  width: 100%;
++  margin-top: 43px;
++  align-items: flex-end;
++}
++@media screen and (max-width: 767px) {
++  .top__right {
++    margin: 0;
++  }
++}
++.top__right-change {
++  background-image: url(../assets/image/header_change.jpg);
++  background-position: center;
++  background-repeat: no-repeat;
++  background-size: cover;
++  display: flex;
++  justify-content: flex-start;
++  margin-top: 43px;
++  align-items: flex-end;
++}
++.top__left {
++  display: flex;
++  flex-direction: column;
++}
++.top__buttons {
++  display: flex;
++  padding-bottom: 90px;
++}
++@media screen and (max-width: 767px) {
++  .top__buttons {
++    display: none;
++  }
++}
++.top__titles {
++  padding-top: 365px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .top__titles {
++    padding-top: 80px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .top__titles {
++    padding-top: 30px;
++  }
++}
++.top__second-title {
++  padding-bottom: 90px;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 700;
++  color: #333;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .top__second-title {
++    font-size: 40px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .top__second-title {
++    font-size: 30px;
++    padding-bottom: 30px;
++  }
++}
++.top__title {
++  color: #BDBDBD;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 300;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .top__title {
++    line-height: 32px;
++    font-size: 40px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .top__title {
++    font-size: 30px;
++    line-height: 24px;
++  }
++}
++.top__numbers {
++  display: flex;
++  justify-content: flex-start;
++  align-items: center;
++  gap: 30px;
++}
++@media screen and (max-width: 767px) {
++  .top__numbers {
++    display: none;
++  }
++}
++@media screen and (max-width: 767px) {
++  .top {
++    gap: 5px;
++    flex-wrap: wrap;
++    flex-direction: column;
++    align-items: center;
++  }
++}
++
++.inside_image {
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 12px;
++  letter-spacing: 2.4px;
++  text-transform: uppercase;
++  color: #333;
++  padding: 30px 49px 23px 20px;
++  background-color: #fff;
++  border-color: transparent;
++}
++.inside_image:hover {
++  transform: scale(1.2);
++  transition: transform 0.3s ease;
++}
++
++.left_button,
++.right_button {
++  width: 53px;
++  height: 53px;
++  border: 1px solid #F2F2F2;
++  background: #F2F2F2;
++  cursor: pointer;
++}
++
++.left_button {
++  margin-right: 23px;
++}
++
++.left_button:hover,
++.right_button:hover {
++  color: #FBFBFB;
++  transform: scale(1.2);
++  transition: transform 0.3s ease;
++}
++
++.button_line {
++  max-width: 271px;
++  height: 1px;
++  align-self: center;
++}
++
++.about {
++  margin: 120px 135px;
++  background-color: #FBFBFB;
++  display: flex;
++  gap: 30px;
++  padding: 0;
++}
++.about__left {
++  display: flex;
++  gap: 30px;
++  padding-top: 30px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .about__left {
+     flex-wrap: wrap;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .about__left {
+-      flex-direction: column;
+-    }
++  }
++}
++@media screen and (max-width: 767px) {
++  .about__left {
++    flex-direction: column;
++  }
+ }
+ .about__right {
+-    padding: 30px 70px 30px 30px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 20px;
++  padding: 30px 70px 30px 30px;
++  display: flex;
++  flex-direction: column;
++  gap: 20px;
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .about__right {
++  .about__right {
+     justify-content: center;
+-    }
++  }
+ }
+ .about__title {
+-    color: #BDBDBD;
+-    font-size: 64px;
+-    font-style: normal;
+-    line-height: 64px;
+-    font-weight: 300;
++  color: #BDBDBD;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 300;
+ }
+ .about__text {
+-    color: #000;
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: 25px;
++  color: #000;
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: 25px;
+ }
+ .about_button {
+-    position: relative;
+-    border-color: transparent;
+-    align-self: flex-start;
++  position: relative;
++  border-color: transparent;
++  align-self: flex-start;
+ }
+ .about_bottom {
+-    margin-bottom: -20px;
++  margin-bottom: -20px;
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .about {
++  .about {
+     margin: 0;
+     padding-top: 30px;
+-    }
++  }
+ }
+ @media screen and (max-width: 767px) {
+-    .about {
++  .about {
+     margin: 30px 0 0;
+     flex-direction: column;
+     align-items: center;
+-    }
++  }
+ }
+ 
+ h2 {
+-    color: #BDBDBD;
+-    font-size: 64px;
+-    font-style: normal;
+-    line-height: 64px;
+-    font-weight: 300;
+-  }
+-  
+-  .right_image {
+-    align-self: center;
++  color: #BDBDBD;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 300;
++}
++
++.right_image {
++  align-self: center;
+ }
+ 
+ .left_images {
+-    display: flex;
+-    flex-direction: column;
+-    justify-content: center;
+-    gap: 30px;
++  display: flex;
++  flex-direction: column;
++  justify-content: center;
++  gap: 30px;
+ }
+ 
+ .main {
+-    padding-top: 120px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 60px;
++  padding-top: 120px;
++  display: flex;
++  flex-direction: column;
++  gap: 60px;
+ }
+ .main__title {
+-    color: #BDBDBD;
+-    font-size: 64px;
+-    font-style: normal;
+-    line-height: 64px;
+-    font-weight: 300;
++  color: #BDBDBD;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 300;
+ }
+ @media screen and (max-width: 767px) {
+-    .main__title {
++  .main__title {
+     word-break: break-word;
+     font-size: 54px;
+-    }
++  }
+ }
+ @media screen and (max-width: 767px) {
+-    .main__first-title {
++  .main__first-title {
+     line-height: 24px;
+     font-size: 30px;
+-    }
++  }
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main__first-title {
++  .main__first-title {
+     font-size: 54px;
+-    }
++  }
+ }
+-
+-@media screen and (max-width: 767px) {  
+-    .main__second-title {
+-      font-size: 30px;   /* Не работает, но свойтсва верные */
+-    }
++@media screen and (max-width: 767px) {
++  .main__second-title {
++    font-size: 30px;
++  }
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main__second-title {
+-      font-size: 54px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main__titles {
+-      display: flex;
+-      flex-direction: column;
+-      align-items: center;
+-      gap: 10px;
+-      padding-top: 30px;
+-    }
+-  }
+-  .main__blocks, .main__left, .main__right {
+-    display: flex;
+-  }
+-  .main__blocks {
+-    gap: 187px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main__blocks {
+-      gap: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main__blocks {
+-      flex-direction: column;
+-    }
+-  }
+-  .main__left, .main__right {
+-    gap: 30px;
+-    align-items: center;
+-  }
+-  .main__blocks {
+-    padding-bottom: 120px;
+-  }
+-  .main__blocks-text {
+-    color: #333;
+-    font-size: 22px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 36px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main__blocks-text {
+-      font-size: 18px;
+-    }
+-  }
+-  .main__ourprojects {
+-    display: flex;
+-    flex-direction: column;
+-    align-items: flex-start;
+-    padding-top: 63px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main__ourprojects {
+-      padding-left: 30px;
+-      padding-right: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main__ourprojects {
+-      padding: 30px 5px 0;
+-      display: flex;
+-      flex-direction: column;
+-      align-items: center;
+-    }
+-  }
+-  .main__second-title {
+-    padding-bottom: 0.45em;
+-    color: #333;
+-    font-size: 4em;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: 1;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main {
+-      padding-top: 30px;
+-    }
+-  }
+-  
+-  .grey-line {
+-    width: 100%;
+-    height: 1px;
+-    background: #F2F2F2;
+-    margin-bottom: 29px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .grey-line {
+-      width: 100%;
+-      margin: 0;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .grey-line {
+-      margin: 0;
+-      width: 100%;
+-    }
+-    .sectionblock {
+-      width: 100%;
+-      grid-template-columns: 1fr;
+-    }
+-  }
+-  
+-  .section.block-section {
+-    padding: 0;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 60px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .section.block-section {
+-      margin: 0;
+-      align-items: center;
+-      gap: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .section.block-section {
+-      align-items: center;
+-      gap: 1px;
+-    }
+-  }
+-  
+-  .sectionblock {
+-    display: grid;
+-    background-color: #FBFBFB;
+-    grid-template-columns: repeat(2, 1fr);
+-  }
+-  .sectionblock__images img {
+-      width: 100%;
+-      height: 100%;
+-      object-fit: cover;
+-  }
+-  .sectionblock__images {
+-    display: flex;
+-    gap: 30px;
+-    overflow: hidden;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .sectionblock__images img {
+-      width: 100%;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .sectionblock__images img {
+-      width: 100%;
+-    }
+-  }
+-  .sectionblock__title {
+-    color: #BDBDBD;
+-    font-size: 40px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: normal;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .sectionblock__title {
+-      font-size: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .sectionblock__title {
+-      font-size: 30px;
+-    }
++  .main__second-title {
++    font-size: 54px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .main__titles {
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    gap: 10px;
++    padding-top: 30px;
++  }
++}
++.main__blocks, .main__left, .main__right {
++  display: flex;
++}
++.main__blocks {
++  gap: 187px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .main__blocks {
++    gap: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .main__blocks {
++    flex-direction: column;
++  }
++}
++.main__left, .main__right {
++  gap: 30px;
++  align-items: center;
++}
++.main__blocks {
++  padding-bottom: 120px;
++}
++.main__blocks-text {
++  color: #333;
++  font-size: 22px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 36px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .main__blocks-text {
++    font-size: 18px;
++  }
++}
++.main__ourprojects {
++  display: flex;
++  flex-direction: column;
++  align-items: flex-start;
++  padding-top: 63px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .main__ourprojects {
++    padding-left: 30px;
++    padding-right: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .main__ourprojects {
++    padding: 30px 5px 0;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++  }
++}
++.main__second-title {
++  padding-bottom: 0.45em;
++  color: #333;
++  font-size: 4em;
++  font-style: normal;
++  font-weight: 700;
++  line-height: 1;
++}
++@media screen and (max-width: 767px) {
++  .main {
++    padding-top: 30px;
++  }
++}
++
++.grey-line {
++  width: 100%;
++  height: 1px;
++  background: #F2F2F2;
++  margin-bottom: 29px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .grey-line {
++    width: 100%;
++    margin: 0;
++  }
++}
++@media screen and (max-width: 767px) {
++  .grey-line {
++    margin: 0;
++    width: 100%;
++  }
++}
++
++.section.block-section {
++  padding: 0;
++  display: flex;
++  flex-direction: column;
++  gap: 60px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .section.block-section {
++    margin: 0;
++    align-items: center;
++    gap: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .section.block-section {
++    align-items: center;
++    gap: 1px;
++  }
++}
++
++.sectionblock {
++  display: flex;
++  background-color: #FBFBFB;
++}
++.sectionblock__images {
++  display: flex;
++  gap: 30px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .sectionblock__images img {
++    width: 100%;
++  }
++}
++@media screen and (max-width: 767px) {
++  .sectionblock__images img {
++    width: 100%;
++  }
++}
++.sectionblock__title {
++  color: #BDBDBD;
++  font-size: 40px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: normal;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .sectionblock__title {
++    font-size: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .sectionblock__title {
++    font-size: 30px;
++  }
+ }
+ .sectionblock__text {
+-    color: #000;
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: 1.5625;
+-    padding-bottom: 0;
++  color: #000;
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: 1.5625;
++  padding-bottom: 0;
+ }
+ .sectionblock__numbers, .sectionblock__buttons {
+-    display: flex;
+-    align-items: center;
+-    gap: 26px;
+-    background-color: transparent;
++  display: flex;
++  align-items: center;
++  gap: 26px;
++  background-color: transparent;
+ }
+ .sectionblock_button {
+-    position: relative;
+-    border-color: transparent;
+-    align-self: flex-start;
+-    transition: transform 0.3s ease;
++  position: relative;
++  border-color: transparent;
++  align-self: flex-start;
++  transition: transform 0.3s ease;
+ }
+ .sectionblock_bottom {
+-    display: flex;
+-    align-items: center;
+-    gap: 29px;
+-    padding-bottom: 120px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .sectionblock_bottom {
+-      padding-top: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .sectionblock_bottom {
+-      gap: 40px;
+-      display: flex;
+-      flex-direction: column;
+-      align-items: center;
+-      gap: 10px;
++  display: flex;
++  align-items: center;
++  gap: 29px;
++  padding-bottom: 120px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .sectionblock_bottom {
++    padding-top: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .sectionblock_bottom {
++    gap: 40px;
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    gap: 10px;
+     padding-top: 30px;
+-    }
++  }
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .sectionblock {
++  .sectionblock {
+     display: flex;
+     margin-top: 30px;
+     flex-direction: row;
+     align-items: center;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .sectionblock {
+-      display: flex;
+-      margin: 30px 0;
+-      flex-direction: column;
+-      align-items: center;
+-    }
+-  }
+-  
+-  .content {
+-    display: flex;
+-    flex-direction: column;
+-    gap: 70px;
+-    padding: 30px 70px 30px 30px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .content {
+-      gap: 20px;
+-      padding: 30px 70px 20px 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .content {
+-      padding-right: 30px;
+-      gap: 40px;
+-    }
+-  }
+-  
+-  .inside_img {
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 12px;
+-    letter-spacing: 2.4px;
+-    text-transform: uppercase;
+-    color: #333;
+-    padding: 30px 49px 23px 20px;
+-    background-color: #fff;
+-    border-color: transparent;
+-    transition: transform 0.3s ease;
+-  }
+-  .inside_img:hover {
+-    transform: scale(1.2);
+-  }
+-  
+-  /* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
+-  .topp {
+-    display: flex;
+-    flex-direction: column;
+-    padding-top: 63px;
+-    padding-bottom: 60px;
+-  }
+-  .topp_line {
+-    width: 100%;
+-    height: 1px;
+-    background: #F2F2F2;
+-    margin-bottom: 29px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .topp_line {
+-      width: 100%;
+-    }
+-  }
+-  .topp__top_1 {
+-    display: contents;
+-    padding-top: 60px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .topp__top_1 {
+-      flex-wrap: wrap;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .topp__top_1 {
+-      max-width: 100%;
+-    }
+-  }
+-  .topp__center_1 {
+-    display: flex;
+-    gap: 30px;
+-    overflow: hidden;
+-    padding-top: 30px;
+-    padding-bottom: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .sectionblock {
++    display: flex;
++    margin: 30px 0;
++    flex-direction: column;
++    align-items: center;
++  }
++}
++
++.content {
++  display: flex;
++  flex-direction: column;
++  gap: 70px;
++  padding: 30px 70px 30px 30px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .content {
++    gap: 20px;
++    padding: 30px 70px 20px 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .content {
++    padding-right: 30px;
++    gap: 40px;
++  }
++}
++
++.inside_img {
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 12px;
++  letter-spacing: 2.4px;
++  text-transform: uppercase;
++  color: #333;
++  padding: 30px 49px 23px 20px;
++  background-color: #fff;
++  border-color: transparent;
++  transition: transform 0.3s ease;
++}
++.inside_img:hover {
++  transform: scale(1.2);
++}
++
++/* ----- START page Sample Project --------------------------------------------------------------------------------------------------------------------- */
++.topp {
++  display: flex;
++  flex-direction: column;
++  padding-top: 63px;
++  padding-bottom: 60px;
++}
++.topp_line {
++  width: 100%;
++  height: 1px;
++  background: #F2F2F2;
++  margin-bottom: 29px;
++}
++@media screen and (max-width: 767px) {
++  .topp_line {
++    width: 100%;
++  }
++}
++.topp__top_1 {
++  display: contents;
++  padding-top: 60px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .topp__top_1 {
++    flex-wrap: wrap;
++  }
++}
++@media screen and (max-width: 767px) {
++  .topp__top_1 {
++    max-width: 100%;
++  }
++}
++.topp__center_1 {
++  display: flex;
++  gap: 30px;
++  overflow: hidden;
++  padding-top: 30px;
++  padding-bottom: 30px;
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .topp__center_1 {
++  .topp__center_1 {
+     justify-content: center;
+-    }
++  }
+ }
+ @media screen and (max-width: 767px) {
+-    .topp__center_1 {
++  .topp__center_1 {
+     justify-content: center;
+-      margin: 30px 0 0;
+-      flex-direction: column;
+-      align-items: center;
+-    }
+-  }
+-  .topp__end_1 {
+-    display: contents;
+-    gap: 30px;
+-    padding-top: 30px;
+-    max-width: 1170px;
+-    height: 435px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .topp__end_1 {
++    margin: 30px 0 0;
++    flex-direction: column;
++    align-items: center;
++  }
++}
++.topp__end_1 {
++  display: contents;
++  gap: 30px;
++  padding-top: 30px;
++  max-width: 1170px;
++  height: 435px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .topp__end_1 {
+     flex-wrap: wrap;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .topp__end_1 {
+-      max-width: 100%;
+-    }
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .topp {
+-      padding-left: 30px;
+-      padding-right: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .topp {
+-      padding-left: 5px;
+-      padding-right: 5px;
+-    }
+-  }
+-  
+-  .sample-title {
+-    padding-bottom: 30px;
+-  }
+-  
+-  .main_text_1 {
+-    color: #000;
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: 25px;
+-    overflow: auto;
+-    max-height: 428px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main_text_1 {
+-      font-size: 18px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main_text_1 {
+-      justify-content: center;
+-    }
+-  }
+-  
+-  /* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
+-  /* ------ START page CERTIFICATIONS and CONTACTS--- */
+-  .main-certifications {
+-    padding-top: 63px;
+-  }
+-  .main-certifications__block {
+-    display: flex;
+-    flex-direction: column;
+-    height: 100vh;
+-  }
+-  
+-  .main-contacts {
+-    padding-top: 63px;
+-  }
+-  .main-contacts__contacts-block {
+-    display: flex;
+-    padding-left: 0;
+-    padding-right: 0;
+-    gap: 177px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .main-contacts__contacts-block {
+-      flex-direction: column;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .main-contacts__contacts-block {
+-      flex-direction: column;
+-    }
+-  }
+-  .main-contacts__left {
+-    display: flex;
+-    flex-direction: column;
+-    align-self: center;
+-  }
+-  .main-contacts__block-name {
+-    padding-top: 34px;
+-  }
+-  .main-contacts__name {
+-    color: #333;
+-    font-size: 18px;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: normal;
+-  }
+-  .main-contacts__address {
+-    color: #333;
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: 141%;
+-  }
+-  .main-contacts__tel {
+-    color: #333;
+-    font-size: 18px;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: normal;
+-    padding-top: 44px;
+-  }
+-  .main-contacts__mail {
+-    color: #333;
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: normal;
+-    padding-top: 53px;
+-    margin-bottom: 33px;
+-  }
+-  .main-contacts__right {
+-    padding-top: 50px;
+-    margin-bottom: 120px;
+-    display: flex;
+-    min-height: 30vh;
+-    overflow: hidden;
+-  }
+-  
+-  .title-second {
+-    padding-bottom: 34px;
+-  }
+-  
+-  .contact-us {
+-    margin-bottom: 112px;
+-    text-align: center;
+-    width: 222px;
+-  }
+-  
+-  /* -----------END page CERTIFICATIONS and CONTACTS-- */
+-  .project {
+-    display: grid;
+-  }
+-  .project__title {
+-    padding-bottom: 60px;
+-  }
+-  .project__cover-title {
+-    color: #fff;
+-    font-size: 64px;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: 64px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .project__cover-title {
+-      font-size: 48px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .project__cover-title {
+-      font-size: 36px;
+-      padding-top: 20px;
+-    }
+-  }
+-  .project__cover {
+-    background-image: linear-gradient(to right, rgb(76, 76, 76) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);
+-    background-size: cover;
+-    background-repeat: no-repeat;
+-    grid-column: 1/span 6;
+-    display: flex;
+-    flex-direction: column;
+-    justify-content: center;
+-    padding-left: 79px;
+-  }
+-  .project__cover-button {
+-    color: #fff;
+-    background-color: transparent;
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 12px;
+-    letter-spacing: 2.4px;
+-    text-transform: uppercase;
+-    padding-top: 14px;
+-  }
+-  .project__cover-button::after {
+-    content: url(../assets/image/ico-shape.svg);
+-    padding-right: 20px;
+-  }
+-  .project__gallery {
+-    display: grid;
+-    gap: 30px;
+-    grid-template-columns: repeat(12, 1fr);
+-    grid-template-rows: 1fr 1fr;
+-    margin-bottom: 30px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .project__gallery {
+-      display: flex;
+-      flex-direction: column;
+-    }
+-  }
+-  .project__gallery img {
+-    width: 100%;
+-  }
+-  .project__gallery div:nth-child(2) {
+-    grid-column: 7/13;
+-  }
+-  .project__gallery div:nth-child(3) {
+-    grid-column: 1/span 3;
+-  }
+-  .project__gallery div:nth-child(4) {
+-    grid-column: 4/span 5;
+-  }
+-  .project__gallery div:last-child {
+-    grid-column: 9/13;
+-  }
+-  .project__button {
+-    justify-self: end;
+-  }
+-  .project__button::after {
+-    content: url(../assets/image/ico-shape.svg);
+-    padding-left: 10px;
+-  }
+-  
+-  .button {
+-    background-color: #333;
+-    color: #fff;
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 12px;
+-    letter-spacing: 2.4px;
+-    text-transform: uppercase;
+-    padding: 30px 39px;
+-    border: none;
+-  }
+-  .button:hover {
+-    background-color: #BDBDBD;
+-  }
+-  
+-  .contacts {
+-    display: grid;
+-    grid-template-columns: 1fr 2fr;
+-    grid-template-rows: 1fr;
+-    gap: 30px;
+-    padding-top: 120px;
+-    padding-bottom: 120px;
+-  }
+-  .contacts__title {
+-    grid-column: 1/3;
+-    grid-row: 1/2;
+-    padding-bottom: 22px;
+-  }
+-  .contacts__form {
+-    grid-column: 1/2;
+-    grid-row: 2/3;
+-  }
+-  .contacts__image {
+-    grid-column: 2/3;
+-    grid-row: 2/3;
+-    width: 100%;
+-    max-width: 100%;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .contacts__image {
+-      display: none;
+-    }
+-  }
+-  .contacts__button {
+-    width: 222px;
+-    height: 71px;
+-    cursor: pointer;
+-  }
+-  .contacts__button::after {
+-    content: url(../assets/image/ico-shape.svg);
+-    padding-left: 10px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .contacts {
+-      display: flex;
+-      flex-direction: column;
+-    }
+-  }
+-  
+-  input,
+-  textarea {
+-    background-color: #F2F2F2;
+-    color: #BDBDBD;
+-    font-size: 14px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: normal;
+-    letter-spacing: 0.56px;
+-    width: 100%;
+-    border: none;
+-  }
+-  
+-  input {
+-    padding: 15px 0 15px 21px;
+-    margin-bottom: 10px;
+-  }
+-  
+-  textarea {
+-    padding: 15px 0 0 21px;
+-  }
+-  
+-  .footer {
+-    background-color: #2C2C2C;
+-    color: #fff;
+-    display: grid;
+-    grid-template-columns: 2fr 3fr 4fr 3fr;
+-    grid-template-rows: 3fr 1fr;
+-    padding-top: 58px;
+-    font-size: 14px;
+-    font-style: normal;
+-    font-weight: 500;
+-    line-height: 24px;
+-    letter-spacing: 0.42px;
+-    overflow: hidden;
+-  }
+-  .footer__title {
+-    font-size: 16px;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: normal;
+-    padding-bottom: 25px;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer__title {
+-      text-align: center;
+-    }
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer__logo {
+-      padding-right: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer__logo {
+-      display: none;
+-    }
+-  }
+-  .footer__logo:hover {
+-    padding: 10px;
+-    border: 2px solid #fff;
+-  }
+-  .footer-nav {
+-    padding-left: 70px;
+-  }
+-  .footer-nav__item {
+-    padding-bottom: 16px;
+-  }
+-  .footer-nav__item:last-child {
+-    padding-bottom: 60px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer-nav {
+-      padding-left: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer-nav {
+-      padding: 0;
+-      text-align: center;
+-    }
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer-social {
+-      padding-left: 30px;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer-social {
+-      padding-top: 60px;
+-      text-align: center;
+-    }
+-  }
+-  .footer-social__item {
+-    margin-right: 40px;
+-  }
+-  .footer-social__list {
+-    display: grid;
+-    grid-template-columns: repeat(4, 1fr);
+-    grid-template-rows: 1fr;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer-social__list {
+-      display: flex;
+-      flex-direction: column;
+-      gap: 15px;
+-      align-items: flex-start;
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer-social__list {
+-      padding-bottom: 30px;
+-    }
+-  }
+-  .footer-social__image {
+-    fill: #F2F2F2;
+-  }
+-  .footer-social__image:hover {
+-    fill: #BDBDBD;
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer-contacts {
+-      text-align: center;
+-    }
+-  }
+-  .footer-contacts__address {
+-    font-style: normal;
+-  }
+-  .footer-contacts__address div::before {
+-    content: url(../assets/image/point.svg);
+-    padding-right: 19px;
+-  }
+-  .footer-contacts__address p {
+-    padding-left: 33px;
+-  }
+-  .footer-contacts__address a::before {
+-    content: url(../assets/image/phone.svg);
+-    padding-right: 14px;
+-  }
+-  .footer-contacts__mail::before {
+-    content: url(../assets/image/mail.svg);
+-    padding-right: 14px;
+-  }
+-  .footer a {
+-    color: #fff;
+-  }
+-  .footer a:hover {
+-    text-decoration: underline;
+-  }
+-  .footer li {
+-    list-style-type: none;
+-  }
+-  .footer__copy {
+-    color: rgba(200, 200, 200, 0.5);
+-    font-family: Open Sans;
+-    font-size: 12px;
+-    font-style: normal;
+-    font-weight: 400;
+-    line-height: 22px;
+-    grid-column: span 4;
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-    padding: 24px 0;
+-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+-    margin: 0 -8.4rem;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer__copy {
+-      margin: 0 -30px;
+-    }
+-  }
+-  .footer-contacts__address div, .footer-contacts__address {
+-    padding-bottom: 32px;
+-  }
+-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    .footer {
+-      display: grid;
+-      grid-template-columns: repeat(4, 1fr);
+-    }
+-  }
+-  @media screen and (max-width: 767px) {
+-    .footer {
+-      display: flex;
+-      flex-direction: column;
+-      align-items: stretch;
+-      padding-left: 30px;
+-    }
+-  }
+-  
+-  /* ------ START page Gallery--- */
+-  .main_container {
+-    display: grid;
+-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+-    padding-top: 50px;
+-    gap: 30px;
+-  }
+-  
+-  .container__item-item {
+-    cursor: zoom-in;
+-  }
+-  .container__item-item:hover {
+-    transform: scale(1.2);
+-  }
+-  
+-  .line {
+-    max-width: 1300px;
+-    height: 1px;
+-  }
+-  
+-  .top__title1 {
+-    color: #BDBDBD;
+-    font-size: 64px;
+-    font-style: normal;
+-    font-weight: 300;
+-    line-height: 64px;
+-    padding-top: 70px;
+-  }
+-  
+-  .top__second-title1 {
+-    color: #000;
+-    font-size: 64px;
+-    font-style: normal;
+-    font-weight: 700;
+-    line-height: 64px;
+-  }
+-  
+-  .top__buttons1 {
+-    display: flex;
+-    flex-direction: row;
+-    padding-bottom: 20px;
+-  }
+-  
+-  .top__numbers1 {
+-    display: flex;
+-    align-items: center;
+-    gap: 30px;
+-    padding-bottom: 100px;
+-    align-self: baseline;
+-    padding-top: 21px;
+-  }
+-  
+-  .full_container {
+-    padding-left: 130px;
+-  }/*# sourceMappingURL=style.css.map */
+\ No newline at end of file
++  }
++}
++@media screen and (max-width: 767px) {
++  .topp__end_1 {
++    max-width: 100%;
++  }
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .topp {
++    padding-left: 30px;
++    padding-right: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .topp {
++    padding-left: 5px;
++    padding-right: 5px;
++  }
++}
++
++.sample-title {
++  padding-bottom: 30px;
++}
++
++.main_text_1 {
++  color: #000;
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: 25px;
++  overflow: auto;
++  max-height: 428px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .main_text_1 {
++    font-size: 18px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .main_text_1 {
++    justify-content: center;
++  }
++}
++
++/* ----- END page Sample Project------------------------------------------------------------------------------------------------------------------------ */
++/* ------ START page CERTIFICATIONS and CONTACTS--- */
++.main-certifications {
++  padding-top: 63px;
++}
++.main-certifications__block {
++  display: flex;
++  flex-direction: column;
++  height: 100vh;
++}
++
++.main-contacts {
++  padding-top: 63px;
++}
++.main-contacts__contacts-block {
++  display: flex;
++  padding-left: 0;
++  padding-right: 0;
++  gap: 177px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .main-contacts__contacts-block {
++    flex-direction: column;
++  }
++}
++@media screen and (max-width: 767px) {
++  .main-contacts__contacts-block {
++    flex-direction: column;
++  }
++}
++.main-contacts__left {
++  display: flex;
++  flex-direction: column;
++  align-self: center;
++}
++.main-contacts__block-name {
++  padding-top: 34px;
++}
++.main-contacts__name {
++  color: #333;
++  font-size: 18px;
++  font-style: normal;
++  font-weight: 700;
++  line-height: normal;
++}
++.main-contacts__address {
++  color: #333;
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: 141%;
++}
++.main-contacts__tel {
++  color: #333;
++  font-size: 18px;
++  font-style: normal;
++  font-weight: 700;
++  line-height: normal;
++  padding-top: 44px;
++}
++.main-contacts__mail {
++  color: #333;
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 300;
++  line-height: normal;
++  padding-top: 53px;
++  margin-bottom: 33px;
++}
++.main-contacts__right {
++  padding-top: 50px;
++  margin-bottom: 120px;
++  display: flex;
++  min-height: 30vh;
++  overflow: hidden;
++}
++
++.title-second {
++  padding-bottom: 34px;
++}
++
++.contact-us {
++  margin-bottom: 112px;
++  text-align: center;
++  width: 222px;
++}
++
++/* -----------END page CERTIFICATIONS and CONTACTS-- */
++.project {
++  display: grid;
++}
++.project__title {
++  padding-bottom: 60px;
++}
++.project__cover-title {
++  color: #fff;
++  font-size: 64px;
++  font-style: normal;
++  font-weight: 700;
++  line-height: 64px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .project__cover-title {
++    font-size: 48px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .project__cover-title {
++    font-size: 36px;
++    padding-top: 20px;
++  }
++}
++.project__cover {
++  background-image: linear-gradient(to right, rgb(76, 76, 76) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);
++  background-size: cover;
++  background-repeat: no-repeat;
++  grid-column: 1/span 6;
++  display: flex;
++  flex-direction: column;
++  justify-content: center;
++  padding-left: 79px;
++}
++.project__cover-button {
++  color: #fff;
++  background-color: transparent;
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 12px;
++  letter-spacing: 2.4px;
++  text-transform: uppercase;
++  padding-top: 14px;
++}
++.project__cover-button::after {
++  content: url(../assets/image/ico-shape.svg);
++  padding-right: 20px;
++}
++.project__gallery {
++  display: grid;
++  gap: 30px;
++  grid-template-columns: repeat(12, 1fr);
++  grid-template-rows: 1fr 1fr;
++  margin-bottom: 30px;
++}
++@media screen and (max-width: 767px) {
++  .project__gallery {
++    display: flex;
++    flex-direction: column;
++  }
++}
++.project__gallery img {
++  width: 100%;
++}
++.project__gallery div:nth-child(2) {
++  grid-column: 7/13;
++}
++.project__gallery div:nth-child(3) {
++  grid-column: 1/span 3;
++}
++.project__gallery div:nth-child(4) {
++  grid-column: 4/span 5;
++}
++.project__gallery div:last-child {
++  grid-column: 9/13;
++}
++.project__button {
++  justify-self: end;
++}
++.project__button::after {
++  content: url(../assets/image/ico-shape.svg);
++  padding-left: 10px;
++}
++
++.button {
++  background-color: #333;
++  color: #fff;
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 12px;
++  letter-spacing: 2.4px;
++  text-transform: uppercase;
++  padding: 30px 39px;
++  border: none;
++}
++.button:hover {
++  background-color: #BDBDBD;
++}
++
++.contacts {
++  display: grid;
++  grid-template-columns: 1fr 2fr;
++  grid-template-rows: 1fr;
++  gap: 30px;
++  padding-top: 120px;
++  padding-bottom: 120px;
++}
++.contacts__title {
++  grid-column: 1/3;
++  grid-row: 1/2;
++  padding-bottom: 22px;
++}
++.contacts__form {
++  grid-column: 1/2;
++  grid-row: 2/3;
++}
++.contacts__image {
++  grid-column: 2/3;
++  grid-row: 2/3;
++  width: 100%;
++  max-width: 100%;
++}
++@media screen and (max-width: 767px) {
++  .contacts__image {
++    display: none;
++  }
++}
++.contacts__button {
++  width: 222px;
++  height: 71px;
++  cursor: pointer;
++}
++.contacts__button::after {
++  content: url(../assets/image/ico-shape.svg);
++  padding-left: 10px;
++}
++@media screen and (max-width: 767px) {
++  .contacts {
++    display: flex;
++    flex-direction: column;
++  }
++}
++
++input,
++textarea {
++  background-color: #F2F2F2;
++  color: #BDBDBD;
++  font-size: 14px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: normal;
++  letter-spacing: 0.56px;
++  width: 100%;
++  border: none;
++}
++
++input {
++  padding: 15px 0 15px 21px;
++  margin-bottom: 10px;
++}
++
++textarea {
++  padding: 15px 0 0 21px;
++}
++
++.contacts__button {
++  margin-top: 30px;
++}
++
++.footer {
++  background-color: #2C2C2C;
++  color: #fff;
++  display: grid;
++  grid-template-columns: 2fr 3fr 4fr 3fr;
++  grid-template-rows: 3fr 1fr;
++  padding-top: 58px;
++  font-size: 14px;
++  font-style: normal;
++  font-weight: 500;
++  line-height: 24px;
++  letter-spacing: 0.42px;
++  overflow: hidden;
++}
++.footer__title {
++  font-size: 16px;
++  font-style: normal;
++  font-weight: 700;
++  line-height: normal;
++  padding-bottom: 25px;
++}
++@media screen and (max-width: 767px) {
++  .footer__title {
++    text-align: center;
++  }
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer__logo {
++    padding-right: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .footer__logo {
++    display: none;
++  }
++}
++.footer__logo:hover {
++  padding: 10px;
++  border: 2px solid #fff;
++}
++.footer-nav {
++  padding-left: 70px;
++}
++.footer-nav__item {
++  padding-bottom: 16px;
++}
++.footer-nav__item:last-child {
++  padding-bottom: 60px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer-nav {
++    padding-left: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .footer-nav {
++    padding: 0;
++    text-align: center;
++  }
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer-social {
++    padding-left: 30px;
++  }
++}
++@media screen and (max-width: 767px) {
++  .footer-social {
++    padding-top: 60px;
++    text-align: center;
++  }
++}
++.footer-social__item {
++  margin-right: 40px;
++}
++.footer-social__list {
++  display: grid;
++  grid-template-columns: repeat(4, 1fr);
++  grid-template-rows: 1fr;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer-social__list {
++    display: flex;
++    flex-direction: column;
++    gap: 15px;
++    align-items: flex-start;
++  }
++}
++@media screen and (max-width: 767px) {
++  .footer-social__list {
++    padding-bottom: 30px;
++  }
++}
++.footer-social__image {
++  fill: #F2F2F2;
++}
++.footer-social__image:hover {
++  fill: #BDBDBD;
++}
++@media screen and (max-width: 767px) {
++  .footer-contacts {
++    text-align: center;
++  }
++}
++.footer-contacts__address {
++  font-style: normal;
++}
++.footer-contacts__address div::before {
++  content: url(../assets/image/point.svg);
++  padding-right: 19px;
++}
++.footer-contacts__address p {
++  padding-left: 33px;
++}
++.footer-contacts__phone::before {
++  content: url(../assets/image/phone.svg);
++  padding-right: 14px;
++}
++.footer-contacts__mail::before {
++  content: url(../assets/image/mail.svg);
++  padding-right: 14px;
++}
++.footer a {
++  color: #fff;
++}
++.footer a:hover {
++  text-decoration: underline;
++}
++.footer li {
++  list-style-type: none;
++}
++.footer__copy {
++  color: rgba(200, 200, 200, 0.5);
++  font-family: Open Sans;
++  font-size: 12px;
++  font-style: normal;
++  font-weight: 400;
++  line-height: 22px;
++  grid-column: span 4;
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  padding: 24px 0;
++  border-top: 1px solid rgba(255, 255, 255, 0.1);
++  margin: 0 -8.4rem;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer__copy {
++    margin: 0 -30px;
++  }
++}
++.footer-contacts__address div, .footer-contacts__address {
++  padding-bottom: 32px;
++}
++@media screen and (min-width: 768px) and (max-width: 1024px) {
++  .footer {
++    display: grid;
++    grid-template-columns: repeat(4, 1fr);
++  }
++}
++@media screen and (max-width: 767px) {
++  .footer {
++    display: flex;
++    flex-direction: column;
++    align-items: stretch;
++    padding-left: 30px;
++  }
++}
++
++/* ------ START page Gallery--- */
++.main_container {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
++  padding-top: 50px;
++  gap: 30px;
++}
++
++.container__item-item {
++  cursor: zoom-in;
++}
++.container__item-item:hover {
++  transform: scale(1.2);
++}
++
++.line {
++  max-width: 1300px;
++  height: 1px;
++}
++
++.top__title1 {
++  color: #BDBDBD;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 300;
++  padding-top: 70px;
++}
++
++.top__second-title1 {
++  color: #000;
++  font-size: 64px;
++  font-style: normal;
++  line-height: 64px;
++  font-weight: 700;
++}
++
++.top__buttons1 {
++  display: flex;
++  flex-direction: row;
++  padding-bottom: 20px;
++}
++
++.top__numbers1 {
++  display: flex;
++  align-items: center;
++  gap: 30px;
++  padding-bottom: 100px;
++  align-self: baseline;
++  padding-top: 21px;
++}
++
++.full_container {
++  padding-left: 130px;
++}/*# sourceMappingURL=style.css.map */
+\ No newline at end of file
