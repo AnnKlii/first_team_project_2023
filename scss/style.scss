@@ -253,10 +253,10 @@ a {
     color: $darkGrey;
     padding: 30px 49px 23px 20px;
     background-color: $white;
-    border-color: transparent;
 
     &:hover {
-        transform: scale(1.2);
+        background-color: $lightGrey;
+        border: 1px solid $lightGrey;
         transition: transform .3s ease;
     }
 }
