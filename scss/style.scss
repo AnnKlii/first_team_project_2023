@@ -394,6 +394,7 @@ h2 {
 
     &__second-title {
         font-size: 64px;
+
         @media screen and (max-width:767px) {
             font-size: 30px;
         }
@@ -769,6 +770,7 @@ h2 {
 
         @media screen and (max-width:767px) {
             @include columnStyle();
+            gap: 0;
         }
     }
 
@@ -776,6 +778,7 @@ h2 {
         @include flexible();
         @include columnStyle();
         align-self: center;
+
     }
 
     &__block-name {
@@ -830,6 +833,10 @@ h2 {
     margin-bottom: 112px;
     text-align: center;
     width: 222px;
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 0;
+    }
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */

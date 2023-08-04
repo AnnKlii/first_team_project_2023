@@ -768,6 +768,7 @@ h2 {
 @media screen and (max-width: 767px) {
   .main-contacts__contacts-block {
     flex-direction: column;
+    gap: 0;
   }
 }
 .main-contacts__left {
@@ -825,6 +826,11 @@ h2 {
   margin-bottom: 112px;
   text-align: center;
   width: 222px;
+}
+@media screen and (max-width: 767px) {
+  .contact-us {
+    margin-bottom: 0;
+  }
 }
 
 /* -----------END page CERTIFICATIONS and CONTACTS-- */
