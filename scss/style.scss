@@ -77,7 +77,7 @@ a {
 .header {
     @include flexible();
     margin-top: 29px;
-    justify-content: space-between;
+    justify-content: space-around;
 
     &__logo {
         @include flexible();
@@ -129,7 +129,7 @@ a {
 .nav_link {
     border-top: 1px solid $darkGrey;
     border-bottom: 1px solid $darkGrey;
-    padding: 5px 15px;
+    padding: 5px 11px;
 }
 
 .after_hover:hover {
