@@ -236,7 +236,7 @@ a {
   width: 53px;
   height: 53px;
   border: 1px solid #F2F2F2;
-  background: #F2F2F2;
+  background: #FBFBFB;
   cursor: pointer;
 }
 
@@ -246,7 +246,7 @@ a {
 
 .left_button:hover,
 .right_button:hover {
-  background-color: #FBFBFB;
+  background-color: #2C2C2C;
   transform: scale(1.2);
   transition: transform 0.3s ease;
   border-color: #2C2C2C;

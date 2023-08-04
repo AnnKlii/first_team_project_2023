@@ -259,7 +259,7 @@ a {
     width: 53px;
     height: 53px;
     border: 1px solid $middleWhite;
-    background: $middleWhite;
+    background: $littleWhite;
     cursor: pointer;
 }
 
@@ -269,7 +269,7 @@ a {
 
 .left_button:hover,
 .right_button:hover {
-    background-color: $littleWhite;
+    background-color: $middleGrey;
     transform: scale(1.2);
     transition: transform .3s ease;
     border-color: $middleGrey;
