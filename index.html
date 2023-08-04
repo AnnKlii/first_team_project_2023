@@ -177,13 +177,14 @@
                 <input type="text" name="contacts-inteserted" id="contacts-inteserted" placeholder="Interested In">
             </p>
             <p><label for="contacts-message"></label>
-                <textarea name="contacts-message" id="contacts-message" rows="8" placeholder="Message*"
+                <textarea name="contacts-message" id="contacts-message" rows="10" placeholder="Message*"
                     required></textarea>
             </p>
+            <button class="button contacts__button" type="submit">Send Email</button>
         </form>
 
         <div><img class="contacts__image" src="./assets/image/image12.png" alt="image"></div>
-        <button class="button contacts__button" type="submit">Send Email</button>
+
     </section>
     <footer class="footer container">
         <a href="index.html"><img class="footer__logo" src="./assets/image/logo-footer.png" alt="logo"></a>
@@ -211,10 +212,12 @@
             <h4 class="footer__title">Contacts</h4>
             <address class="footer-contacts__address">
                 <div>
-                    1234 Sample Street
-                    <p>Austin Texas 78704</p>
+                    <a class="footer-contacts__map" href="https://goo.gl/maps/GQxoDrFYM6d3BQsc9" target="_blank">1234
+                        Sample Street
+                        <p>Austin Texas 78704</p>
+                    </a>
                 </div>
-                <a href="tel:+5123332222">512.333.2222</a>
+                <a class="footer-contacts__phone" href="tel:+5123332222">512.333.2222</a>
             </address>
             <a class="footer-contacts__mail" href="mailto:sampleemail@gmail.com">sampleemail@gmail.com</a>
         </section>

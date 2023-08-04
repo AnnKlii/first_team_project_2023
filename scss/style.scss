@@ -64,11 +64,12 @@ a {
     margin: 0 auto;
 
     @media screen and (min-width:768px) and (max-width: 1024px) {
-            padding-left: 30px;
-            padding-right: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
+
     @media screen and (max-width:767px) {
-    padding-left: 5px;
+        padding-left: 5px;
         padding-right: 5px;
     }
 }
@@ -87,6 +88,7 @@ a {
             transition: transform .3s ease;
         }
     }
+
     &__nav {
         @include flexible();
         gap: 60px;
@@ -97,6 +99,7 @@ a {
             gap: 20px;
         }
     }
+
     &__link {
         text-decoration: none;
         color: $darkGrey;
@@ -108,14 +111,16 @@ a {
         cursor: pointer;
 
         @media screen and (max-width: 767px) {
-        font-size: 10px;
-        font-weight: 300;
+            font-size: 10px;
+            font-weight: 300;
         }
     }
+
     @media screen and (min-width:768px) and (max-width: 1024px) {
         @include columnStyle();
         gap: 20px;
     }
+
     @media screen and (max-width:767px) {
         gap: 10px;
     }
@@ -150,6 +155,7 @@ a {
             margin: 0;
         }
     }
+
     &__right-change {
         background-image: url(../assets/image/header_change.jpg);
         @include backStyle();
@@ -158,58 +164,65 @@ a {
         margin-top: 43px;
         align-items: flex-end;
     }
+
     &__left {
         @include flexible();
         @include columnStyle();
     }
-    
+
     &__buttons {
         @include flexible();
         padding-bottom: 90px;
 
         @media screen and (max-width:767px) {
-        display: none;
-    }
+            display: none;
+        }
     }
 
     &__titles {
         padding-top: 365px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        padding-top: 80px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            padding-top: 80px;
         }
+
         @media screen and (max-width:767px) {
             padding-top: 30px;
         }
     }
-    
+
     &__second-title {
         padding-bottom: 90px;
         @include bigFont();
         font-weight: 700;
         color: $darkGrey;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        font-size: 40px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            font-size: 40px;
         }
+
         @media screen and (max-width:767px) {
             font-size: 30px;
             padding-bottom: 30px;
         }
     }
-    
+
     &__title {
         color: $lightGrey;
         @include bigFont();
         font-weight: 300;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        line-height: 32px;
-        font-size: 40px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            line-height: 32px;
+            font-size: 40px;
         }
+
         @media screen and (max-width:767px) {
-        font-size: 30px;
-        line-height: 24px;
+            font-size: 30px;
+            line-height: 24px;
         }
     }
-    
+
     &__numbers {
         @include flexible();
         justify-content: flex-start;
@@ -217,9 +230,10 @@ a {
         gap: 30px;
 
         @media screen and (max-width:767px) {
-        display: none;
+            display: none;
+        }
     }
-    }
+
     @media screen and (max-width:767px) {
         gap: 5px;
         flex-wrap: wrap;
@@ -278,9 +292,11 @@ a {
         @include flexible();
         gap: 30px;
         padding-top: 30px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        flex-wrap: wrap;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            flex-wrap: wrap;
         }
+
         @media screen and (max-width:767px) {
             @include columnStyle();
         }
@@ -291,38 +307,44 @@ a {
         @include flexible();
         @include columnStyle();
         gap: 20px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        justify-content: center;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            justify-content: center;
         }
     }
-    &__title {
-    color: $lightGrey;
-    @include bigFont();
-    font-weight: 300;
-}
 
-&__text {
-    color: $black;
-    @include smallFont();
-    line-height: 25px;
-}
-&_button {
-    position: relative;
-    border-color: transparent;
-    align-self: flex-start;
-}
-&_bottom {
-    margin-bottom: -20px;
-}
-@media screen and (min-width:768px) and (max-width: 1024px){
-    margin: 0;
-    padding-top: 30px;
-}
-@media screen and (max-width:767px){
-    margin: 30px 0 0;
-    @include columnStyle();
-    align-items: center;
-}
+    &__title {
+        color: $lightGrey;
+        @include bigFont();
+        font-weight: 300;
+    }
+
+    &__text {
+        color: $black;
+        @include smallFont();
+        line-height: 25px;
+    }
+
+    &_button {
+        position: relative;
+        border-color: transparent;
+        align-self: flex-start;
+    }
+
+    &_bottom {
+        margin-bottom: -20px;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    @media screen and (max-width:767px) {
+        margin: 30px 0 0;
+        @include columnStyle();
+        align-items: center;
+    }
 }
 
 h2 {
@@ -364,6 +386,7 @@ h2 {
             line-height: 24px;
             font-size: 30px;
         }
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
             font-size: 54px;
         }
@@ -373,6 +396,7 @@ h2 {
         @media screen and (max-width:767px) {
             font-size: 30px;
         }
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
             font-size: 54px;
         }
@@ -387,69 +411,78 @@ h2 {
             padding-top: 30px;
         }
     }
-    
+
     &__blocks,
     &__left,
     &__right {
         @include flexible();
     }
-    
+
     &__blocks {
         gap: 187px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
             gap: 30px;
         }
+
         @media screen and (max-width:767px) {
             @include columnStyle();
         }
     }
-    &__left,
-&__right {
-    gap: 30px;
-    align-items: center;
-}
 
-&__blocks {
-    padding-bottom: 120px;
-    &-text {
-        color: $darkGrey;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 36px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        font-size: 18px;
-        }
-    }
-}
-&__ourprojects {
-    @include flexible();
-    @include columnStyle();
-    align-items: flex-start;
-    padding-top: 63px;
-    @media screen and (min-width:768px) and (max-width: 1024px){
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    @media screen and (max-width:767px) {
-        padding: 30px 5px 0;
-        @include flexible();
-        @include columnStyle();
+    &__left,
+    &__right {
+        gap: 30px;
         align-items: center;
     }
-}
 
-&__second-title {
-    padding-bottom: 0.45em;
-    color: $darkGrey;
-    font-size: 4em;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-}
-@media screen and (max-width:767px) {
-    padding-top: 30px;
-}
+    &__blocks {
+        padding-bottom: 120px;
+
+        &-text {
+            color: $darkGrey;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+
+            @media screen and (min-width:768px) and (max-width: 1024px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__ourprojects {
+        @include flexible();
+        @include columnStyle();
+        align-items: flex-start;
+        padding-top: 63px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width:767px) {
+            padding: 30px 5px 0;
+            @include flexible();
+            @include columnStyle();
+            align-items: center;
+        }
+    }
+
+    &__second-title {
+        padding-bottom: 0.45em;
+        color: $darkGrey;
+        font-size: 4em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    @media screen and (max-width:767px) {
+        padding-top: 30px;
+    }
 }
 
 .grey-line {
@@ -457,10 +490,12 @@ h2 {
     height: 1px;
     background: $middleWhite;
     margin-bottom: 29px;
-    @media screen and (min-width:768px) and (max-width: 1024px){
-    width: 100%;
-    margin: 0;
+
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        width: 100%;
+        margin: 0;
     }
+
     @media screen and (max-width:767px) {
         margin: 0;
         width: 100%;
@@ -472,11 +507,13 @@ h2 {
     @include flexible();
     @include columnStyle();
     gap: 60px;
-    @media screen and (min-width:768px) and (max-width: 1024px){
+
+    @media screen and (min-width:768px) and (max-width: 1024px) {
         margin: 0;
         align-items: center;
         gap: 30px;
     }
+
     @media screen and (max-width:767px) {
         align-items: center;
         gap: 1px;
@@ -492,77 +529,87 @@ h2 {
         gap: 30px;
 
         & img {
-            @media screen and (min-width:768px) and (max-width: 1024px){ 
-            width: 100%;
+            @media screen and (min-width:768px) and (max-width: 1024px) {
+                width: 100%;
             }
-            @media screen and (max-width:767px){
+
+            @media screen and (max-width:767px) {
                 width: 100%;
             }
         }
     }
+
     &__title {
         color: $lightGrey;
         font-size: 40px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        @media screen and (min-width:768px) and (max-width: 1024px){ 
-        font-size: 30px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            font-size: 30px;
         }
-        @media screen and (max-width:767px){
+
+        @media screen and (max-width:767px) {
             font-size: 30px;
         }
     }
-    
+
     &__text {
         color: $black;
         @include smallFont();
         line-height: 1.5625;
         padding-bottom: 0;
     }
+
     &__numbers,
-&__buttons {
-    @include flexible();
-    align-items: center;
-    gap: 26px;
-    background-color: transparent;
-}
-&_button {
-    position: relative;
-    border-color: transparent;
-    align-self: flex-start;
-    transition: transform 0.3s ease;
-}
-&_bottom {
-    @include flexible();
-    align-items: center;
-    gap: 29px;
-    padding-bottom: 120px;
+    &__buttons {
+        @include flexible();
+        align-items: center;
+        gap: 26px;
+        background-color: transparent;
+    }
+
+    &_button {
+        position: relative;
+        border-color: transparent;
+        align-self: flex-start;
+        transition: transform 0.3s ease;
+    }
+
+    &_bottom {
+        @include flexible();
+        align-items: center;
+        gap: 29px;
+        padding-bottom: 120px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            padding-top: 30px;
+        }
+
+        @media screen and (max-width:767px) {
+            gap: 40px;
+            @include flexible();
+            @include columnStyle();
+            align-items: center;
+            gap: 10px;
+            padding-top: 30px;
+        }
+    }
 
     @media screen and (min-width:768px) and (max-width: 1024px) {
-        padding-top: 30px;
-    }
-    @media screen and (max-width:767px) {
-        gap: 40px;
-        @include flexible();
-        @include columnStyle();
-        align-items: center;
-        gap: 10px;
-        padding-top: 30px;
-    }
-}
-@media screen and (min-width:768px) and (max-width: 1024px){
         @include flexible();
         margin-top: 30px;
         flex-direction: row;
         align-items: center;
-}
-@media screen and (max-width:767px) {
-    @include flexible();
-    margin: 30px 0;
-    @include columnStyle();
-    align-items: center;
-}
+    }
+
+    @media screen and (max-width:767px) {
+        @include flexible();
+        margin: 30px 0;
+        @include columnStyle();
+        align-items: center;
+    }
 }
 
 .content {
@@ -570,10 +617,12 @@ h2 {
     @include columnStyle();
     gap: 70px;
     padding: 30px 70px 30px 30px;
-    @media screen and (min-width:768px) and (max-width: 1024px){
-    gap: 20px;
-    padding: 30px 70px 20px 30px;
+
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        gap: 20px;
+        padding: 30px 70px 20px 30px;
     }
+
     @media screen and (max-width:767px) {
         padding-right: 30px;
         gap: 40px;
@@ -610,7 +659,7 @@ h2 {
             width: 100%;
         }
     }
-    
+
     &__top_1 {
         display: contents;
         padding-top: 60px;
@@ -618,10 +667,12 @@ h2 {
         @media screen and (min-width:768px) and (max-width: 1024px) {
             flex-wrap: wrap;
         }
+
         @media screen and (max-width:767px) {
             max-width: 100%;
         }
     }
+
     &__center_1 {
         @include flexible();
         gap: 30px;
@@ -632,6 +683,7 @@ h2 {
         @media screen and (min-width:768px) and (max-width: 1024px) {
             justify-content: center;
         }
+
         @media screen and (max-width:767px) {
             justify-content: center;
             margin: 30px 0 0;
@@ -639,6 +691,7 @@ h2 {
             align-items: center;
         }
     }
+
     &__end_1 {
         display: contents;
         gap: 30px;
@@ -646,17 +699,20 @@ h2 {
         max-width: 1170px;
         height: 435px;
 
-        @media screen and (min-width:768px) and (max-width: 1024px){
+        @media screen and (min-width:768px) and (max-width: 1024px) {
             flex-wrap: wrap;
         }
+
         @media screen and (max-width:767px) {
             max-width: 100%;
         }
     }
+
     @media screen and (min-width:768px) and (max-width: 1024px) {
         padding-left: 30px;
         padding-right: 30px;
     }
+
     @media screen and (max-width:767px) {
         padding-left: 5px;
         padding-right: 5px;
@@ -677,6 +733,7 @@ h2 {
     @media screen and (min-width:768px) and (max-width: 1024px) {
         font-size: 18px;
     }
+
     @media screen and (max-width:767px) {
         justify-content: center;
     }
@@ -704,14 +761,16 @@ h2 {
         padding-left: 0;
         padding-right: 0;
         gap: 177px;
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
             @include columnStyle();
         }
+
         @media screen and (max-width:767px) {
             @include columnStyle();
         }
     }
-    
+
     &__left {
         @include flexible();
         @include columnStyle();
@@ -721,7 +780,7 @@ h2 {
     &__block-name {
         padding-top: 34px;
     }
-    
+
     &__name {
         color: $darkGrey;
         font-size: 18px;
@@ -729,13 +788,13 @@ h2 {
         font-weight: 700;
         line-height: normal;
     }
-    
+
     &__address {
         color: $darkGrey;
         @include smallFont();
         line-height: 141%;
     }
-    
+
     &__tel {
         color: $darkGrey;
         font-size: 18px;
@@ -744,7 +803,7 @@ h2 {
         line-height: normal;
         padding-top: 44px;
     }
-    
+
     &__mail {
         color: $darkGrey;
         @include smallFont();
@@ -752,6 +811,7 @@ h2 {
         padding-top: 53px;
         margin-bottom: 33px;
     }
+
     &__right {
         padding-top: 50px;
         margin-bottom: 120px;
@@ -779,22 +839,24 @@ h2 {
     &__title {
         padding-bottom: 60px;
     }
-    
+
     &__cover-title {
         color: $white;
         font-size: 64px;
         font-style: normal;
         font-weight: 700;
         line-height: 64px;
-        @media screen and (min-width:768px) and (max-width: 1024px){
-        font-size: 48px;
+
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            font-size: 48px;
         }
+
         @media screen and (max-width:767px) {
             font-size: 36px;
             padding-top: 20px;
         }
     }
-    
+
     &__cover {
         background-image: linear-gradient(to right, rgba(76, 76, 76, 1) 0%, rgba(74, 74, 74, 0.65) 49%, rgba(76, 76, 76, 0.65) 100%), url(../assets/image/Rectangle12.png);
         background-size: cover;
@@ -805,19 +867,19 @@ h2 {
         justify-content: center;
         padding-left: 79px;
     }
-    
+
     &__cover-button {
         color: $white;
         background-color: transparent;
         @include twelveFont();
         padding-top: 14px;
     }
-    
+
     &__cover-button::after {
         content: url(../assets/image/ico-shape.svg);
         padding-right: 20px;
     }
-    
+
     &__gallery {
         display: grid;
         gap: 30px;
@@ -825,31 +887,32 @@ h2 {
         grid-template-rows: 1fr 1fr;
         margin-bottom: 30px;
 
-    @media screen and (max-width: 767px){
-        @include flexible();
-        @include columnStyle();
+        @media screen and (max-width: 767px) {
+            @include flexible();
+            @include columnStyle();
+        }
     }
-    }
-    
+
     &__gallery img {
         width: 100%;
     }
-    
+
     &__gallery div:nth-child(2) {
         grid-column: 7/13;
     }
-    
+
     &__gallery div:nth-child(3) {
         grid-column: 1/span 3;
     }
-    
+
     &__gallery div:nth-child(4) {
         grid-column: 4/span 5;
     }
-    
+
     &__gallery div:last-child {
         grid-column: 9/ 13;
     }
+
     &__button {
         justify-self: end;
 
@@ -866,6 +929,7 @@ h2 {
     @include twelveFont();
     padding: 30px 39px;
     border: none;
+
     &:hover {
         background-color: $lightGrey;
     }
@@ -884,12 +948,12 @@ h2 {
         grid-row: 1/2;
         padding-bottom: 22px;
     }
-    
+
     &__form {
         grid-column: 1/2;
         grid-row: 2/3;
     }
-    
+
     &__image {
         grid-column: 2/3;
         grid-row: 2/3;
@@ -900,7 +964,7 @@ h2 {
             display: none;
         }
     }
-    
+
     &__button {
         width: 222px;
         height: 71px;
@@ -911,6 +975,7 @@ h2 {
             padding-left: 10px;
         }
     }
+
     @media screen and (max-width: 767px) {
         @include flexible();
         @include columnStyle();
@@ -939,6 +1004,10 @@ textarea {
     padding: 15px 0 0 21px;
 }
 
+.contacts__button {
+    margin-top: 30px;
+}
+
 .footer {
     background-color: $middleGrey;
     color: $white;
@@ -964,19 +1033,22 @@ textarea {
             text-align: center;
         }
     }
+
     &__logo {
         @media screen and (min-width:768px) and (max-width: 1024px) {
             padding-right: 30px;
         }
+
         @media screen and (max-width:767px) {
             display: none;
         }
+
         &:hover {
             padding: 10px;
             border: 2px solid $white;
         }
     }
-    
+
     &-nav {
         padding-left: 70px;
 
@@ -987,84 +1059,98 @@ textarea {
                 padding-bottom: 60px;
             }
         }
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
             padding-left: 30px;
         }
+
         @media screen and (max-width:767px) {
             padding: 0;
             text-align: center;
         }
     }
+
     &-social {
         @media screen and (min-width:768px) and (max-width: 1024px) {
             padding-left: 30px;
         }
+
         @media screen and (max-width:767px) {
             padding-top: 60px;
             text-align: center;
         }
+
         &__item {
             margin-right: 40px;
         }
+
         &__list {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr;
+
             @media screen and (min-width:768px) and (max-width: 1024px) {
                 @include flexible();
                 @include columnStyle();
                 gap: 15px;
                 align-items: flex-start;
             }
+
             @media screen and (max-width:767px) {
                 padding-bottom: 30px;
             }
         }
+
         &__image {
             fill: $middleWhite;
-    
+
             &:hover {
                 fill: $lightGrey;
             }
         }
     }
+
     &-contacts {
-    @media screen and (max-width:767px) {
-        text-align: center;
+        @media screen and (max-width:767px) {
+            text-align: center;
+        }
     }
-}
+
     &-contacts__address {
         font-style: normal;
     }
-    
+
     &-contacts__address div::before {
         content: url(../assets/image/point.svg);
         padding-right: 19px;
     }
-    
+
     &-contacts__address p {
         padding-left: 33px;
     }
-    
-    &-contacts__address a::before {
+
+    &-contacts__phone::before {
         content: url(../assets/image/phone.svg);
         padding-right: 14px;
     }
-    
+
     &-contacts__mail::before {
         content: url(../assets/image/mail.svg);
         padding-right: 14px;
     }
+
     & a {
         color: $white;
     }
+
     & a:hover {
         text-decoration: underline;
     }
-    
+
     & li {
         list-style-type: none;
     }
+
     &__copy {
         color: rgba(200, 200, 200, 0.50);
         font-family: Open Sans;
@@ -1079,24 +1165,28 @@ textarea {
         padding: 24px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin: 0 -8.4rem;
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
-        margin: 0 -30px;
+            margin: 0 -30px;
         }
     }
-&-contacts__address div,
-&-contacts__address {
-    padding-bottom: 32px;
-}
-@media screen and (min-width:768px) and (max-width: 1024px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-@media screen and (max-width:767px) {
-    @include flexible();
-    @include columnStyle();
-    align-items: stretch;
-    padding-left: 30px;
-}
+
+    &-contacts__address div,
+    &-contacts__address {
+        padding-bottom: 32px;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (max-width:767px) {
+        @include flexible();
+        @include columnStyle();
+        align-items: stretch;
+        padding-left: 30px;
+    }
 }
 
 /* ------ START page Gallery--- */

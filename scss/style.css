@@ -993,6 +993,10 @@ textarea {
   padding: 15px 0 0 21px;
 }
 
+.contacts__button {
+  margin-top: 30px;
+}
+
 .footer {
   background-color: #2C2C2C;
   color: #fff;
@@ -1106,7 +1110,7 @@ textarea {
 .footer-contacts__address p {
   padding-left: 33px;
 }
-.footer-contacts__address a::before {
+.footer-contacts__phone::before {
   content: url(../assets/image/phone.svg);
   padding-right: 14px;
 }
