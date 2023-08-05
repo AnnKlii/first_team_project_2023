@@ -503,14 +503,15 @@ h2 {
     height: 1px;
     background: $middleWhite;
     margin-bottom: 29px;
+    margin-top: 29px;
 
     @media screen and (min-width:768px) and (max-width: 1024px) {
         width: 100%;
-        margin: 0;
     }
 
     @media screen and (max-width:767px) {
         margin: 0;
+        margin-top: 29px;
         width: 100%;
     }
 }
