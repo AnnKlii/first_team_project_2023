@@ -52,6 +52,11 @@ a {
   flex-wrap: wrap;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header__nav {
+    gap: 30px;
+  }
+}
 @media screen and (max-width: 767px) {
   .header__nav {
     gap: 20px;
@@ -79,8 +84,7 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 767px) {
@@ -98,6 +102,7 @@ a {
 .after_hover:hover {
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
+  padding: 5px 0;
 }
 
 .top {
@@ -205,6 +210,11 @@ a {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .top {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 767px) {
   .top {
     gap: 5px;
@@ -224,10 +234,10 @@ a {
   color: #333;
   padding: 30px 49px 23px 20px;
   background-color: #fff;
-  border-color: transparent;
 }
 .inside_image:hover {
-  transform: scale(1.2);
+  background-color: #BDBDBD;
+  border: 1px solid #BDBDBD;
   transition: transform 0.3s ease;
 }
 
@@ -312,6 +322,11 @@ a {
 }
 .about_bottom {
   margin-bottom: -20px;
+}
+@media screen and (max-width: 767px) {
+  .about_bottom {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .about {
@@ -760,6 +775,7 @@ h2 {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-contacts__contacts-block {
     flex-direction: column;
+    gap: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -823,6 +839,11 @@ h2 {
   margin-bottom: 112px;
   text-align: center;
   width: 222px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact-us {
+    margin-bottom: 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact-us {
@@ -988,10 +1009,6 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #BDBDBD;
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #BDBDBD;
 }
 
@@ -1211,7 +1228,7 @@ textarea {
   font-style: normal;
   line-height: 64px;
   font-weight: 300;
-  padding-top: 70px;
+  padding-top: 170px;
 }
 
 .top__second-title1 {
@@ -1235,9 +1252,10 @@ textarea {
   padding-bottom: 100px;
   align-self: baseline;
   padding-top: 21px;
+  margin-top: 50px;
 }
 
 .full_container {
-  padding-left: 130px;
-  margin-right: 130px;
+  padding-left: 140px;
+  margin-right: 140px;
 }/*# sourceMappingURL=style.css.map */
