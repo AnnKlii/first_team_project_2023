@@ -378,11 +378,14 @@ h2 {
   font-size: 64px;
   font-style: normal;
   line-height: 64px;
-  font-weight: 300;
+  font-weight: 700;
+  color: #333;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main__second-title {
     font-size: 54px;
+    font-weight: 700;
+    color: #333;
   }
 }
 @media screen and (max-width: 767px) {
@@ -391,6 +394,8 @@ h2 {
     align-self: center;
     line-height: 24px;
     font-size: 30px;
+    font-weight: 700;
+    color: #333;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -481,17 +486,17 @@ h2 {
   }
 }
 
-.ourTitle {
-  color: #333;
+.firstTitle {
+  color: #BDBDBD;
   font-size: 64px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .ourTitle {
+  .firstTitle {
     font-size: 54px;
   }
 }
 @media screen and (max-width: 767px) {
-  .ourTitle {
+  .firstTitle {
     align-self: center;
     font-size: 30px;
   }
@@ -650,7 +655,7 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.thirstImage {
+.thirdImage {
   background-image: url(../assets/image/image_projects_3.png);
   background-size: cover;
   background-position: center;
