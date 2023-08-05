@@ -447,26 +447,27 @@ h2 {
     font-size: 18px;
   }
 }
+
 .main__ourprojects {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 63px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main__ourprojects {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 63px 30px 0;
   }
 }
+
 @media screen and (max-width: 767px) {
   .main__ourprojects {
     padding: 30px 5px 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 }
+
 .main__second-title {
   padding-bottom: 0.45em;
   color: #333;
@@ -474,6 +475,7 @@ h2 {
   font-weight: 700;
   line-height: 1;
 }
+
 @media screen and (max-width: 767px) {
   .main {
     padding-top: 30px;
@@ -486,57 +488,65 @@ h2 {
   background: #F2F2F2;
   margin-bottom: 29px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .grey-line {
-    width: 100%;
     margin: 0;
   }
 }
+
 @media screen and (max-width: 767px) {
   .grey-line {
     margin: 0;
-    width: 100%;
   }
 }
 
 .section.block-section {
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 60px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .section.block-section {
-    margin: 0;
-    align-items: center;
     gap: 30px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .section.block-section {
-    align-items: center;
     gap: 1px;
   }
 }
 
 .sectionblock {
-  display: flex;
+  display: grid;
+  width: 100%;
   background-color: #FBFBFB;
+  grid-template-columns: repeat(2, 1fr);
 }
+
 .sectionblock__images {
-  display: flex;
+  display: grid;
+  overflow: hidden;
   gap: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+.sectionblock__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px),
+(max-width: 767px) {
   .sectionblock__images img {
     width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
-  .sectionblock__images img {
-    width: 100%;
-  }
-}
+
 .sectionblock__title {
   color: #BDBDBD;
   font-size: 40px;
@@ -544,16 +554,13 @@ h2 {
   font-weight: 300;
   line-height: normal;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .sectionblock__title {
-    font-size: 30px;
-  }
-}
+
 @media screen and (max-width: 767px) {
   .sectionblock__title {
     font-size: 30px;
   }
 }
+
 .sectionblock__text {
   color: #000;
   font-size: 16px;
@@ -562,53 +569,55 @@ h2 {
   line-height: 1.5625;
   padding-bottom: 0;
 }
+
 .sectionblock__numbers, .sectionblock__buttons {
   display: flex;
   align-items: center;
   gap: 26px;
   background-color: transparent;
 }
+
 .sectionblock_button {
   position: relative;
   border-color: transparent;
   align-self: flex-start;
   transition: transform 0.3s ease;
 }
+
 .sectionblock_bottom {
   display: flex;
   align-items: center;
   gap: 29px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock_bottom {
     padding-top: 30px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .sectionblock_bottom {
     gap: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     padding-top: 30px;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock {
-    display: flex;
     margin-top: 30px;
-    flex-direction: row;
     align-items: center;
   }
 }
 @media screen and (max-width: 767px) {
   .sectionblock {
-    display: flex;
     margin: 30px 0;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -616,14 +625,17 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 70px;
-  padding: 30px 70px 30px 30px;
+  padding: 30px;
+  padding-right: 70px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .content {
     gap: 20px;
-    padding: 30px 70px 20px 30px;
+    padding: 30px 30px 20px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .content {
     padding-right: 30px;
