@@ -366,7 +366,7 @@ h2 {
   flex-direction: column;
   gap: 60px;
 }
-.main__title {
+.main__title, .main__first-title, .main__second-title {
   color: #BDBDBD;
   font-size: 64px;
   font-style: normal;
@@ -374,58 +374,49 @@ h2 {
   font-weight: 300;
 }
 @media screen and (max-width: 767px) {
-  .main__title {
+  .main__title, .main__first-title, .main__second-title {
     word-break: break-word;
     font-size: 54px;
   }
-}
-@media screen and (max-width: 767px) {
-  .main__first-title {
+  .main__title__first-title, .main__first-title__first-title, .main__second-title__first-title {
     line-height: 24px;
     font-size: 30px;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .main__first-title {
-    font-size: 54px;
-  }
-}
-.main__second-title {
-  font-size: 64px;
-}
-@media screen and (max-width: 767px) {
-  .main__second-title {
+  .main__title__second-title, .main__first-title__second-title, .main__second-title__second-title {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .main__second-title {
+  .main__title__first-title, .main__title__second-title, .main__first-title__first-title, .main__first-title__second-title, .main__second-title__first-title, .main__second-title__second-title {
     font-size: 54px;
   }
 }
+.main__titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 30px;
+}
 @media screen and (max-width: 767px) {
   .main__titles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
     padding-top: 30px;
   }
 }
 .main__blocks, .main__left, .main__right {
   display: flex;
-}
-.main__blocks {
   gap: 187px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .main__blocks {
+  .main__blocks, .main__left, .main__right {
     gap: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .main__blocks {
+  .main__blocks, .main__left, .main__right {
     flex-direction: column;
+    gap: 10px;
   }
 }
 .main__left, .main__right {
@@ -447,27 +438,25 @@ h2 {
     font-size: 18px;
   }
 }
-
 .main__ourprojects {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 63px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .main__ourprojects {
     padding: 63px 30px 0;
   }
 }
-
 @media screen and (max-width: 767px) {
   .main__ourprojects {
     padding: 30px 5px 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 }
-
 .main__second-title {
   padding-bottom: 0.45em;
   color: #333;
@@ -475,7 +464,6 @@ h2 {
   font-weight: 700;
   line-height: 1;
 }
-
 @media screen and (max-width: 767px) {
   .main {
     padding-top: 30px;
@@ -488,65 +476,58 @@ h2 {
   background: #F2F2F2;
   margin-bottom: 29px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .grey-line {
+    width: 100%;
     margin: 0;
   }
 }
-
 @media screen and (max-width: 767px) {
   .grey-line {
     margin: 0;
+    width: 100%;
   }
 }
 
 .section.block-section {
-  padding: 0;
   display: grid;
+  padding: 0;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   gap: 60px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .section.block-section {
+    margin: 0;
+    align-items: center;
     gap: 30px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .section.block-section {
+    align-items: center;
     gap: 1px;
   }
 }
 
 .sectionblock {
-  display: grid;
-  width: 100%;
+  display: flex;
   background-color: #FBFBFB;
-  grid-template-columns: repeat(2, 1fr);
 }
-
 .sectionblock__images {
-  display: grid;
-  overflow: hidden;
+  display: flex;
   gap: 30px;
 }
-
-.sectionblock__images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px),
-(max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock__images img {
     width: 100%;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .sectionblock__images img {
+    width: 100%;
+  }
+}
 .sectionblock__title {
   color: #BDBDBD;
   font-size: 40px;
@@ -554,13 +535,16 @@ h2 {
   font-weight: 300;
   line-height: normal;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sectionblock__title {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width: 767px) {
   .sectionblock__title {
     font-size: 30px;
   }
 }
-
 .sectionblock__text {
   color: #000;
   font-size: 16px;
@@ -569,55 +553,53 @@ h2 {
   line-height: 1.5625;
   padding-bottom: 0;
 }
-
 .sectionblock__numbers, .sectionblock__buttons {
   display: flex;
   align-items: center;
   gap: 26px;
   background-color: transparent;
 }
-
 .sectionblock_button {
   position: relative;
   border-color: transparent;
   align-self: flex-start;
   transition: transform 0.3s ease;
 }
-
 .sectionblock_bottom {
   display: flex;
   align-items: center;
   gap: 29px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock_bottom {
     padding-top: 30px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .sectionblock_bottom {
     gap: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     padding-top: 30px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock {
+    display: flex;
     margin-top: 30px;
+    flex-direction: row;
     align-items: center;
   }
 }
 @media screen and (max-width: 767px) {
   .sectionblock {
+    display: flex;
     margin: 30px 0;
-    width: 100%;
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -625,17 +607,14 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 70px;
-  padding: 30px;
-  padding-right: 70px;
+  padding: 30px 70px 30px 30px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .content {
     gap: 20px;
-    padding: 30px 30px 20px;
+    padding: 30px 70px 20px 30px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .content {
     padding-right: 30px;
