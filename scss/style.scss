@@ -1272,18 +1272,37 @@ textarea {
     height: 1px;
 }
 
-.top__title1 {
+.top__title_gallerytitle {
     color: $lightGrey;
     @include bigFont();
     font-weight: 300;
-    padding-top: 80px;
+    padding-top: 100px;
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        padding-top: 80px;
+        padding-left: 40px;
+    }
+    
+    @media screen and (max-width:767px) {
+        padding-top: 30px;
+        font-size: 30px;
+        padding-left: 100px;
+    }
 
 }
 
-.top__second-title1 {
+.top__second-title_gallerytitle {
     color: $black;
     @include bigFont();
     font-weight: 700;
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        font-size: 40px;
+        padding-left: 40px;
+    }
+    @media screen and (max-width:767px) {
+        font-size: 30px;
+        padding-bottom: 30px;
+        padding-left: 100px;
+    }
 }
 
 .top__buttons1 {
@@ -1305,3 +1324,9 @@ textarea {
     width: fit-content;
     height: fit-content;
 }
+@media screen and (max-width: 767px) {
+    .container__item-item {
+    justify-self:center;
+    }
+}
+
