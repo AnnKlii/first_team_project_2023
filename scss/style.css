@@ -366,35 +366,46 @@ h2 {
   flex-direction: column;
   gap: 60px;
 }
-.main__title, .main__first-title, .main__second-title {
+.main__title {
   color: #BDBDBD;
   font-size: 64px;
   font-style: normal;
   line-height: 64px;
   font-weight: 300;
 }
-@media screen and (max-width: 767px) {
-  .main__title, .main__first-title, .main__second-title {
-    word-break: break-word;
+.main__second-title {
+  color: #BDBDBD;
+  font-size: 64px;
+  font-style: normal;
+  line-height: 64px;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main__second-title {
     font-size: 54px;
   }
-  .main__title__first-title, .main__first-title__first-title, .main__second-title__first-title {
-    line-height: 24px;
+}
+@media screen and (max-width: 767px) {
+  .main__second-title {
     font-size: 30px;
-  }
-  .main__title__second-title, .main__first-title__second-title, .main__second-title__second-title {
+    align-self: center;
+    line-height: 24px;
     font-size: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .main__title__first-title, .main__title__second-title, .main__first-title__first-title, .main__first-title__second-title, .main__second-title__first-title, .main__second-title__second-title {
+  .main__first-title {
     font-size: 54px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__first-title {
+    align-self: center;
   }
 }
 .main__titles {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
   padding-top: 30px;
 }
@@ -457,7 +468,7 @@ h2 {
     align-items: center;
   }
 }
-.main__second-title {
+.main__ourprojects__second-title {
   padding-bottom: 0.45em;
   color: #333;
   font-style: normal;
@@ -465,8 +476,24 @@ h2 {
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
-  .main {
+  .main__ourprojects {
     padding-top: 30px;
+  }
+}
+
+.ourTitle {
+  color: #333;
+  font-size: 64px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ourTitle {
+    font-size: 54px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ourTitle {
+    align-self: center;
+    font-size: 30px;
   }
 }
 
@@ -493,7 +520,7 @@ h2 {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 60px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -512,9 +539,10 @@ h2 {
 
 .sectionblock {
   display: grid;
-  width: 100%;
   background-color: #FBFBFB;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 3fr 2fr;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .sectionblock__title {
   color: #BDBDBD;
@@ -531,7 +559,7 @@ h2 {
   }
   .sectionblock__images {
     display: grid;
-    overflow: hidden;
+    height: 300px;
     gap: 30px;
   }
   .sectionblock__images img {
@@ -556,6 +584,7 @@ h2 {
   font-weight: 300;
   line-height: 1.5625;
   padding-bottom: 0;
+  overflow: scroll;
 }
 .sectionblock__numbers, .sectionblock__buttons {
   display: flex;
@@ -604,6 +633,27 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.firstImage {
+  background-image: url(../assets/image/image_projects_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.secondImage {
+  background-image: url(../assets/image/image_projects_2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.thirstImage {
+  background-image: url(../assets/image/image_projects_3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -1248,7 +1298,7 @@ textarea {
   padding-bottom: 100px;
   align-self: baseline;
   padding-top: 21px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .full_container {

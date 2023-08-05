@@ -381,34 +381,36 @@ h2 {
     @include columnStyle();
     gap: 60px;
 
-    &__title, &__first-title, &__second-title {
+    &__title {
         color: $lightGrey;
         @include bigFont();
         font-weight: 300;
-
-        @media screen and (max-width:767px) {
-            word-break: break-word;
+    }
+    &__second-title {
+        color: $lightGrey;
+        @include bigFont();
+        font-weight: 300;
+        @media screen and (min-width:768px) and (max-width: 1024px) {
             font-size: 54px;
-            &__first-title {
-                line-height: 24px;
-                font-size: 30px;
-            }
-            &__second-title {
-                font-size: 30px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 30px;
+            align-self: center;
+            line-height: 24px;
+            font-size: 30px;
             }
         }
-
-        @media screen and (min-width:768px) and (max-width: 1024px) {
-            &__first-title, &__second-title {
+        &__first-title {
+            @media screen and (min-width:768px) and (max-width: 1024px) {
                 font-size: 54px;
             }
+            @media screen and (max-width:767px) {
+                align-self: center;
+            }
         }
-    }
-
     &__titles {
         @include flexible();
         @include columnStyle();
-        align-items: center;
         gap: 10px;
         padding-top: 30px;
 
@@ -469,7 +471,7 @@ h2 {
             @include columnStyle();
             align-items: center;
         }
-    }
+    
 
     &__second-title {
         padding-bottom: 0.45em;
@@ -481,6 +483,18 @@ h2 {
 
     @media screen and (max-width:767px) {
         padding-top: 30px;
+    }
+    }
+}
+.ourTitle {
+    color: $darkGrey;
+    font-size: 64px;
+    @media screen and (min-width:768px) and (max-width: 1024px) {
+        font-size: 54px;
+    }
+    @media screen and (max-width:767px) {
+        align-self: center;
+        font-size: 30px;
     }
 }
 
@@ -505,7 +519,7 @@ h2 {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 60px;
 
     @media screen and (min-width:768px) and (max-width: 1024px) {
@@ -522,9 +536,9 @@ h2 {
 
 .sectionblock {
     display: grid;
-    width: 100%;
     background-color: #FBFBFB;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 2fr;
+    height: fit-content;
 
     &__title {
         color: $lightGrey;
@@ -541,9 +555,9 @@ h2 {
 
         &__images {
             display: grid;
-            overflow: hidden;
+            height: 300px;
             gap: 30px;
-
+            
             & img {
                 width: 100%;
                 height: 100%;
@@ -567,6 +581,7 @@ h2 {
         @include smallFont();
         line-height: 1.5625;
         padding-bottom: 0;
+        overflow: scroll;
     }
 
     &__numbers, &__buttons {
@@ -621,12 +636,35 @@ h2 {
     }
     
 }
+
+.firstImage {
+    background-image: url(../assets/image/image_projects_1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondImage {
+    background-image: url(../assets/image/image_projects_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.thirstImage {
+    background-image: url(../assets/image/image_projects_3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .content {
     @include flexible();
     @include columnStyle();
     gap: 70px;
     padding: 30px;
     padding-right: 70px;
+
 
     @media screen and (min-width:768px) and (max-width: 1024px) {
         gap: 20px;
