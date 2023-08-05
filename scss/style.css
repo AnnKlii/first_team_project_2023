@@ -1254,7 +1254,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   padding-top: 50px;
-  gap: 30px;
+  row-gap: 30px;
 }
 
 .container__item-item {
@@ -1265,7 +1265,7 @@ textarea {
 }
 
 .line {
-  max-width: 1300px;
+  max-width: 100%;
   height: 1px;
 }
 
@@ -1300,4 +1300,11 @@ textarea {
   align-self: baseline;
   padding-top: 21px;
   margin-top: 50px;
+}
+
+.container__item-item {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }/*# sourceMappingURL=style.css.map */
