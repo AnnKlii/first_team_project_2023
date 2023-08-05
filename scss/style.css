@@ -1241,7 +1241,7 @@ textarea {
   font-style: normal;
   line-height: 64px;
   font-weight: 300;
-  padding-top: 170px;
+  padding-top: 80px;
 }
 
 .top__second-title1 {
@@ -1265,10 +1265,10 @@ textarea {
   padding-bottom: 100px;
   align-self: baseline;
   padding-top: 21px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .full_container {
-  padding-left: 140px;
-  margin-right: 140px;
+  padding-left: 135px;
+  margin-right: 135px;
 }/*# sourceMappingURL=style.css.map */
