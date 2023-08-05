@@ -1257,7 +1257,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     padding-top: 50px;
-    gap: 30px;
+    row-gap: 30px;
 }
 
 .container__item-item {
@@ -1302,4 +1302,7 @@ textarea {
     padding-top: 21px;
     margin-top: 50px;
 }
-
+.container__item-item{
+    width: fit-content;
+    height: fit-content;
+}
