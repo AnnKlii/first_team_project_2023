@@ -1281,11 +1281,13 @@ textarea {
     padding-top: 100px;
     @media screen and (min-width:768px) and (max-width: 1024px) {
         padding-top: 80px;
+        padding-left: 40px;
     }
     
     @media screen and (max-width:767px) {
         padding-top: 30px;
         font-size: 30px;
+        padding-left: 100px;
     }
 
 }
@@ -1296,10 +1298,12 @@ textarea {
     font-weight: 700;
     @media screen and (min-width:768px) and (max-width: 1024px) {
         font-size: 40px;
+        padding-left: 40px;
     }
     @media screen and (max-width:767px) {
         font-size: 30px;
         padding-bottom: 30px;
+        padding-left: 100px;
     }
 }
 
