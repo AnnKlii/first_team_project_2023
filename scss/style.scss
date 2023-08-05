@@ -257,7 +257,6 @@ a {
 
     &:hover {
         background-color: $lightGrey;
-        // border: 1px solid $lightGrey;  Аня, можно убрать эту строчку?, т.к. с ней прыгает текст Sample project на моей части страницы
         transition: transform .3s ease;
     }
 }
