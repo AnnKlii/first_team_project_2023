@@ -257,7 +257,7 @@ a {
 
     &:hover {
         background-color: $lightGrey;
-        border: 1px solid $lightGrey;
+        // border: 1px solid $lightGrey;  Аня, можно убрать эту строчку?, т.к. с ней прыгает текст Sample project на моей части страницы
         transition: transform .3s ease;
     }
 }
@@ -864,6 +864,7 @@ h2 {
         font-style: normal;
         font-weight: 700;
         line-height: 64px;
+        margin-bottom: 10px;
 
         @media screen and (min-width:768px) and (max-width: 1024px) {
             font-size: 48px;
@@ -890,7 +891,8 @@ h2 {
         color: $white;
         background-color: transparent;
         @include twelveFont();
-        padding-top: 14px;
+        padding-top: 18px;
+        margin-left: -18px;
     }
 
     &__cover-button::after {
@@ -975,7 +977,7 @@ h2 {
     &__image {
         grid-column: 2/3;
         grid-row: 2/3;
-        width: 100%;
+        width: 110%;
 
 
         @media screen and (max-width: 767px) {

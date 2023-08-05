@@ -237,7 +237,6 @@ a {
 }
 .inside_image:hover {
   background-color: #BDBDBD;
-  border: 1px solid #BDBDBD;
   transition: transform 0.3s ease;
 }
 
@@ -863,6 +862,7 @@ h2 {
   font-style: normal;
   font-weight: 700;
   line-height: 64px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .project__cover-title {
@@ -894,7 +894,8 @@ h2 {
   line-height: 12px;
   letter-spacing: 2.4px;
   text-transform: uppercase;
-  padding-top: 14px;
+  padding-top: 18px;
+  margin-left: -18px;
 }
 .project__cover-button::after {
   content: url(../assets/image/ico-shape.svg);
@@ -972,7 +973,7 @@ h2 {
 .contacts__image {
   grid-column: 2/3;
   grid-row: 2/3;
-  width: 100%;
+  width: 110%;
 }
 @media screen and (max-width: 767px) {
   .contacts__image {
@@ -1009,6 +1010,10 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #BDBDBD;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #BDBDBD;
 }
 
