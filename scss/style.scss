@@ -387,6 +387,10 @@ h2 {
         color: $lightGrey;
         @include bigFont();
         font-weight: 300;
+        @media screen and (max-width:767px) {
+            font-size: 40px;
+        }
+
     }
     &__second-title {
         color: $lightGrey;

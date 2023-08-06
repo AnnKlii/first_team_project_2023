@@ -375,6 +375,11 @@ h2 {
   line-height: 64px;
   font-weight: 300;
 }
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 40px;
+  }
+}
 .main__second-title {
   color: #BDBDBD;
   font-size: 64px;
@@ -395,7 +400,6 @@ h2 {
     font-size: 30px;
     align-self: center;
     line-height: 24px;
-    font-size: 30px;
     font-weight: 700;
     color: #333;
   }
