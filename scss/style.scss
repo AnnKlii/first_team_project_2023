@@ -380,7 +380,6 @@ h2 {
     @include flexible();
     @include columnStyle();
     gap: 60px;
-
     &__title {
         color: $lightGrey;
         @include bigFont();
@@ -415,53 +414,42 @@ h2 {
         }
     &__titles {
         padding-top: 30px;
-
         @media screen and (max-width:767px) {
         }
     }
-
     &__blocks, &__left, &__right {
         @include flexible();
         gap: 187px;
-
         @media screen and (min-width:768px) and (max-width: 1024px) {
             gap: 30px;
         }
-
         @media screen and (max-width:767px) {
             @include columnStyle();
             gap: 10px;
         }
     }
-
     &__left, &__right {
         gap: 30px;
         align-items: center;
     }
-
     &__blocks {
         padding-bottom: 120px;
-
         &-text {
             color: $darkGrey;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
             line-height: 36px;
-
             @media screen and (min-width:768px) and (max-width: 1024px) {
                 font-size: 18px;
             }
         }
     }
-
     &__ourprojects {
         padding-top: 63px;
-
         @media screen and (min-width:768px) and (max-width: 1024px) {
             padding: 63px 30px 0;
         }
-
         @media screen and (max-width:767px) {
             padding: 30px 5px 0;
             @include flexible();
@@ -492,7 +480,6 @@ h2 {
         line-height: 50px;
     }
 }
-
 .grey-line {
     width: 100%;
     height: 1px;
@@ -516,13 +503,11 @@ h2 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 60px;
-
     @media screen and (min-width:768px) and (max-width: 1024px) {
         margin: 0;
         align-items: center;
         gap: 60px;
     }
-
     @media screen and (max-width:767px) {
         align-items: center;
         gap: 60px;
@@ -557,18 +542,15 @@ h2 {
                 object-fit: cover;
             }
         }
-
         &__title {
             font-size: 30px;
         }
     }
-
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         &__title {
             font-size: 30px;
         }
     }
-
     &__text {
         color: $black;
         @include smallFont();
@@ -583,14 +565,12 @@ h2 {
         gap: 26px;
         background-color: transparent;
     }
-
     &_button {
         position: relative;
         border-color: transparent;
         align-self: flex-start;
         transition: transform 0.3s ease;
     }
-
     &_bottom {
         @include flexible();
         align-items: center;
@@ -611,8 +591,6 @@ h2 {
     
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         &_bottom {
-            @include flexible();
-            margin-top: 30px;
             flex-direction: row;
             align-items: center;
         }
@@ -620,55 +598,45 @@ h2 {
     
     @media screen and (max-width: 767px) {
         &_bottom {
-            @include flexible();
-            margin: 30px 0;
             @include columnStyle();
             align-items: center;
         }
     }
     
 }
-
 .firstImage {
     background-image: url(../assets/image/image_projects_1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .secondImage {
     background-image: url(../assets/image/image_projects_2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .thirdImage {
     background-image: url(../assets/image/image_projects_3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .content {
     @include flexible();
     @include columnStyle();
     gap: 70px;
     padding: 30px;
     padding-right: 70px;
-
-
     @media screen and (min-width:768px) and (max-width: 1024px) {
         gap: 20px;
         padding: 30px 70px 20px 30px;
     }
-
     @media screen and (max-width:767px) {
         padding-right: 30px;
         gap: 40px;
     }
 }
-
 .inside_img {
     @include twelveFont();
     color: $darkGrey;
@@ -676,7 +644,6 @@ h2 {
     background-color: $white;
     border-color: transparent;
     transition: transform 0.3s ease;
-
     &:hover {
         transform: scale(1.2);
     }
