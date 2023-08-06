@@ -1024,6 +1024,7 @@ h2 {
     gap: 30px;
     padding-top: 120px;
     padding-bottom: 120px;
+    overflow: hidden;
 
     &__title {
         grid-column: 1/3;
