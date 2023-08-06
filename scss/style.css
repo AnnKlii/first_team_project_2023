@@ -553,6 +553,7 @@ h2 {
   display: grid;
   background-color: #FBFBFB;
   grid-template-columns: 3fr 2fr;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1004,6 +1005,7 @@ h2 {
   text-transform: uppercase;
   padding: 30px 39px;
   border: none;
+  transition: background-color 1s ease-in-out;
 }
 .button:hover {
   background-color: #BDBDBD;
@@ -1066,6 +1068,10 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #BDBDBD;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #BDBDBD;
 }
 
@@ -1314,8 +1320,10 @@ textarea {
 }
 
 .container__item-item {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }

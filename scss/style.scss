@@ -155,7 +155,8 @@ a {
         align-items: flex-end;
 
         @media screen and (max-width:767px) {
-            margin-left: 20px;;
+            margin-left: 20px;
+            ;
         }
     }
 
@@ -387,37 +388,44 @@ h2 {
         color: $lightGrey;
         @include bigFont();
         font-weight: 300;
+
         @media screen and (max-width:767px) {
             font-size: 40px;
         }
 
     }
+
     &__second-title {
         color: $lightGrey;
         @include bigFont();
         font-weight: 700;
         color: #333;
+
         @media screen and (min-width:768px) and (max-width: 1024px) {
             font-size: 54px;
             font-weight: 700;
             color: #333;
         }
+
         @media screen and (max-width:767px) {
             font-size: 30px;
             align-self: center;
             line-height: 24px;
             font-weight: 700;
             color: #333;
-            }
         }
-        &__first-title {
-            @media screen and (min-width:768px) and (max-width: 1024px) {
-                font-size: 54px;
-            }
-            @media screen and (max-width:767px) {
-                align-self: center;
-            }
+    }
+
+    &__first-title {
+        @media screen and (min-width:768px) and (max-width: 1024px) {
+            font-size: 54px;
         }
+
+        @media screen and (max-width:767px) {
+            align-self: center;
+        }
+    }
+
     &__titles {
         @include flexible();
         @include columnStyle();
@@ -430,7 +438,9 @@ h2 {
         }
     }
 
-    &__blocks, &__left, &__right {
+    &__blocks,
+    &__left,
+    &__right {
         @include flexible();
         gap: 187px;
 
@@ -444,7 +454,8 @@ h2 {
         }
     }
 
-    &__left, &__right {
+    &__left,
+    &__right {
         gap: 30px;
         align-items: center;
     }
@@ -481,45 +492,53 @@ h2 {
             @include columnStyle();
             align-items: center;
         }
-    &__second-title {
-        padding-bottom: 0.45em;
-        color: $darkGrey;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1;
-    }
 
-    @media screen and (max-width:767px) {
-        padding-top: 30px;
-    }
+        &__second-title {
+            padding-bottom: 0.45em;
+            color: $darkGrey;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        @media screen and (max-width:767px) {
+            padding-top: 30px;
+        }
     }
 }
+
 .firstTitle {
     color: $lightGrey;
     font-size: 64px;
+
     @media screen and (min-width:768px) and (max-width: 1024px) {
         font-size: 54px;
     }
+
     @media screen and (max-width:767px) {
         align-self: center;
         font-size: 30px;
     }
 }
+
 .grey-line {
     width: 100%;
     height: 1px;
     background: $middleWhite;
     margin-bottom: 29px;
     margin-top: 29px;
+
     @media screen and (min-width:768px) and (max-width: 1024px) {
         width: 100%;
     }
+
     @media screen and (max-width:767px) {
         margin: 0;
         margin-top: 29px;
         width: 100%;
     }
 }
+
 .section.block-section {
     padding: 0;
     display: grid;
@@ -538,12 +557,13 @@ h2 {
         gap: 1px;
     }
 }
+
 .sectionblock {
     display: grid;
     background-color: #FBFBFB;
     grid-template-columns: 3fr 2fr;
     height: fit-content;
-    
+
     &__title {
         color: $lightGrey;
         font-size: 40px;
@@ -561,7 +581,7 @@ h2 {
             display: grid;
             height: 300px;
             gap: 30px;
-            
+
             & img {
                 width: 100%;
                 height: 100%;
@@ -587,7 +607,8 @@ h2 {
         padding-bottom: 0;
     }
 
-    &__numbers, &__buttons {
+    &__numbers,
+    &__buttons {
         @include flexible();
         align-items: center;
         gap: 26px;
@@ -606,20 +627,20 @@ h2 {
         align-items: center;
         gap: 29px;
         padding-bottom: 120px;
-    
+
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             padding-top: 30px;
             @include columnStyle();
             gap: 40px;
         }
-    
+
         @media screen and (max-width: 767px) {
             @include columnStyle();
             padding-top: 30px;
             gap: 40px;
         }
     }
-    
+
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         &_bottom {
             @include flexible();
@@ -628,7 +649,7 @@ h2 {
             align-items: center;
         }
     }
-    
+
     @media screen and (max-width: 767px) {
         &_bottom {
             @include flexible();
@@ -637,7 +658,7 @@ h2 {
             align-items: center;
         }
     }
-    
+
 }
 
 .firstImage {
@@ -986,6 +1007,7 @@ h2 {
     @include twelveFont();
     padding: 30px 39px;
     border: none;
+    transition: background-color 1s ease-in-out;
 
     &:hover {
         background-color: $lightGrey;
@@ -1272,16 +1294,18 @@ textarea {
 }
 
 .line {
-    max-width:100%;
+    max-width: 100%;
     height: 1px;
 }
 
 .gallerytitle {
     padding-bottom: 0;
+
     @media screen and (min-width:768px) and (max-width: 1024px) {
         font-size: 40px;
         padding-left: 40px;
     }
+
     @media screen and (max-width:767px) {
         font-size: 30px;
         display: flex;
@@ -1305,13 +1329,14 @@ textarea {
     padding-top: 21px;
     margin-top: 50px;
 }
-.container__item-item{
+
+.container__item-item {
     width: fit-content;
     height: fit-content;
 
-@media screen and (max-width: 767px) {
-    justify-self:center;
-}  
+    @media screen and (max-width: 767px) {
+        justify-self: center;
+    }
 }
 
 .top__center1 {
