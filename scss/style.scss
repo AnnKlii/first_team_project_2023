@@ -69,8 +69,8 @@ a {
     }
 
     @media screen and (max-width:767px) {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
@@ -976,6 +976,7 @@ h2 {
 
     &__gallery img {
         width: 100%;
+        height: inherit;
     }
 
     &__gallery div:nth-child(2) {
