@@ -1081,6 +1081,10 @@ textarea::placeholder {
   color: #BDBDBD;
 }
 
+textarea {
+  resize: none;
+}
+
 :focus::-webkit-input-placeholder {
   opacity: 0;
 }
