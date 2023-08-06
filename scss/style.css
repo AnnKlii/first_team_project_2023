@@ -592,7 +592,6 @@ h2 {
   font-weight: 300;
   line-height: 1.5625;
   padding-bottom: 0;
-  overflow: scroll;
 }
 .sectionblock__numbers, .sectionblock__buttons {
   display: flex;

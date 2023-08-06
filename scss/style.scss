@@ -581,7 +581,6 @@ h2 {
         @include smallFont();
         line-height: 1.5625;
         padding-bottom: 0;
-        overflow: scroll;
     }
 
     &__numbers, &__buttons {
