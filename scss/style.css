@@ -374,11 +374,6 @@ h2 {
   line-height: 64px;
   font-weight: 300;
 }
-@media screen and (max-width: 767px) {
-  .main__title {
-    font-size: 40px;
-  }
-}
 .main__second-title {
   color: #BDBDBD;
   font-size: 64px;
@@ -415,7 +410,16 @@ h2 {
   }
 }
 .main__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .main__titles {
+    gap: 10px;
+    padding-top: 30px;
+  }
 }
 .main__blocks, .main__left, .main__right {
   display: flex;
@@ -452,6 +456,9 @@ h2 {
   }
 }
 .main__ourprojects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 63px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -464,6 +471,7 @@ h2 {
     padding: 30px 5px 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 .main__ourprojects__second-title {
@@ -490,8 +498,8 @@ h2 {
 }
 @media screen and (max-width: 767px) {
   .firstTitle {
+    align-self: center;
     font-size: 30px;
-    line-height: 50px;
   }
 }
 
@@ -509,11 +517,9 @@ h2 {
 }
 @media screen and (max-width: 767px) {
   .grey-line {
+    margin: 0;
     margin-top: 29px;
     width: 100%;
-    height: 1px;
-    background: #F2F2F2;
-    margin-bottom: 29px;
   }
 }
 
@@ -528,13 +534,13 @@ h2 {
   .section.block-section {
     margin: 0;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 767px) {
   .section.block-section {
     align-items: center;
-    gap: 60px;
+    gap: 1px;
   }
 }
 
@@ -554,6 +560,7 @@ h2 {
 }
 @media screen and (max-width: 767px) {
   .sectionblock {
+    margin: 30px 0;
     width: 100%;
     grid-template-columns: 1fr;
   }
@@ -584,6 +591,7 @@ h2 {
   font-weight: 300;
   line-height: 1.5625;
   padding-bottom: 0;
+  overflow: scroll;
 }
 .sectionblock__numbers, .sectionblock__buttons {
   display: flex;
@@ -613,17 +621,22 @@ h2 {
 @media screen and (max-width: 767px) {
   .sectionblock_bottom {
     flex-direction: column;
+    padding-top: 30px;
     gap: 40px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sectionblock_bottom {
+    display: flex;
+    margin-top: 30px;
     flex-direction: row;
     align-items: center;
   }
 }
 @media screen and (max-width: 767px) {
   .sectionblock_bottom {
+    display: flex;
+    margin: 30px 0;
     flex-direction: column;
     align-items: center;
   }
