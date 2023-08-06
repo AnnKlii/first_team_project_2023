@@ -246,6 +246,7 @@ a {
         flex-wrap: wrap;
         @include columnStyle();
         align-items: center;
+        overflow: hidden;
     }
 }
 
