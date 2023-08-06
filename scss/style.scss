@@ -414,14 +414,13 @@ h2 {
             }
         }
     &__titles {
-        @include flexible();
-        @include columnStyle();
-        gap: 10px;
+        // @include flexible();
+        // @include columnStyle();
+        // gap: 10px;
         padding-top: 30px;
 
         @media screen and (max-width:767px) {
-            gap: 10px;
-            padding-top: 30px;
+            // padding-top: 30px;
         }
     }
 
@@ -461,9 +460,9 @@ h2 {
     }
 
     &__ourprojects {
-        @include flexible();
-        @include columnStyle();
-        align-items: flex-start;
+        // @include flexible();
+        // @include columnStyle();
+        // align-items: flex-start;
         padding-top: 63px;
 
         @media screen and (min-width:768px) and (max-width: 1024px) {
@@ -474,7 +473,7 @@ h2 {
             padding: 30px 5px 0;
             @include flexible();
             @include columnStyle();
-            align-items: center;
+            // align-items: center;
         }
     &__second-title {
         padding-bottom: 0.45em;
@@ -496,10 +495,11 @@ h2 {
         font-size: 54px;
     }
     @media screen and (max-width:767px) {
-        align-self: center;
         font-size: 30px;
+        line-height: 50px;
     }
 }
+
 .grey-line {
     width: 100%;
     height: 1px;
@@ -510,9 +510,11 @@ h2 {
         width: 100%;
     }
     @media screen and (max-width:767px) {
-        margin: 0;
         margin-top: 29px;
         width: 100%;
+        height: 1px;
+        background: #F2F2F2;
+        margin-bottom: 29px;
     }
 }
 .section.block-section {
@@ -525,12 +527,12 @@ h2 {
     @media screen and (min-width:768px) and (max-width: 1024px) {
         margin: 0;
         align-items: center;
-        gap: 30px;
+        gap: 60px;
     }
 
     @media screen and (max-width:767px) {
         align-items: center;
-        gap: 1px;
+        gap: 60px;
     }
 }
 .sectionblock {
@@ -548,7 +550,6 @@ h2 {
     }
 
     @media screen and (max-width: 767px) {
-        margin: 30px 0;
         width: 100%;
         grid-template-columns: 1fr;
 
@@ -580,7 +581,7 @@ h2 {
         @include smallFont();
         line-height: 1.5625;
         padding-bottom: 0;
-        overflow: scroll;
+        // overflow: scroll;
     }
 
     &__numbers, &__buttons {
@@ -611,7 +612,6 @@ h2 {
     
         @media screen and (max-width: 767px) {
             @include columnStyle();
-            padding-top: 30px;
             gap: 40px;
         }
     }
