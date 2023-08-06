@@ -414,13 +414,9 @@ h2 {
             }
         }
     &__titles {
-        // @include flexible();
-        // @include columnStyle();
-        // gap: 10px;
         padding-top: 30px;
 
         @media screen and (max-width:767px) {
-            // padding-top: 30px;
         }
     }
 
@@ -460,9 +456,6 @@ h2 {
     }
 
     &__ourprojects {
-        // @include flexible();
-        // @include columnStyle();
-        // align-items: flex-start;
         padding-top: 63px;
 
         @media screen and (min-width:768px) and (max-width: 1024px) {
