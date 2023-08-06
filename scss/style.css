@@ -89,7 +89,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header {
-    gap: 10px;
+    gap: 30px;
   }
 }
 
