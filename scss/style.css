@@ -137,6 +137,8 @@ a {
 @media screen and (max-width: 767px) {
   .top__right {
     margin-left: 20px;
+    height: 400px;
+    margin-top: 0;
   }
 }
 
