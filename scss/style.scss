@@ -269,6 +269,7 @@ a {
     height: 53px;
     border: 1px solid $middleWhite;
     background: $littleWhite;
+    transition: background-color 1s ease-in-out;
     cursor: pointer;
 }
 
@@ -280,7 +281,6 @@ a {
 .right_button:hover {
     background-color: $middleWhite;
     transform: scale(1.2);
-    transition: transform .3s ease;
     border-color: $middleGrey;
 }
 

@@ -247,6 +247,7 @@ a {
   height: 53px;
   border: 1px solid #F2F2F2;
   background: #FBFBFB;
+  transition: background-color 1s ease-in-out;
   cursor: pointer;
 }
 
@@ -258,7 +259,6 @@ a {
 .right_button:hover {
   background-color: #F2F2F2;
   transform: scale(1.2);
-  transition: transform 0.3s ease;
   border-color: #2C2C2C;
 }
 
@@ -553,7 +553,6 @@ h2 {
   display: grid;
   background-color: #FBFBFB;
   grid-template-columns: 3fr 2fr;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1071,10 +1070,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   color: #BDBDBD;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #BDBDBD;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: #BDBDBD;
@@ -1320,10 +1315,8 @@ textarea {
 }
 
 .container__item-item {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
